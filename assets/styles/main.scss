@@ -1,22 +1,35 @@
-@import url(vars.scss);
-@import url(mixins.scss);
-@import url(header.scss);
-@import url(section_1.scss);
-@import url(section_2.scss);
-@import url(section_3.scss);
-@import url(section_4.scss);
-@import url(section_5.scss);
-@import url(section_6.scss);
-@import url(section_7.scss);
-@import url(section_8.scss);
-@import url(section_9.scss);
-@import url(section_10.scss);
-@import url(section_11.scss);
-@import url(section_12.scss);
-@import url(footer.scss);
+// import vars and mixins
+@import "vars.scss";
+@import "mixins.scss";
+
+// import all style files
+@import "header.scss";
+@import "section_1.scss";
+@import "section_2.scss";
+@import "section_3.scss";
+@import "section_4.scss";
+@import "section_5.scss";
+@import "section_6.scss";
+@import "section_7.scss";
+@import "section_8.scss";
+@import "section_9.scss";
+@import "section_10.scss";
+@import "section_11.scss";
+@import "section_12.scss";
+@import "footer.scss";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
 }
