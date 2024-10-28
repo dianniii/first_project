@@ -1,0 +1,22 @@
+// mixins
+@mixin font-600 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+}
+
+@mixin font-500 {
+  @include font-600;
+  font-weight: 500;
+}
+
+@mixin h1-h2-font {
+  @include font-600;
+  font-size: 42px;
+}
+
+@mixin h3-font {
+  @include font-600;
+  font-size: 24px;
+}
