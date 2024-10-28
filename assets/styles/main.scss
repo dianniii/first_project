@@ -1,0 +1,39 @@
+// variables
+// font-colors
+$main-font-color: #263238;
+$experts-names-font-color: #000958;
+$accent-blue: #2196f3;
+$accent-orange: #ffa726;
+
+// background-colors
+$light-blue-background: #f1f8ff;
+$form-background: #f8fcff;
+
+// mixins
+@mixin font-600 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+}
+
+@mixin font-500 {
+  @include font-600;
+  font-weight: 500;
+}
+
+@mixin h1-h2-font {
+  @include font-600;
+  font-size: 42px;
+}
+
+@mixin h3-font {
+  @include font-600;
+  font-size: 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
