@@ -1,36 +1,19 @@
-// variables
-// font-colors
-$main-font-color: #263238;
-$experts-names-font-color: #000958;
-$accent-blue: #2196f3;
-$accent-orange: #ffa726;
-
-// background-colors
-$light-blue-background: #f1f8ff;
-$form-background: #f8fcff;
-
-// mixins
-@mixin font-600 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-}
-
-@mixin font-500 {
-  @include font-600;
-  font-weight: 500;
-}
-
-@mixin h1-h2-font {
-  @include font-600;
-  font-size: 42px;
-}
-
-@mixin h3-font {
-  @include font-600;
-  font-size: 24px;
-}
+@import url(vars.scss);
+@import url(mixins.scss);
+@import url(header.scss);
+@import url(section_1.scss);
+@import url(section_2.scss);
+@import url(section_3.scss);
+@import url(section_4.scss);
+@import url(section_5.scss);
+@import url(section_6.scss);
+@import url(section_7.scss);
+@import url(section_8.scss);
+@import url(section_9.scss);
+@import url(section_10.scss);
+@import url(section_11.scss);
+@import url(section_12.scss);
+@import url(footer.scss);
 
 * {
   margin: 0;
