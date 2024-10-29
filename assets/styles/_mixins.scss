@@ -20,3 +20,10 @@
   @include font-600;
   font-size: 24px;
 }
+
+@mixin header-nav-font {
+  color: $main-font-color;
+  font-size: 11px;
+  @include font-600;
+  letter-spacing: 2.75px;
+}
