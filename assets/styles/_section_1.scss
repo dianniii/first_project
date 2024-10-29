@@ -1,5 +1,6 @@
 .header {
   width: 100%;
+
   .header__first-line,
   .header__second-line,
   .header__banner {
@@ -65,4 +66,65 @@
       }
     }
   }
+
+  .header__banner {
+    grid-template-rows: 4fr 1fr 2fr;
+    gap: 50px;
+    // background-image: url("../header-pics/header__banner-kids.png"),
+    //   url("../header-pics/header__banner-dotted-ellipse.svg"),
+    //   url("../header-pics/header__banner-ellipse.svg");
+    // background-repeat: no-repeat;
+    background: url("../header-pics/header__banner-kids.png") content-box right
+      no-repeat;
+    // background-size: 45%;
+
+    .header__banner-title {
+      align-self: end;
+      width: 56%;
+      margin: 0;
+      @include h1-h2-font;
+
+      .header__banner-title_orange-italics {
+        color: $accent-orange;
+        font-style: italic;
+        font-weight: 800;
+      }
+    }
+    .header__banner-text {
+      width: 45%;
+      font-size: 24px;
+      @include font-600;
+      color: $main-font-color;
+    }
+
+    .header-banner-btn {
+      position: relative;
+    }
+
+    .header-banner-btn::after {
+      content: url("../header-pics/flags.svg");
+      position: absolute;
+      right: -45%;
+      max-width: 120px;
+    }
+  }
 }
+
+// &__button {
+//   background-color: #2196F3;
+//   color: #ffffff;
+//   border: none;
+//   font-weight: 500;
+//   font-size: 18px;
+//   line-height: 140%;
+//   border-radius: 2px;
+//   padding: 19px 9px;
+//   width: 310px;
+//   height: 60px;
+//   text-align: center;
+//   cursor: pointer;
+
+//   &:hover {
+//     background-color: #0056b3;
+//   }
+// }
