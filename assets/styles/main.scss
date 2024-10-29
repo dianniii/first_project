@@ -1,6 +1,6 @@
 // import vars and mixins
 @import "vars.scss";
-@import "mixins.scss";
+@import "_mixins.scss";
 
 * {
   margin: 0;
@@ -10,6 +10,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 ul {
