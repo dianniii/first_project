@@ -6,3 +6,9 @@ h3 {
 .section_7{
     margin: 0 16%;
 }
+.main{
+    .section_7_items{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
