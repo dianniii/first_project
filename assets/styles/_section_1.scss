@@ -1,2 +1,32 @@
-header {
+.header {
+  .header__first-line,
+  .header__second-line,
+  .header__banner {
+    width: 68%;
+    max-width: 1300px;
+    margin: 15px auto 15px;
+    display: grid;
+  }
+
+  .header__first-line {
+    grid-template-columns: 7fr 1fr;
+    gap: 50px;
+
+    .header__nav1 {
+      .header__nav1-list {
+        display: grid;
+        grid-template-columns: 20fr 1fr 1fr;
+        gap: 10px;
+        justify-items: end;
+
+        li:first-child {
+          justify-self: start;
+        }
+
+        .header__nav1-list-item > .header__nav1-list-item-link {
+          color: $main-font-color;
+        }
+      }
+    }
+  }
 }
