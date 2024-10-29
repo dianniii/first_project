@@ -1,3 +1,8 @@
-.section_7 {
+@import "mixins.scss";
+h3 {
     @include h3-font;
+}
+
+.section_7{
+    margin: 0 16%;
 }
