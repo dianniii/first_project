@@ -3,9 +3,6 @@
 h2 {
     @include h1-h2-font;
 }
-h3{
-    @include h3-font;
-}
 .section_7{
     margin: 0 16%;
     height: 100vh;
@@ -20,11 +17,34 @@ h3{
     li{
         display: grid;
         grid-template-columns: auto 1fr;
+        font-size: 40px;
     }
 }
-.section_7_items_item_1,
-.section_7_items_item_2,
-.section_7_items_item_3 {
+.section_7_items_item_1{
     max-width: 420px;
     height: 780px;
+    
+    &__list{
+        font-size: 18px;
+    }
+    &__sub-title{
+        @include h3-font;
+        text-align: center;
+    }
+}
+.section_7_items_item_2{
+    max-width: 420px;
+    height: 780px;
+    
+    &__list{
+        font-size: 18px;
+    }
+}
+.section_7_items_item_3{
+    max-width: 420px;
+    height: 780px;
+    
+    &__list{
+        font-size: 18px;
+    }
 }
