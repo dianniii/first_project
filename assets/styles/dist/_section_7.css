@@ -1,3 +1,11 @@
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 42px;
+}
+
 h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -8,4 +16,21 @@ h3 {
 
 .section_7 {
   margin: 0 16%;
+}
+
+.main .section_7_items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.section_7_items li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.section_7_items_item_1,
+.section_7_items_item_2,
+.section_7_items_item_3 {
+  max-width: 420px;
+  max-height: 680px;
 }
