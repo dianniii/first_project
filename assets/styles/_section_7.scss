@@ -1,4 +1,5 @@
 @import "mixins.scss";
+@import "vars.scss";
 
 h2 {
     @include h1-h2-font;
@@ -25,7 +26,6 @@ h2 {
     max-width: 420px;
     height: 780px;
     border: 1px solid black;
-    color: $main-font-color;
     
     &__list{
         font-size: 18px;
@@ -34,6 +34,7 @@ h2 {
         @include h3-font;
         text-align: center;
         margin: 10px 0 20px;
+        color: $main-font-color;
     }
     img{
         display: block;
@@ -46,6 +47,7 @@ h2 {
         line-height: 25.2px;
         margin: 10px 10px;
         gap: 10px;
+        color: $main-font-color;
     }
 }
 // Карточка вторая
@@ -61,6 +63,7 @@ h2 {
         @include h3-font;
         text-align: center;
         margin: 10px 0 20px;
+        color: $main-font-color;
     }
     img{
         display: block;
@@ -73,15 +76,28 @@ h2 {
         line-height: 25.2px;
         margin: 10px 10px;
         gap: 10px;
+        color: $main-font-color;
     }
 }
 
-// Карточка третья
-// .section_7_items_item_3{
-//     max-width: 420px;
-//     height: 780px;
-    
-//     &__list{
-//         font-size: 18px;
-//     }
-// }
+    // .section_7_items_item_1,
+    // .section_7_items_item_2,
+    // .section_7_items_item_3{
+    //     max-width: 420px;
+    //     height: 780px;
+    //     border: 1px solid black;
+    // }
+    // .section_7_items_item_1__list,
+    // .section_7_items_item_2__list,
+    // .section_7_items_item_3__list {
+    //     font-size: 18px;
+    // }
+    // .section_7_items_item_1,
+    // .section_7_items_item_2,
+    // .section_7_items_item_3{
+    //     img{
+    //         display: block;
+    //         margin: 0 auto;
+    //     }
+    // }
+

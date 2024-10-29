@@ -24,7 +24,7 @@ h2 {
 .section_7_items_item_1 {
   max-width: 420px;
   height: 780px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .section_7_items_item_1__list {
   font-size: 18px;
@@ -37,6 +37,7 @@ h2 {
   font-size: 24px;
   text-align: center;
   margin: 10px 0 20px;
+  color: #263238;
 }
 .section_7_items_item_1 img {
   display: block;
@@ -49,12 +50,13 @@ h2 {
   line-height: 25.2px;
   margin: 10px 10px;
   gap: 10px;
+  color: #263238;
 }
 /* Карточка вторрая */
 .section_7_items_item_2 {
   max-width: 420px;
   height: 780px;
-  border: 1px solid black;
+  border: 1px solid black; 
 }
 .section_7_items_item_2__list {
   font-size: 18px;
@@ -67,6 +69,7 @@ h2 {
   font-size: 24px;
   text-align: center;
   margin: 10px 0 20px;
+  color: #263238;
 }
 .section_7_items_item_2 img {
   display: block;
@@ -79,4 +82,5 @@ h2 {
   line-height: 25.2px;
   margin: 10px 10px;
   gap: 10px;
+  color: #263238;
 }
