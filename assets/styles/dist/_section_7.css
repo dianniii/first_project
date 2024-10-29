@@ -16,15 +16,15 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-._items li {
+.section_7_items li {
   display: grid;
   grid-template-columns: auto 1fr;
-  font-size: 40px;
 }
 
 .section_7_items_item_1 {
   max-width: 420px;
   height: 780px;
+  border: 1px solid black;
 }
 .section_7_items_item_1__list {
   font-size: 18px;
@@ -36,20 +36,47 @@ h2 {
   line-height: 140%;
   font-size: 24px;
   text-align: center;
+  margin: 10px 0 20px;
 }
-
+.section_7_items_item_1 img {
+  display: block;
+  margin: 0 auto;
+}
+.section_7_items_item_1 li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25.2px;
+  margin: 10px 10px;
+  gap: 10px;
+}
+/* Карточка вторрая */
 .section_7_items_item_2 {
   max-width: 420px;
   height: 780px;
+  border: 1px solid black;
 }
 .section_7_items_item_2__list {
   font-size: 18px;
 }
-
-.section_7_items_item_3 {
-  max-width: 420px;
-  height: 780px;
+.section_7_items_item_2__sub-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0 20px;
 }
-.section_7_items_item_3__list {
-  font-size: 18px;
+.section_7_items_item_2 img {
+  display: block;
+  margin: 0 auto;
+}
+.section_7_items_item_2 li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25.2px;
+  margin: 10px 10px;
+  gap: 10px;
 }

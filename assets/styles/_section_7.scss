@@ -17,12 +17,15 @@ h2 {
     li{
         display: grid;
         grid-template-columns: auto 1fr;
-        font-size: 40px;
     }
 }
+
+// Карточка первая
 .section_7_items_item_1{
     max-width: 420px;
     height: 780px;
+    border: 1px solid black;
+    color: $main-font-color;
     
     &__list{
         font-size: 18px;
@@ -30,21 +33,55 @@ h2 {
     &__sub-title{
         @include h3-font;
         text-align: center;
+        margin: 10px 0 20px;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    li{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-style: normal;      
+        line-height: 25.2px;
+        margin: 10px 10px;
+        gap: 10px;
     }
 }
+// Карточка вторая
 .section_7_items_item_2{
     max-width: 420px;
     height: 780px;
-    
+    border: 1px solid black;
+
     &__list{
         font-size: 18px;
     }
-}
-.section_7_items_item_3{
-    max-width: 420px;
-    height: 780px;
-    
-    &__list{
-        font-size: 18px;
+    &__sub-title{
+        @include h3-font;
+        text-align: center;
+        margin: 10px 0 20px;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    li{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-style: normal;      
+        line-height: 25.2px;
+        margin: 10px 10px;
+        gap: 10px;
     }
 }
+
+// Карточка третья
+// .section_7_items_item_3{
+//     max-width: 420px;
+//     height: 780px;
+    
+//     &__list{
+//         font-size: 18px;
+//     }
+// }
