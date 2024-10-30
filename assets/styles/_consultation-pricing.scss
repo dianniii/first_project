@@ -1,12 +1,15 @@
 @import "mixins.scss";
 @import "vars.scss";
 
-h2 {
+.consultation-pricing-title{
     @include h1-h2-font;
+    color: $main-font-color;
+    margin: 10px 0;
 }
-.section_7{
+.consultation-pricing{
     height: 100vh;
-    margin: 0 16%;
+    margin: 0 auto;
+    width: 68%;
 }
     .section_7_items{
         display: grid;
@@ -70,6 +73,14 @@ h2 {
     &__but{
         width: 340px;
         height: 65px;
+        background-color: white;
+        border: 3px solid $accent-blue;
+        color: $accent-blue;
+        @include font-500;
+        cursor: pointer;
+    }
+    &__but:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     }
 }
 // Карточка вторая
@@ -122,6 +133,14 @@ h2 {
     &__but{
         width: 340px;
         height: 65px;
+        background-color: white;
+        border: 3px solid $accent-blue;
+        color: $accent-blue;
+        @include font-500;
+        cursor: pointer;
+    }
+    &__but:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     }
 }
 // Карточка третья
@@ -174,6 +193,14 @@ h2 {
     &__but{
         width: 340px;
         height: 65px;
+        background-color: white;
+        border: 3px solid $accent-blue;
+        color: $accent-blue;
+        @include font-500;
+        cursor: pointer;
+    }
+    &__but:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     }
 }
 
