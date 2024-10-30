@@ -69,14 +69,14 @@
     }
   }
 
-  .header__banner::before {
-    content: url("../header-pics/dots.svg");
-    position: absolute;
-    left: -5%;
-    top: 0px;
-    bottom: 0px;
-    z-index: -1;
-  }
+  // .header__banner::before {
+  //   content: url("../header-pics/dots.svg");
+  //   position: absolute;
+  //   left: -5%;
+  //   top: 0px;
+  //   bottom: 0px;
+  //   z-index: -1;
+  // }
 
   .header__banner {
     position: relative;
