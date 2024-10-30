@@ -68,15 +68,14 @@
   }
 
   .header__banner {
-    grid-template-rows: 4fr 1fr 2fr;
-    gap: 50px;
-    background: url("../header-pics/header__banner-kids.png") no-repeat right
-      top;
-    background-size: 44%;
+    grid-template-rows: 2fr 0.5fr 1fr;
+    grid-template-columns: 1.7fr 1.3fr;
+    grid-template-areas: "title pic" "text pic" "button pic";
+    gap: 30px 20px;
 
     .header__banner-title {
+      grid-area: title;
       align-self: end;
-      width: 56%;
       margin: 0;
       @include h1-h2-font;
 
@@ -87,13 +86,14 @@
       }
     }
     .header__banner-text {
-      width: 45%;
+      grid-area: text;
       font-size: 24px;
       @include font-600;
       color: $main-font-color;
     }
 
     .header-banner-btn {
+      grid-area: button;
       position: relative;
     }
 
@@ -102,6 +102,17 @@
       position: absolute;
       right: -45%;
       max-width: 120px;
+    }
+
+    .header__banner-img-container {
+      grid-area: pic;
+      width: 100%;
+
+      .header__banner-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
     }
   }
 }
