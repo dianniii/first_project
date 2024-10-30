@@ -69,11 +69,21 @@
     }
   }
 
+  .header__banner::before {
+    content: url("../header-pics/dots.svg");
+    position: absolute;
+    left: -5%;
+    top: 0px;
+    bottom: 0px;
+    z-index: -1;
+  }
+
   .header__banner {
+    position: relative;
     grid-template-rows: 2fr 0.5fr 1fr;
     grid-template-columns: 1.7fr 1.3fr;
     grid-template-areas: "title pic" "text pic" "button pic";
-    gap: 30px 20px;
+    gap: 40px 20px;
 
     .header__banner-title {
       grid-area: title;
@@ -99,7 +109,7 @@
       position: relative;
     }
 
-    .header-banner-btn::after {
+    .header-banner-btn::before {
       content: url("../header-pics/flags.svg");
       position: absolute;
       right: -45%;
