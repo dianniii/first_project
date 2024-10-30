@@ -3,6 +3,12 @@
   text-align: center;
   margin-bottom: 100px;
 
+  &__container {
+    max-width: 1300px; // Ограничение ширины для основной контентной части
+    margin: 0 auto; // Центрирование контейнера
+    padding: 0 20px;
+  }
+
   &__title {
     font-size: 42px;
     margin-bottom:89px;
@@ -17,7 +23,6 @@
     justify-content: center;
     position: relative;
     margin: 0 auto 50px;
-    max-width: 1300px;
     width: 100%;
     background-image: url('../img/how-we-work-girl.png'); 
     background-size: contain; 
@@ -52,17 +57,17 @@
       transform: translateX(-50%);
       width: 650px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -24px;
-        left: -26px;
-        width: 123px;
-        height: 123px;
-        background-image: url('../img/how-we-work-dots-left.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -24px;
+      //   left: -26px;
+      //   width: 123px;
+      //   height: 123px;
+      //   background-image: url('../img/how-we-work-dots-left.svg');
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
     }
 
     &--top-right {
@@ -70,17 +75,17 @@
       right: -460px;
       width: 450px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -24px;
-        left: 348px;
-        width: 123px;
-        height: 123px;
-        background-image: url('../img/how-we-work-dots-right.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -24px;
+      //   left: 348px;
+      //   width: 123px;
+      //   height: 123px;
+      //   background-image: url('../img/how-we-work-dots-right.svg');
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
     }
 
     &--top-left {
@@ -88,17 +93,17 @@
       left: -480px;
       width: 400px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -24px;
-        left: -20px;
-        width: 123px;
-        height: 123px;
-        background-image: url('../img/how-we-work-dots-left.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -24px;
+      //   left: -20px;
+      //   width: 123px;
+      //   height: 123px;
+      //   background-image: url('../img/how-we-work-dots-left.svg');
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
     }
 
     &--bottom-left {
@@ -106,17 +111,17 @@
       left: -365px;
       width: 549px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -14px;
-        left: -20px;
-        width: 130px;
-        height: 130px;
-        background-image: url('../img/how-we-work-dots-left.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -14px;
+      //   left: -20px;
+      //   width: 130px;
+      //   height: 130px;
+      //   background-image: url('../img/how-we-work-dots-left.svg');
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
     }
 
     &--bottom-right {
@@ -124,17 +129,17 @@
       right: -350px;
       width: 650px;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: -17px;
-        left: 542px;
-        width: 130px;
-        height: 130px;
-        background-image: url('../img/how-we-work-dots-right.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   top: -17px;
+      //   left: 542px;
+      //   width: 130px;
+      //   height: 130px;
+      //   background-image: url('../img/how-we-work-dots-right.svg');
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
     }
   }
 

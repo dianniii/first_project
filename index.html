@@ -139,27 +139,29 @@
 
 
         <section class="how-we-work">
-            <h2 class="how-we-work__title">Как мы работаем?</h2>
-              <div class="how-we-work__content">
-                  <div class="how-we-work__info">
-                      <p class="how-we-work__text how-we-work__text--top">
-                          Расскажем о каждой школе из списка, чтобы вы соотнесли свой запрос с этим предложением
-                      </p>
-                      <p class="how-we-work__text how-we-work__text--top-right">
-                          Определим важные и второстепенные параметры выбора конкретно для вас
-                      </p>
-                      <p class="how-we-work__text how-we-work__text--top-left">
-                          Поможем вам и вашей семье прояснить запрос к школе
-                      </p>
-                      <p class="how-we-work__text how-we-work__text--bottom-left">
-                          Описание школы будет содержать как общедоступную информацию, так и наши впечатления и наблюдения о работе и особенностях этих школ
-                      </p>
-                      <p class="how-we-work__text how-we-work__text--bottom-right">
-                          Если вас интересуют негосударственные школы Санкт-Петербурга: предложим список из 4–5 школ, потенциально соответствующих вашим ожиданиям
-                      </p>
-                  </div>
-              </div>
-            <button class="how-we-work__button">Заказать консультацию</button>
+            <div class="how-we-work__container">
+              <h2 class="how-we-work__title">Как мы работаем?</h2>
+                <div class="how-we-work__content">
+                    <div class="how-we-work__info">
+                        <p class="how-we-work__text how-we-work__text--top">
+                            Расскажем о каждой школе из списка, чтобы вы соотнесли свой запрос с этим предложением
+                        </p>
+                        <p class="how-we-work__text how-we-work__text--top-right">
+                            Определим важные и второстепенные параметры выбора конкретно для вас
+                        </p>
+                        <p class="how-we-work__text how-we-work__text--top-left">
+                            Поможем вам и вашей семье прояснить запрос к школе
+                        </p>
+                        <p class="how-we-work__text how-we-work__text--bottom-left">
+                            Описание школы будет содержать как общедоступную информацию, так и наши впечатления и наблюдения о работе и особенностях этих школ
+                        </p>
+                        <p class="how-we-work__text how-we-work__text--bottom-right">
+                            Если вас интересуют негосударственные школы Санкт-Петербурга: предложим список из 4–5 школ, потенциально соответствующих вашим ожиданиям
+                        </p>
+                    </div>
+                </div>
+              <button class="how-we-work__button">Заказать консультацию</button>
+            </div>
         </section>
       
         <section class="main section_7">
@@ -223,6 +225,89 @@
           </div>
         </div>
         </section>
+
+
+          <section class="schools">
+            <div class="schools__container">
+              <div class="schools__info">
+                <h2 class="schools__title">Все частные школы Петербурга</h2>
+                <p class="schools__description">
+                  На нашем сайте вы можете посмотреть все школы Петербурга прямо на карте:
+                </p>
+                <ul class="schools__legend">
+                  <li class="schools__legend__item">Классические</li>
+                  <li class="schools__legend__item">Альтернативные</li>
+                  <li class="schools__legend__item">Неформальные</li>
+                  <li class="schools__legend__item">Авторские</li>
+                  <li class="schools__legend__item">Семейные</li>
+                </ul>
+                <button class="schools__button">Смотреть на карте</button>
+              </div>
+              <div id="map" style="width: 100%; height: 560px;"></div>
+            </div>
+          </section>
+        
+        
+
+
+
+        
+        
+        
+
+        
+
       </main>
+
+      <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+      <!-- JavaScript-код для отображения карты и добавления меток -->
+      <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            var myMap = new ymaps.Map("map", {
+                center: [59.939095, 30.315868], // Центр карты (например, Санкт-Петербург)
+                zoom: 10
+            });
+    
+            // Добавляем метки с SVG-кружками
+            var circles = [
+                { coords: [59.972373, 29.721276], number: 3, colors: ['#76a23f', '#8fbf67', '#d3d3d3'] },
+                { coords: [60.081663, 30.024236], number: 7, colors: ['#f38b2f', '#c0392b', '#d3d3d3'] },
+                { coords: [59.991188, 30.103922], number: 15, colors: ['#3498db', '#2ecc71', '#d3d3d3'] },
+                { coords: [59.935581, 30.300728], number: 124, colors: ['#9b59b6', '#34495e', '#d3d3d3'] },
+                { coords: [59.859139, 30.120692], number: 11, colors: ['#e67e22', '#e74c3c', '#d3d3d3'] },
+                { coords: [59.857419, 30.323546], number: 32, colors: ['#1abc9c', '#2ecc71', '#d3d3d3'] },
+                { coords: [59.861070, 29.968837], number: 13, colors: ['#3498db', '#9b59b6', '#d3d3d3'] }
+            ];
+    
+            circles.forEach(function(circle) {
+                var placemark = new ymaps.Placemark(
+                    circle.coords,
+                    {
+                        balloonContent: `Метка: ${circle.number}`
+                    },
+                    {
+                        iconLayout: 'default#imageWithContent',
+                        iconImageHref: '', // Не используем картинку, вместо этого добавляем SVG
+                        iconImageSize: [120, 120],
+                        iconImageOffset: [-60, -60],
+                        iconContentOffset: [0, 0],
+                        iconContentLayout: ymaps.templateLayoutFactory.createClass(
+                            `<svg width="120" height="120" viewBox="0 0 36 36">
+                               <circle cx="18" cy="18" r="16" fill="${circle.colors[2]}" />
+                               <path d="M18 2 a16 16 0 0 1 16 16L18 18Z" fill="${circle.colors[0]}" />
+                               <path d="M18 2 a16 16 0 0 0 -16 16L18 18Z" fill="${circle.colors[1]}" />
+                               <circle cx="18" cy="18" r="10" fill="#ffffff" />
+                               <text x="18" y="21" font-size="8" text-anchor="middle" fill="#333">${circle.number}</text>
+                             </svg>`
+                        )
+                    }
+                );
+                myMap.geoObjects.add(placemark);
+            });
+        }
+    </script>
+    
   </body>
 </html>
