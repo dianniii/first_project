@@ -119,26 +119,6 @@ ul li {
   line-height: 140%;
   color: #263238;
 }
-.header .header__banner .header-banner-btn {
-  grid-area: button;
-  position: relative;
-}
-.header .header__banner .header-banner-btn::before {
-  content: url("../header-pics/flags.svg");
-  position: absolute;
-  right: -45%;
-  max-width: 120px;
-}
-.header .header__banner .header__banner-img-container {
-  grid-area: pic;
-  width: 100%;
-}
-.header .header__banner .header__banner-img-container .header__banner-img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 
 .how-we-work {
   text-align: center;
