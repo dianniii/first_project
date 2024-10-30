@@ -51,14 +51,14 @@
   }
 
   .header__second-line {
-    // border: 1px solid black;
     padding: 20px 0;
     // grid-template-columns: 1fr 2fr;
     grid-template-columns: 1fr minmax(600px, 1.5fr);
 
     .header__nav2 .header__nav2-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+      // grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+      grid-template-columns: repeat(5, auto);
       justify-items: end;
       gap: 10px;
 
