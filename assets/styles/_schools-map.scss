@@ -1,21 +1,21 @@
 .schools {
-  padding: 20px 0;
+  margin-top: 200px;
   margin-bottom: 100px;
+  z-index: 0;
 
   &__container {
-    max-width: 68%; // Ограничение ширины для основной контентной части
-    margin: 0 auto; // Центрирование контейнера
-    padding: 0 20px; // Отступы по бокам для мобильных устройств
+    max-width: 68%; 
+    margin: 0 auto; 
     display: flex;
-    justify-content: space-between; // Разделение на две части: информация и карта
+    justify-content: space-between; 
     align-items: center;
   }
 
   &__info {
     flex: 1;
     display: flex;
-    flex-direction: column; // Размещаем элементы вертикально
-    margin-right: 10px; // Отступ между колонками
+    flex-direction: column; 
+    margin-right: 10px; 
   }
 
   &__title {
@@ -44,31 +44,31 @@
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Отступы между элементами легенды */
+    gap: 20px; 
   }
 
   &__legend__item {
     position: relative;
-    padding-left: 30px; /* Увеличен отступ для места под псевдоэлемент */
+    padding-left: 30px; 
     font-weight: 500;
     font-size: 18px;
     line-height: 140%;
     text-transform: capitalize;
     color: #000;
-    display: flex; /* Устанавливаем flex, чтобы text и before были на одной линии */
-    align-items: center; /* Центрируем текст по вертикали */
+    display: flex; 
+    align-items: center; 
 
 
     &::before {
       content: '';
       width: 24px;
-      height: 2px; /* Немного увеличим высоту, чтобы она стала заметнее */
+      height: 2px; 
       border-radius: 100px;
       background-color: #F3B221;
       position: absolute;
       left: 0;
       top: 50%;
-      transform: translateY(-50%); /* Центрируем по вертикали относительно текста */
+      transform: translateY(-50%); 
     }
   }
 
@@ -94,27 +94,14 @@
   &__map {
     position: relative;
     flex: 2;
-    height: 560px;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-
-    .map__circle {
-      position: absolute; // Абсолютное позиционирование для наложения поверх карты
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #ddd;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: bold;
-      color: #333;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    }
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; 
+    overflow: hidden; 
   }
+}
+
+#map {
+  width: 100%;
+  height: 100%;
 }
