@@ -70,13 +70,9 @@
   .header__banner {
     grid-template-rows: 4fr 1fr 2fr;
     gap: 50px;
-    // background-image: url("../header-pics/header__banner-kids.png"),
-    //   url("../header-pics/header__banner-dotted-ellipse.svg"),
-    //   url("../header-pics/header__banner-ellipse.svg");
-    // background-repeat: no-repeat;
-    background: url("../header-pics/header__banner-kids.png") content-box right
-      no-repeat;
-    // background-size: 45%;
+    background: url("../header-pics/header__banner-kids.png") no-repeat right
+      top;
+    background-size: 44%;
 
     .header__banner-title {
       align-self: end;
