@@ -5,7 +5,8 @@
   .header__second-line,
   .header__banner {
     width: 68%;
-    max-width: 1300px;
+    // max-width: 1300px;
+    // min-width: 900px;
     margin: 0 auto;
     display: grid;
   }
@@ -52,13 +53,14 @@
   .header__second-line {
     // border: 1px solid black;
     padding: 20px 0;
-    grid-template-columns: 1fr 1.5fr;
+    // grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr minmax(600px, 1.5fr);
 
     .header__nav2 .header__nav2-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(100px, auto));
       justify-items: end;
-      gap: 30px;
+      gap: 10px;
 
       .header__nav2-list-item .header__nav2-list-item-link {
         text-transform: uppercase;
