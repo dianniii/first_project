@@ -5,35 +5,43 @@ h2 {
     @include h1-h2-font;
 }
 .section_7{
-    margin: 0 16%;
     height: 100vh;
+    margin: 0 16%;
 }
-.main{
     .section_7_items{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center
     }
-}
-._items{
     li{
         display: grid;
         grid-template-columns: auto 1fr;
     }
-}
 
 // Карточка первая
 .section_7_items_item_1{
+    display: grid;
+    grid-template-rows: 1fr auto 3fr 1fr;
     max-width: 420px;
     height: 780px;
-    border: 1px solid black;
-    
+    padding: 15px;
+    background-color: white;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    &:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+
     &__list{
         font-size: 18px;
     }
     &__sub-title{
         @include h3-font;
         text-align: center;
-        margin: 10px 0 20px;
+        margin-top: 10px;
         color: $main-font-color;
     }
     img{
@@ -48,13 +56,36 @@ h2 {
         margin: 10px 10px;
         gap: 10px;
         color: $main-font-color;
+    }
+    &__sub-title-cost{
+        @include h3-font;
+        color: $main-font-color;
+    }
+}
+// кнопка
+.section_7_items_item_1__cost-button{
+    justify-items: center;
+    gap: 20px;
+    
+    &__but{
+        width: 340px;
+        height: 65px;
     }
 }
 // Карточка вторая
 .section_7_items_item_2{
+    display: grid;
+    grid-template-rows: 1fr auto 3fr 1fr;
     max-width: 420px;
     height: 780px;
-    border: 1px solid black;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    &:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
 
     &__list{
         font-size: 18px;
@@ -62,7 +93,7 @@ h2 {
     &__sub-title{
         @include h3-font;
         text-align: center;
-        margin: 10px 0 20px;
+        margin-top: 10px;
         color: $main-font-color;
     }
     img{
@@ -77,6 +108,72 @@ h2 {
         margin: 10px 10px;
         gap: 10px;
         color: $main-font-color;
+    }
+    &__sub-title-cost{
+        @include h3-font;
+        color: $main-font-color;
+    }
+}
+// кнопка
+.section_7_items_item_2__cost-button{
+    justify-items: center;
+    gap: 20px;
+    
+    &__but{
+        width: 340px;
+        height: 65px;
+    }
+}
+// Карточка третья
+.section_7_items_item_3{
+    display: grid;
+    grid-template-rows: 1fr auto 3fr 1fr;
+    max-width: 420px;
+    height: 780px;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    &:hover{
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+    }
+
+    &__list{
+        font-size: 18px;
+    }
+    &__sub-title{
+        @include h3-font;
+        text-align: center;
+        margin-top: 10px;
+        color: $main-font-color;
+    }
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+    li{
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-style: normal;      
+        line-height: 25.2px;
+        margin: 10px 10px;
+        gap: 10px;
+        color: $main-font-color;
+    }
+    &__sub-title-cost{
+        @include h3-font;
+        color: $main-font-color;
+    }
+}
+// кнопка
+.section_7_items_item_3__cost-button{
+    justify-items: center;
+    gap: 20px;
+    
+    &__but{
+        width: 340px;
+        height: 65px;
     }
 }
 
