@@ -1,17 +1,15 @@
 .how-we-work {
-  padding: 20px;
   text-align: center;
   margin-bottom: 100px;
 
   &__container {
-    max-width: 68%; // Ограничение ширины для основной контентной части
-    margin: 0 auto; // Центрирование контейнера
-    padding: 0 20px;
+    max-width: 68%;
+    margin: 0 auto;
   }
 
   &__title {
     font-size: 42px;
-    margin-bottom:89px;
+    margin-bottom: 4.6vw;
     color: #333;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -22,124 +20,67 @@
     display: flex;
     justify-content: center;
     position: relative;
-    margin: 0 auto 50px;
+    margin: 0 auto;
+    margin-bottom: 50px;
     width: 100%;
-    background-image: url('../img/how-we-work-girl.png'); 
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: center; 
-    height: 630px;
+    padding-top: 56.25%; 
+    background-image: url('../img/how-we-work-girl.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &__info {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
   &__text {
-    position: relative;
+    position: absolute;
     background-color: #fff;
-    padding: 10px; 
-    font-size: 18px; 
-    margin: 0 auto; 
+    padding: 10px;
+    font-size: 18px;
     color: #263238;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
-    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
-
+    max-width: 90%;
+    width: auto;
 
     &--top {
-      position: relative;
-      top: -35px; 
-      left: 50%; 
+      top: -3%;
+      left: 50%;
       transform: translateX(-50%);
-      width: 650px;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: -24px;
-      //   left: -26px;
-      //   width: 123px;
-      //   height: 123px;
-      //   background-image: url('../img/how-we-work-dots-left.svg');
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      // }
+      width: 31vw;
     }
 
     &--top-right {
-      top: 100px;
-      right: -460px;
-      width: 450px;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: -24px;
-      //   left: 348px;
-      //   width: 123px;
-      //   height: 123px;
-      //   background-image: url('../img/how-we-work-dots-right.svg');
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      // }
+      top: 26%;
+      right: -2%;
+      width: 21vw;
     }
 
     &--top-left {
-      top: 60px;
-      left: -480px;
-      width: 400px;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: -24px;
-      //   left: -20px;
-      //   width: 123px;
-      //   height: 123px;
-      //   background-image: url('../img/how-we-work-dots-left.svg');
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      // }
+      top: 26%;
+      left: -6%;
+      width: 16vw;
     }
 
     &--bottom-left {
-      top: 160px;
-      left: -365px;
-      width: 549px;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: -14px;
-      //   left: -20px;
-      //   width: 130px;
-      //   height: 130px;
-      //   background-image: url('../img/how-we-work-dots-left.svg');
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      // }
+      bottom: 27%;
+      left: -6%;
+      width: 29vw;
     }
 
     &--bottom-right {
-      top: 66px;
-      right: -350px;
-      width: 650px;
-
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   top: -17px;
-      //   left: 542px;
-      //   width: 130px;
-      //   height: 130px;
-      //   background-image: url('../img/how-we-work-dots-right.svg');
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      // }
+      bottom: 27%;
+      right: -2%;
+      width: 31vw;
     }
   }
 
@@ -162,113 +103,3 @@
     }
   }
 }
-
-//гриды
-
-// .how-we-work {
-//   padding: 20px;
-//   text-align: center;
-//   margin-bottom: 100px;
-
-//   &__title {
-//     font-size: 42px;
-//     margin-bottom: 89px;
-//     color: #333;
-//     font-family: 'Montserrat', sans-serif;
-//     font-weight: 600;
-//     line-height: 140%;
-//   }
-
-//   &__content {
-//     display: grid;
-//     grid-template-columns: repeat(12, 1fr); // 12-колоночная сетка
-//     grid-template-rows: auto;
-//     position: relative;
-//     margin: 0 auto 50px;
-//     max-width: 1300px;
-//     width: 100%;
-//     background-image: url('../img/how-we-work-girl.png');
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     height: 630px;
-//   }
-
-//   &__info {
-//     grid-column: 1 / -1; // Располагаем элементы внутри всей сетки
-//     display: contents; // Убираем блок-контейнер, чтобы его содержимое было частью сетки
-//   }
-
-//   &__text {
-//     background-color: #fff;
-//     padding: 10px;
-//     font-size: 18px;
-//     color: #263238;
-//     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-//     font-family: 'Montserrat', sans-serif;
-//     font-weight: 500;
-//     line-height: 140%;
-//     text-align: center;
-//     z-index: 1; // Чтобы текст был поверх фона
-
-//     &--top {
-//       grid-column: 2 / 12;
-//       grid-row: 1;
-//       align-self: start;
-//       justify-self: center;
-//       width: 650px;
-//     }
-
-//     &--top-right {
-//       grid-column: 8 / 12;
-//       grid-row: 2;
-//       align-self: start;
-//       justify-self: start;
-//       width: 450px;
-//     }
-
-//     &--top-left {
-//       grid-column: 1 / 5;
-//       grid-row: 3;
-//       align-self: start;
-//       justify-self: start;
-//       width: 400px;
-//     }
-
-//     &--bottom-left {
-//       grid-column: 2 / 6;
-//       grid-row: 4;
-//       align-self: end;
-//       justify-self: start;
-//       width: 549px;
-//     }
-
-//     &--bottom-right {
-//       grid-column: 7 / 12;
-//       grid-row: 5;
-//       align-self: end;
-//       justify-self: end;
-//       width: 650px;
-//     }
-//   }
-
-//   &__button {
-//     background-color: #2196F3;
-//     color: #ffffff;
-//     border: none;
-//     font-weight: 500;
-//     font-size: 18px;
-//     line-height: 140%;
-//     border-radius: 2px;
-//     padding: 19px 9px;
-//     width: 310px;
-//     height: 60px;
-//     text-align: center;
-//     cursor: pointer;
-//     margin: 20px auto;
-
-//     &:hover {
-//       background-color: #0056b3;
-//     }
-//   }
-// }
