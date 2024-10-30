@@ -147,7 +147,7 @@ ul li {
   margin-bottom: 100px;
 }
 .how-we-work__container {
-  max-width: 1300px;
+  max-width: 68%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -233,99 +233,12 @@ ul li {
   background-color: #0056b3;
 }
 
-h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-size: 42px;
-}
-
-.section_7 {
-  margin: 0 16%;
-  height: 100vh;
-}
-
-.main .section_7_items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-._items li {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-.section_7_items_item_1 {
-  max-width: 420px;
-  height: 780px;
-  border: 1px solid black;
-}
-.section_7_items_item_1__list {
-  font-size: 18px;
-}
-.section_7_items_item_1__sub-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-size: 24px;
-  text-align: center;
-  margin: 10px 0 20px;
-  color: #263238;
-}
-.section_7_items_item_1 img {
-  display: block;
-  margin: 0 auto;
-}
-.section_7_items_item_1 li {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 25.2px;
-  margin: 10px 10px;
-  gap: 10px;
-  color: #263238;
-}
-
-.section_7_items_item_2 {
-  max-width: 420px;
-  height: 780px;
-  border: 1px solid black;
-}
-.section_7_items_item_2__list {
-  font-size: 18px;
-}
-.section_7_items_item_2__sub-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-size: 24px;
-  text-align: center;
-  margin: 10px 0 20px;
-  color: #263238;
-}
-.section_7_items_item_2 img {
-  display: block;
-  margin: 0 auto;
-}
-.section_7_items_item_2 li {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 25.2px;
-  margin: 10px 10px;
-  gap: 10px;
-  color: #263238;
-}
-
 .schools {
   padding: 20px 0;
   margin-bottom: 100px;
 }
 .schools__container {
-  max-width: 1300px;
+  max-width: 68%;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
