@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/styles/dist/normalize.css" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="stylesheet" href="./assets/styles/dist/_consultation-pricing.css">
+    <link rel="stylesheet" href="./assets/styles/dist/_about-us.css">
     <link rel="stylesheet" href="./assets/styles/experts.css" />
     <title>Document</title>
   </head>
@@ -137,6 +138,18 @@
     </header>
     <main class="main">
 
+      <section class="about-us">
+        <div class="about-us__container">
+          <div class="about-us__info">
+            <h2 class="about-us__title">Давайте знакомиться!</h2>
+            <p class="about-us__text">Посмотрите наше небольшое видео, где мы расскажем, почему вам это нужно!</p>
+          </div>
+          <div class="about-us__content">
+            <iframe class="about-us__video" src="./assets/images/about-us/video.png" frameborder="0"></iframe>
+          </div>
+        </div>
+      </section>
+
         <div class="container">
           <h2 class="section-title">Эксперты проекта</h2>
             <div class="experts">
@@ -146,7 +159,7 @@
                   <p class="expert-card__role">Автор проекта Просто Учиться, соорганизатор
                   фестиваля Другие школы
                   </p>
-                  <blockquote class="expert-card__quote">В наше время нет одного правильного способа выбирать образование для детей, как и нет школы, которая подходила бы всем детям. Каждая семья вырабатывает свой способ - это всегда не просто, знаю по себе!
+                  <blockquote class="expert-card__quote"><img src="./assets/images/section4_pic/quotes-left.svg" alt="кавычки" class="expert-card_quote-leftQuotes">В наше время нет одного правильного способа выбирать образование для детей, как и нет школы, которая подходила бы всем детям. Каждая семья вырабатывает свой способ - это всегда не просто, знаю по себе!
                   </blockquote>
               </div> 
               <div class="expert-card">
@@ -188,71 +201,71 @@
         </section>
       
         <section class="consultation-pricing">
-          <h2 class="consultation-pricing-title">Стоимость консультаций</h2>
-        <div class="main section_7_items">
-          <div class="main section_7_items_item_1">
-            <img src="./assets/images/section7_pic/pic_1.png" alt="устная консультация">
-              <h3 class="main section_7_items_item_1__sub-title">Устная консультация по Петербургу</h3>
-            <div class="main section_7_items_item_1__list">
+          <h2 class="consultation-pricing__title">Стоимость консультаций</h2>
+        <div class="consultation-pricing__items">
+          <div class="consultation-pricing__item consultation-pricing__item--1">
+            <img src="./assets/images/consultation-pricing/pic_1.png" alt="устная консультация">
+              <h3 class="consultation-pricing__item-subtitle">Устная консультация по Петербургу</h3>
+            <div class="consultation-pricing__item-list">
               <ul>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Консультация в течение часа</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Консультация в течение часа</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Прояснение вашего запроса к школе</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Прояснение вашего запроса к школе</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Устные рекомендации о подборе, о неформальных школах</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Устные рекомендации о подборе, о неформальных школах</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Описание и ссылки на 4–5 школ, удовлетворяющих вашему запросу</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Описание и ссылки на 4–5 школ, удовлетворяющих вашему запросу</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Ответы на вопросы</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Ответы на вопросы</li>
               </ul>
             </div>
-            <div class="main section_7_items_item_1__cost-button">
-              <h3 class="main section_7_items_item_1__sub-title-cost">4 500 ₽</h3>
-              <button class="main section_7_items_item_1__cost-button__but">Заказать</button>
+            <div class="consultation-pricing__item-cost-button">
+              <h3 class="consultation-pricing__item-cost">4 500 ₽</h3>
+              <button class="consultation-pricing__item-order-button">Заказать</button>
             </div>
           </div>
-          <div class="main section_7_items_item_2">
-            <img src="./assets/images/section7_pic/pic_2.png" alt="список школ">
-              <h3 class="main section_7_items_item_2__sub-title">Подробный список школ Петербурга</h3>
-            <div class="main section_7_items_item_2__list">
+          <div class="consultation-pricing__item consultation-pricing__item--2">
+            <img src="./assets/images/consultation-pricing/pic_2.png" alt="список школ">
+              <h3 class="consultation-pricing__item-subtitle">Подробный список школ Петербурга</h3>
+            <div class="consultation-pricing__item-list">
               <ul>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Устная консультация для прояснения запроса</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Устная консультация для прояснения запроса</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Создание подробного списка школ с условиями поступления и наличием мест в течение 5 рабочих дней</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Создание подробного списка школ с условиями поступления и наличием мест в течение 5 рабочих дней</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Итоговая консультация для ответов на ваши вопросы</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Итоговая консультация для ответов на ваши вопросы</li>
               </ul>
             </div>
-            <div class="main section_7_items_item_2__cost-button">
-              <h3 class="main section_7_items_item_2__sub-title-cost">9 500 ₽</h3>
-              <button class="main section_7_items_item_2__cost-button__but">Заказать</button>
+            <div class="consultation-pricing__item-cost-button">
+              <h3 class="consultation-pricing__item-cost">9 500 ₽</h3>
+              <button class="consultation-pricing__item-order-button">Заказать</button>
             </div>
           </div>
-          <div class="main section_7_items_item_3">
-            <img src="./assets/images/section7_pic/pic_3.png" alt="общая консультация">
-            <h3 class="main section_7_items_item_3__sub-title">Общая консультация вне зависимости от города</h3>
-            <div class="main section_7_items_item_3__list">
+          <div class="consultation-pricing__item consultation-pricing__item--3">
+            <img src="./assets/images/consultation-pricing/pic_3.png" alt="общая консультация">
+            <h3 class="consultation-pricing__item-subtitle">Общая консультация вне зависимости от города</h3>
+            <div class="consultation-pricing__item-list">
               <ul">
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Для родителей из любого города</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Для родителей из любого города</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Консультация в течение часа</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Консультация в течение часа</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Прояснение вашего запроса к школе</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Прояснение вашего запроса к школе</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Устные рекомендации о подборе, о неформальных школах</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Устные рекомендации о подборе, о неформальных школах</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Помощь в составлении вашей стратегии выбора школы</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Помощь в составлении вашей стратегии выбора школы</li>
                 <li>
-                  <img src="./assets/images/section7_pic/okei.png" alt="ok">Ответы на вопросы</li>
+                  <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Ответы на вопросы</li>
                 </ul>
               </ul>
             </div>
-            <div class="main section_7_items_item_3__cost-button">
-              <h3 class="main section_7_items_item_3__sub-title-cost">4 500 ₽</h3>
-              <button class="main section_7_items_item_3__cost-button__but">Заказать</button>
+            <div class="consultation-pricing__item-cost-button">
+              <h3 class="consultation-pricing__item-cost">4 500 ₽</h3>
+              <button class="consultation-pricing__item-order-button">Заказать</button>
             </div>
           </div>
         </div>
