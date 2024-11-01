@@ -332,7 +332,6 @@ ul li {
   z-index: 0;
 }
 .schools__container {
-<<<<<<< HEAD
   max-width: 68%;
   margin: 0 auto;
   display: grid;
@@ -343,18 +342,6 @@ ul li {
 .schools__info {
   display: flex;
   flex-direction: column;
-=======
-  padding: 20px 0;
-  margin-left: 16%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 34px;
-}
-.schools__info {
-  flex: 1;
-  display: grid;
-  grid-template-rows: repeat(4, auto);
->>>>>>> bd3360008ba855d8131ef2f8e21adbd2a594e626
 }
 .schools__title {
   font-size: 42px;
@@ -363,6 +350,7 @@ ul li {
   font-weight: 600;
   line-height: 140%;
   margin-bottom: 40px;
+  width: 450px;
 }
 .schools__description {
   font-weight: 600;
@@ -371,6 +359,7 @@ ul li {
   line-height: 140%;
   color: #000;
   margin-bottom: 30px;
+  max-width: 450px;
 }
 .schools__legend {
   list-style: none;
@@ -396,14 +385,14 @@ ul li {
   width: 24px;
   height: 2px;
   border-radius: 100px;
-  background-color: #f3b221;
+  background-color: #F3B221;
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
 .schools__button {
-  background-color: #2196f3;
+  background-color: #2196F3;
   color: #ffffff;
   border: none;
   font-weight: 500;
@@ -419,16 +408,11 @@ ul li {
 .schools__button:hover {
   background-color: #0056b3;
 }
-<<<<<<< HEAD
-=======
-.schools__map {
-  position: relative;
-  flex: 2;
+
+#map {
   width: 100%;
-  padding-top: 56.25%;
-  overflow: hidden;
+  height: 100%;
 }
->>>>>>> bd3360008ba855d8131ef2f8e21adbd2a594e626
 
 .social-media {
   padding: 40px 10px;
