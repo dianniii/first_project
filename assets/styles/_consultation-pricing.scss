@@ -11,7 +11,7 @@
     }
     &__items{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
         gap: 20px;
         justify-items: center;
     }
@@ -45,9 +45,7 @@
             margin: 0 auto;
         }
         li{
-            font-family: "Montserrat", sans-serif;
-            font-weight: 500;
-            font-style: normal;      
+            @include font-500;    
             line-height: 25.2px;
             margin: 10px 10px;
             gap: 10px;
@@ -108,9 +106,7 @@
         margin: 0 auto;
     }
     li{
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-style: normal;      
+        @include font-500;     
         line-height: 25.2px;
         margin: 10px 10px;
         gap: 10px;
@@ -167,9 +163,7 @@
         margin: 0 auto;
     }
     li{
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-style: normal;      
+        @include font-500;       
         line-height: 25.2px;
         margin: 10px 10px;
         gap: 10px;
