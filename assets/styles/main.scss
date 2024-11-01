@@ -1,6 +1,7 @@
 // import vars and mixins
 @import "vars.scss";
-@import "_mixins.scss";
+// @import "_mixins.scss";
+@import "_new_mixins.scss";
 
 * {
   margin: 0;
@@ -16,6 +17,26 @@ a {
 ul {
   li {
     list-style: none;
+  }
+}
+
+.button {
+  @include button;
+}
+
+.pagination__container {
+  @include pagination-container;
+
+  .pagination__page-numbers {
+    @include pagination;
+
+    .pagination__total-pages {
+      @include total-pages;
+    }
+  }
+
+  .pagination__control {
+    @include pagination-control;
   }
 }
 
