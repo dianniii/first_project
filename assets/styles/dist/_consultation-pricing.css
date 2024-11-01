@@ -1,4 +1,8 @@
-.consultation-pricing-title {
+.consultation-pricing {
+  margin: 0 16%;
+  margin-bottom: 9.8%;
+}
+.consultation-pricing__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -7,17 +11,81 @@
   color: #263238;
   margin: 10px 0;
 }
-
-.consultation-pricing {
-  margin: 0 16%;
-  margin-bottom: 9.8%;
-}
-
-.section_7_items {
+.consultation-pricing__items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-items: center;
+}
+
+.consultation-pricing__item--1 {
+  display: grid;
+  grid-template-rows: 1fr auto 3fr 1fr;
+  max-width: 420px;
+  height: 780px;
+  padding: 15px;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.consultation-pricing__item--1:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.consultation-pricing__item--1 .consultation-pricing__item-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  color: #263238;
+}
+.consultation-pricing__item--1 .consultation-pricing__item-list {
+  font-size: 18px;
+}
+.consultation-pricing__item--1 img {
+  display: block;
+  margin: 0 auto;
+}
+.consultation-pricing__item--1 li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 25.2px;
+  margin: 10px 10px;
+  gap: 10px;
+  color: #263238;
+}
+
+.consultation-pricing__item-cost-button {
+  justify-items: center;
+  gap: 20px;
+}
+.consultation-pricing__item-cost-button .consultation-pricing__item-cost {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 24px;
+  color: #263238;
+}
+.consultation-pricing__item-cost-button .consultation-pricing__item-order-button {
+  width: 340px;
+  height: 65px;
+  background-color: white;
+  border: 3px solid #2196f3;
+  color: #2196f3;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  cursor: pointer;
+}
+.consultation-pricing__item-cost-button .consultation-pricing__item-order-button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 li {
@@ -25,7 +93,7 @@ li {
   grid-template-columns: auto 1fr;
 }
 
-.section_7_items_item_1 {
+.consultation-pricing__item--2 {
   display: grid;
   grid-template-rows: 1fr auto 3fr 1fr;
   max-width: 420px;
@@ -35,14 +103,11 @@ li {
   transition: box-shadow 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.section_7_items_item_1:hover {
+.consultation-pricing__item--2:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
-.section_7_items_item_1__list {
-  font-size: 18px;
-}
-.section_7_items_item_1__sub-title {
+.consultation-pricing__item--2 .consultation-pricing__item-subtitle {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -52,11 +117,14 @@ li {
   margin-top: 10px;
   color: #263238;
 }
-.section_7_items_item_1 img {
+.consultation-pricing__item--2 .consultation-pricing__item-list {
+  font-size: 18px;
+}
+.consultation-pricing__item--2 img {
   display: block;
   margin: 0 auto;
 }
-.section_7_items_item_1 li {
+.consultation-pricing__item--2 li {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -65,7 +133,12 @@ li {
   gap: 10px;
   color: #263238;
 }
-.section_7_items_item_1__sub-title-cost {
+
+.consultation-pricing__item-cost-button {
+  justify-items: center;
+  gap: 20px;
+}
+.consultation-pricing__item-cost-button .consultation-pricing__item-cost {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -73,12 +146,7 @@ li {
   font-size: 24px;
   color: #263238;
 }
-
-.section_7_items_item_1__cost-button {
-  justify-items: center;
-  gap: 20px;
-}
-.section_7_items_item_1__cost-button__but {
+.consultation-pricing__item-cost-button .consultation-pricing__item-order-button {
   width: 340px;
   height: 65px;
   background-color: white;
@@ -91,27 +159,25 @@ li {
   font-weight: 500;
   cursor: pointer;
 }
-.section_7_items_item_1__cost-button__but:hover {
+.consultation-pricing__item-cost-button .consultation-pricing__item-order-button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-.section_7_items_item_2 {
+.consultation-pricing__item--3 {
   display: grid;
   grid-template-rows: 1fr auto 3fr 1fr;
   max-width: 420px;
   height: 780px;
   padding: 15px;
+  background-color: white;
   transition: box-shadow 0.3s ease;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.section_7_items_item_2:hover {
+.consultation-pricing__item--3:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
-.section_7_items_item_2__list {
-  font-size: 18px;
-}
-.section_7_items_item_2__sub-title {
+.consultation-pricing__item--3 .consultation-pricing__item-subtitle {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -121,11 +187,14 @@ li {
   margin-top: 10px;
   color: #263238;
 }
-.section_7_items_item_2 img {
+.consultation-pricing__item--3 .consultation-pricing__item-list {
+  font-size: 18px;
+}
+.consultation-pricing__item--3 img {
   display: block;
   margin: 0 auto;
 }
-.section_7_items_item_2 li {
+.consultation-pricing__item--3 li {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -134,7 +203,12 @@ li {
   gap: 10px;
   color: #263238;
 }
-.section_7_items_item_2__sub-title-cost {
+
+.consultation-pricing__item-cost-button {
+  justify-items: center;
+  gap: 20px;
+}
+.consultation-pricing__item-cost-button .consultation-pricing__item-cost {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -142,12 +216,7 @@ li {
   font-size: 24px;
   color: #263238;
 }
-
-.section_7_items_item_2__cost-button {
-  justify-items: center;
-  gap: 20px;
-}
-.section_7_items_item_2__cost-button__but {
+.consultation-pricing__item-cost-button .consultation-pricing__item-order-button {
   width: 340px;
   height: 65px;
   background-color: white;
@@ -160,75 +229,6 @@ li {
   font-weight: 500;
   cursor: pointer;
 }
-.section_7_items_item_2__cost-button__but:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.section_7_items_item_3 {
-  display: grid;
-  grid-template-rows: 1fr auto 3fr 1fr;
-  max-width: 420px;
-  height: 780px;
-  padding: 15px;
-  transition: box-shadow 0.3s ease;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-.section_7_items_item_3:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-}
-.section_7_items_item_3__list {
-  font-size: 18px;
-}
-.section_7_items_item_3__sub-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-size: 24px;
-  text-align: center;
-  margin-top: 10px;
-  color: #263238;
-}
-.section_7_items_item_3 img {
-  display: block;
-  margin: 0 auto;
-}
-.section_7_items_item_3 li {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 25.2px;
-  margin: 10px 10px;
-  gap: 10px;
-  color: #263238;
-}
-.section_7_items_item_3__sub-title-cost {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-size: 24px;
-  color: #263238;
-}
-
-.section_7_items_item_3__cost-button {
-  justify-items: center;
-  gap: 20px;
-}
-.section_7_items_item_3__cost-button__but {
-  width: 340px;
-  height: 65px;
-  background-color: white;
-  border: 3px solid #2196f3;
-  color: #2196f3;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-weight: 500;
-  cursor: pointer;
-}
-.section_7_items_item_3__cost-button__but:hover {
+.consultation-pricing__item-cost-button .consultation-pricing__item-order-button:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }

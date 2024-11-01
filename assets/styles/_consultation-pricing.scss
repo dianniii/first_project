@@ -1,28 +1,86 @@
 @import "mixins.scss";
 @import "vars.scss";
 
-.consultation-pricing-title{
-    @include h1-h2-font;
-    color: $main-font-color;
-    margin: 10px 0;
-}
 .consultation-pricing{
     margin: 0 16%;
     margin-bottom: 9.8%;
-}
-    .section_7_items{
+    &__title{
+        @include h1-h2-font;
+        color: $main-font-color;
+        margin: 10px 0;
+    }
+    &__items{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        justify-items: center
+        justify-items: center;
+    }
+}
+// карточка первая
+    .consultation-pricing__item--1{
+        display: grid;
+        grid-template-rows: 1fr auto 3fr 1fr;
+        max-width: 420px;
+        height: 780px;
+        padding: 15px;
+        background-color: white;
+        transition: box-shadow 0.3s ease;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+        &:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+        .consultation-pricing__item-subtitle{
+            @include h3-font;
+            text-align: center;
+            margin-top: 10px;
+            color: $main-font-color;
+        }
+        .consultation-pricing__item-list{
+            font-size: 18px;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        li{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-style: normal;      
+            line-height: 25.2px;
+            margin: 10px 10px;
+            gap: 10px;
+            color: $main-font-color;
+            }
+    }
+    .consultation-pricing__item-cost-button{
+        justify-items: center;
+        gap: 20px;
+        .consultation-pricing__item-cost{
+            @include h3-font;
+            color: $main-font-color;
+        }
+        .consultation-pricing__item-order-button{
+            width: 340px;
+            height: 65px;
+            background-color: white;
+            border: 3px solid $accent-blue;
+            color: $accent-blue;
+            @include font-500;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            }
+        }
     }
     li{
         display: grid;
         grid-template-columns: auto 1fr;
     }
-
-// Карточка первая
-.section_7_items_item_1{
+// карточка вторая
+.consultation-pricing__item--2{
     display: grid;
     grid-template-rows: 1fr auto 3fr 1fr;
     max-width: 420px;
@@ -36,15 +94,14 @@
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         cursor: pointer;
     }
-
-    &__list{
-        font-size: 18px;
-    }
-    &__sub-title{
+    .consultation-pricing__item-subtitle{
         @include h3-font;
         text-align: center;
         margin-top: 10px;
         color: $main-font-color;
+    }
+    .consultation-pricing__item-list{
+        font-size: 18px;
     }
     img{
         display: block;
@@ -58,18 +115,16 @@
         margin: 10px 10px;
         gap: 10px;
         color: $main-font-color;
-    }
-    &__sub-title-cost{
+        }
+}
+.consultation-pricing__item-cost-button{
+    justify-items: center;
+    gap: 20px;
+    .consultation-pricing__item-cost{
         @include h3-font;
         color: $main-font-color;
     }
-}
-// кнопка
-.section_7_items_item_1__cost-button{
-    justify-items: center;
-    gap: 20px;
-    
-    &__but{
+    .consultation-pricing__item-order-button{
         width: 340px;
         height: 65px;
         background-color: white;
@@ -77,34 +132,35 @@
         color: $accent-blue;
         @include font-500;
         cursor: pointer;
-    }
-    &__but:hover{
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+        &:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
     }
 }
-// Карточка вторая
-.section_7_items_item_2{
+// карточка третья
+.consultation-pricing__item--3{
     display: grid;
     grid-template-rows: 1fr auto 3fr 1fr;
     max-width: 420px;
     height: 780px;
     padding: 15px;
+    background-color: white;
     transition: box-shadow 0.3s ease;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    
+
     &:hover{
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         cursor: pointer;
     }
-
-    &__list{
-        font-size: 18px;
-    }
-    &__sub-title{
+    .consultation-pricing__item-subtitle{
         @include h3-font;
         text-align: center;
         margin-top: 10px;
         color: $main-font-color;
+    }
+    .consultation-pricing__item-list{
+        font-size: 18px;
     }
     img{
         display: block;
@@ -118,18 +174,16 @@
         margin: 10px 10px;
         gap: 10px;
         color: $main-font-color;
-    }
-    &__sub-title-cost{
+        }
+}
+.consultation-pricing__item-cost-button{
+    justify-items: center;
+    gap: 20px;
+    .consultation-pricing__item-cost{
         @include h3-font;
         color: $main-font-color;
     }
-}
-// кнопка
-.section_7_items_item_2__cost-button{
-    justify-items: center;
-    gap: 20px;
-    
-    &__but{
+    .consultation-pricing__item-order-button{
         width: 340px;
         height: 65px;
         background-color: white;
@@ -137,90 +191,9 @@
         color: $accent-blue;
         @include font-500;
         cursor: pointer;
-    }
-    &__but:hover{
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+
+        &:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
     }
 }
-// Карточка третья
-.section_7_items_item_3{
-    display: grid;
-    grid-template-rows: 1fr auto 3fr 1fr;
-    max-width: 420px;
-    height: 780px;
-    padding: 15px;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    
-    &:hover{
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        cursor: pointer;
-    }
-
-    &__list{
-        font-size: 18px;
-    }
-    &__sub-title{
-        @include h3-font;
-        text-align: center;
-        margin-top: 10px;
-        color: $main-font-color;
-    }
-    img{
-        display: block;
-        margin: 0 auto;
-    }
-    li{
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-style: normal;      
-        line-height: 25.2px;
-        margin: 10px 10px;
-        gap: 10px;
-        color: $main-font-color;
-    }
-    &__sub-title-cost{
-        @include h3-font;
-        color: $main-font-color;
-    }
-}
-// кнопка
-.section_7_items_item_3__cost-button{
-    justify-items: center;
-    gap: 20px;
-    
-    &__but{
-        width: 340px;
-        height: 65px;
-        background-color: white;
-        border: 3px solid $accent-blue;
-        color: $accent-blue;
-        @include font-500;
-        cursor: pointer;
-    }
-    &__but:hover{
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    }
-}
-
-    // .section_7_items_item_1,
-    // .section_7_items_item_2,
-    // .section_7_items_item_3{
-    //     max-width: 420px;
-    //     height: 780px;
-    //     border: 1px solid black;
-    // }
-    // .section_7_items_item_1__list,
-    // .section_7_items_item_2__list,
-    // .section_7_items_item_3__list {
-    //     font-size: 18px;
-    // }
-    // .section_7_items_item_1,
-    // .section_7_items_item_2,
-    // .section_7_items_item_3{
-    //     img{
-    //         display: block;
-    //         margin: 0 auto;
-    //     }
-    // }
-
