@@ -27,3 +27,8 @@
   @include font-600;
   letter-spacing: 2.75px;
 }
+
+@mixin text-18px-font {
+  @include font-500;
+  font-size: 18px;
+}
