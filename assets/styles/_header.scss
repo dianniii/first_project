@@ -6,7 +6,7 @@
   &__banner {
     width: 71%;
     margin: 0 16.2% 0 13.8%;
-    min-width: 900px;
+    // min-width: 900px;
     display: grid;
   }
 
@@ -114,6 +114,7 @@
 
   &__banner-img-container {
     grid-area: pic;
+    align-self: center;
     width: 107.4%;
     margin-left: -8%;
   }
