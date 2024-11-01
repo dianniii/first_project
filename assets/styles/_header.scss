@@ -4,12 +4,9 @@
   &__first-line,
   &__second-line,
   &__banner {
-    width: 70.8%;
-    margin: 0 16% 0 13.8%;
-    // width: 68%;
-    // max-width: 1300px;
+    width: 71%;
+    margin: 0 16.2% 0 13.8%;
     min-width: 900px;
-    margin: 0 auto;
     display: grid;
   }
 
@@ -72,7 +69,6 @@
   &__banner {
     margin-bottom: 5.2%;
     padding-left: 3%;
-    display: grid;
     // grid-template-rows: 0.85fr 0.4fr 0.6fr;
     grid-template-rows: 1fr 0.5fr 0.6fr;
     grid-template-columns: 1.7fr 1.3fr;
