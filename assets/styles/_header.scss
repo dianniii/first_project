@@ -2,8 +2,11 @@
   width: 100%;
 
   &__first-line,
-  &__second-line {
-    width: 68%;
+  &__second-line,
+  &__banner {
+    width: 70.8%;
+    margin: 0 16% 0 13.8%;
+    // width: 68%;
     // max-width: 1300px;
     min-width: 900px;
     margin: 0 auto;
@@ -11,7 +14,7 @@
   }
 
   &__first-line {
-    padding: 20px 0 5px;
+    padding: 20px 0 5px 3%;
     grid-template-columns: 10fr 1fr;
     align-items: center;
     gap: 55px;
@@ -50,7 +53,7 @@
 
   &__second-line {
     margin-bottom: 40px;
-    padding: 20px 0;
+    padding: 20px 0 0 3%;
     grid-template-columns: 1fr minmax(600px, 1.5fr);
   }
 
@@ -67,9 +70,8 @@
   }
 
   &__banner {
-    width: 73%;
-    margin: 0 auto 5.2%;
-    padding-left: 52px;
+    margin-bottom: 5.2%;
+    padding-left: 3%;
     display: grid;
     // grid-template-rows: 0.85fr 0.4fr 0.6fr;
     grid-template-rows: 1fr 0.5fr 0.6fr;
@@ -117,7 +119,7 @@
   &__banner-img-container {
     grid-area: pic;
     width: 107.4%;
-    margin-left: -10%;
+    margin-left: -8%;
   }
 
   &__banner-img {
