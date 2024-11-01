@@ -20,7 +20,7 @@ ul {
 }
 
 // import all style files
-@import "_header.scss";
+@import "./header";
 // @import "_old_header.scss";
 @import "_section_2.scss";
 @import "_section_3.scss";
@@ -28,8 +28,9 @@ ul {
 @import "./how-we-work";
 @import "_section_6.scss";
 // @import "_section_7.scss";
-@import "_reviews.scss";
+@import "./reviews";
 @import "_section_9.scss";
-@import "./schools-map";
+// @import "./schools-map";
+@import "_my_map.scss";
 @import "_section_11.scss";
 @import "./social-media";
