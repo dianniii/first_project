@@ -332,6 +332,18 @@ ul li {
   z-index: 0;
 }
 .schools__container {
+<<<<<<< HEAD
+  max-width: 68%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  align-items: start;
+}
+.schools__info {
+  display: flex;
+  flex-direction: column;
+=======
   padding: 20px 0;
   margin-left: 16%;
   display: grid;
@@ -342,6 +354,7 @@ ul li {
   flex: 1;
   display: grid;
   grid-template-rows: repeat(4, auto);
+>>>>>>> bd3360008ba855d8131ef2f8e21adbd2a594e626
 }
 .schools__title {
   font-size: 42px;
@@ -406,6 +419,8 @@ ul li {
 .schools__button:hover {
   background-color: #0056b3;
 }
+<<<<<<< HEAD
+=======
 .schools__map {
   position: relative;
   flex: 2;
@@ -413,6 +428,7 @@ ul li {
   padding-top: 56.25%;
   overflow: hidden;
 }
+>>>>>>> bd3360008ba855d8131ef2f8e21adbd2a594e626
 
 .social-media {
   padding: 40px 10px;
@@ -432,7 +448,8 @@ ul li {
   line-height: 140%;
 }
 .social-media__content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 20px;
   margin-bottom: 30px;
@@ -462,40 +479,50 @@ ul li {
 .social-media__slider {
   display: flex;
   gap: 20px;
-  overflow: hidden;
+  overflow-x: auto;
+  width: 100vw;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
-  justify-content: center;
-  margin-bottom: 50px;
+  padding: 0 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.social-media__slider::before {
+  content: "";
+  flex: 0 0 10%;
+}
+.social-media__slider::-webkit-scrollbar {
+  display: none;
 }
 .social-media__slide {
   flex: 0 0 auto;
   min-width: 310px;
   max-width: 310px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
   text-align: center;
   background-color: #fff;
   box-shadow: 0 9px 20px rgba(0, 0, 0, 0.05);
   border-radius: 2px;
-  margin-bottom: 20px;
+  padding: 20px;
+  scroll-snap-align: start;
+  margin-bottom: 50px;
 }
 .social-media__slide-image {
   width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 .social-media__slide-title {
   font-size: 24px;
   color: #535353;
   font-weight: 300;
-  width: 260px;
-  margin-bottom: 40px;
+  margin: 0;
 }
 .social-media__pagination-container {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
   justify-content: center;
   gap: 14px;
@@ -506,8 +533,10 @@ ul li {
   font-size: 18px;
   line-height: 140%;
   color: #666;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   gap: 14px;
+  align-items: center;
 }
 .social-media__page-number {
   font-weight: 500;
@@ -521,9 +550,8 @@ ul li {
   height: 43px;
   border: 2px solid #fff;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   background-color: #fff;
   box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
   cursor: pointer;
@@ -536,7 +564,7 @@ ul li {
 }
 .social-media__control img {
   position: absolute;
-  width: 43px;
+  width: 48px;
   height: 24px;
   color: #FFA726;
 }
