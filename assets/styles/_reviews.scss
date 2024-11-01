@@ -1,0 +1,82 @@
+.reviews {
+  width: 68%;
+  margin: 0 auto 5.2%;
+
+  &__title {
+    margin-bottom: 50px;
+    @include h1-h2-font;
+    color: $main-font-color;
+  }
+
+  &__reviews-container {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__review {
+    padding: 0 20px 20px;
+    border-radius: 2px;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+  }
+
+  &__review-title {
+    @include h3-font;
+    color: $main-font-color;
+  }
+
+  &__review-text,
+  &__review-read-more {
+    @include font-500;
+    font-size: 18px;
+  }
+
+  &__review-text {
+    color: #000;
+  }
+
+  &__review-read-more {
+    color: $accent-blue;
+  }
+
+  &__review-author {
+    @include font-500;
+    font-size: 16px;
+    color: #868889;
+  }
+
+  &__pagination-container {
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pagination {
+    margin: 0 10px;
+    @include font-500;
+    font-size: 18px;
+    color: $main-font-color;
+  }
+  &__total-pages {
+    color: #868889;
+  }
+
+  &__control {
+    width: 5.5%;
+    min-width: 50px;
+    border: none;
+    background-color: #fff;
+
+    .arrow-left,
+    .arrow-right {
+      padding-top: 20px;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
