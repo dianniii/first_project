@@ -1,18 +1,23 @@
 .reviews {
-  width: 68%;
+  width: 73.6%;
   margin: 0 auto 5.2%;
 
   &__title {
-    margin-bottom: 50px;
+    padding: 0 57px 0;
     @include h1-h2-font;
     color: $main-font-color;
   }
 
   &__reviews-container {
-    margin-bottom: 50px;
+    padding: 50px 57px;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    background-image: url(../images/reviews/dots.svg),
+      url(../images/reviews/dots.svg);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: bottom left, top right;
   }
 
   &__review {
@@ -22,6 +27,7 @@
     display: grid;
     grid-template-rows: repeat(4, auto);
     gap: 20px;
+    background-color: #fff;
   }
 
   &__review-title {
