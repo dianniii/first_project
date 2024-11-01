@@ -1,6 +1,7 @@
 .reviews {
   width: 74%;
   margin: 0 auto 5.2%;
+  margin-bottom: 9.8%;
 
   &__title {
     padding: 0 57px 0;
@@ -13,9 +14,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    background-image: url(../images/reviews/dots.svg),
-      url(../images/reviews/dots.svg);
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-image: url(../images/reviews/dots.svg), url(../images/reviews/dots.svg);
+    background-repeat: no-repeat, no-repeat;
     background-position: bottom left, top right;
   }
 
@@ -55,33 +55,18 @@
   }
 
   &__pagination-container {
-    // text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include pagination-container; 
   }
 
   &__pagination {
-    margin: 0 10px;
-    @include font-500;
-    font-size: 18px;
-    color: $main-font-color;
+    @include pagination; 
   }
+
   &__total-pages {
-    color: #868889;
+    @include total-pages; 
   }
 
   &__control {
-    width: 5.5%;
-    min-width: 50px;
-    border: none;
-    background-color: #fff;
-
-    .arrow-left,
-    .arrow-right {
-      padding-top: 20px;
-      width: 100%;
-      object-fit: contain;
-    }
+    @include pagination-control; 
   }
 }

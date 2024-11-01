@@ -140,7 +140,7 @@ ul li {
 
 .how-we-work {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 9.8%;
 }
 .how-we-work__container {
   max-width: 68%;
@@ -149,7 +149,7 @@ ul li {
 .how-we-work__title {
   font-size: 42px;
   margin-bottom: 4.6vw;
-  color: #333;
+  color: #263238;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 140%;
@@ -159,7 +159,7 @@ ul li {
   justify-content: center;
   position: relative;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 2.6%;
   width: 100%;
   padding-top: 56.25%;
   background-image: url("../images/how-we-work/how-we-work-girl.png");
@@ -215,7 +215,7 @@ ul li {
   width: 31vw;
 }
 .how-we-work__button {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: #ffffff;
   border: none;
   font-weight: 500;
@@ -225,8 +225,13 @@ ul li {
   padding: 19px 9px;
   width: 310px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
 }
 .how-we-work__button:hover {
   background-color: #0056b3;
@@ -235,6 +240,7 @@ ul li {
 .reviews {
   width: 74%;
   margin: 0 auto 5.2%;
+  margin-bottom: 9.8%;
 }
 .reviews__title {
   padding: 0 57px 0;
@@ -251,7 +257,7 @@ ul li {
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   background-image: url(../images/reviews/dots.svg), url(../images/reviews/dots.svg);
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-repeat: no-repeat, no-repeat;
   background-position: bottom left, top right;
 }
 .reviews__review {
@@ -295,62 +301,79 @@ ul li {
   color: #868889;
 }
 .reviews__pagination-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 20px;
 }
 .reviews__pagination {
-  margin: 0 10px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-weight: 500;
   font-size: 18px;
-  color: #263238;
+  line-height: 140%;
+  color: #666;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 14px;
+  align-items: center;
 }
 .reviews__total-pages {
   color: #868889;
 }
 .reviews__control {
-  width: 5.5%;
-  min-width: 50px;
-  border: none;
+  width: 43px;
+  height: 43px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
   background-color: #fff;
+  box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
-.reviews__control .arrow-left,
-.reviews__control .arrow-right {
-  padding-top: 20px;
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.reviews__control:hover {
+  background-color: #fafafa;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.reviews__control img {
+  position: absolute;
+  width: 48px;
+  height: 24px;
+  color: #ffa726;
+}
+.reviews__control img.arrow-left {
+  left: -16px;
+}
+.reviews__control img.arrow-right {
+  right: -16px;
 }
 
 .schools {
-  margin-top: 400px;
-  margin-bottom: 100px;
+  margin-bottom: 9.8%;
   z-index: 0;
 }
 .schools__container {
-  max-width: 68%;
-  margin: 0 auto;
+  padding: 20px 0;
+  margin-left: 16%;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 20px;
-  align-items: start;
+  gap: 10px;
+  align-items: stretch;
 }
 .schools__info {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
 }
 .schools__title {
   font-size: 42px;
-  color: #333;
+  color: #263238;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 140%;
   margin-bottom: 40px;
-  width: 450px;
 }
 .schools__description {
   font-weight: 600;
@@ -359,7 +382,6 @@ ul li {
   line-height: 140%;
   color: #000;
   margin-bottom: 30px;
-  max-width: 450px;
 }
 .schools__legend {
   list-style: none;
@@ -385,14 +407,14 @@ ul li {
   width: 24px;
   height: 2px;
   border-radius: 100px;
-  background-color: #F3B221;
+  background-color: #ffa726;
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
 .schools__button {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: #ffffff;
   border: none;
   font-weight: 500;
@@ -402,21 +424,27 @@ ul li {
   padding: 19px 9px;
   width: 310px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .schools__button:hover {
   background-color: #0056b3;
 }
-
-#map {
+.schools__map-wrapper {
+  display: grid;
+  align-items: stretch;
+}
+.schools #map {
   width: 100%;
   height: 100%;
 }
 
 .social-media {
-  padding: 40px 10px;
-  margin-bottom: 100px;
+  margin-bottom: 9.8%;
 }
 .social-media__container {
   max-width: 68%;
@@ -426,7 +454,7 @@ ul li {
 .social-media__title {
   font-size: 42px;
   margin-bottom: 34px;
-  color: #333;
+  color: #263238;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 140%;
@@ -458,7 +486,7 @@ ul li {
   font-size: 16px;
   line-height: 140%;
   color: #B0BEC5;
-  width: 460px;
+  width: 42%;
 }
 .social-media__slider {
   display: flex;
@@ -550,7 +578,7 @@ ul li {
   position: absolute;
   width: 48px;
   height: 24px;
-  color: #FFA726;
+  color: #ffa726;
 }
 .social-media__control img.arrow-left {
   left: -16px;
