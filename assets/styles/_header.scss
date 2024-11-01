@@ -2,8 +2,7 @@
   width: 100%;
 
   &__first-line,
-  &__second-line,
-  &__banner {
+  &__second-line {
     width: 68%;
     // max-width: 1300px;
     min-width: 900px;
@@ -68,12 +67,16 @@
   }
 
   &__banner {
-    margin-bottom: 5.2%;
-    position: relative;
+    width: 70.5%;
+    margin: 0 auto 5.2%;
+    padding-left: 54px;
+    display: grid;
     grid-template-rows: 0.85fr 0.4fr 0.6fr;
     grid-template-columns: 1.7fr 1.3fr;
     grid-template-areas: "title pic" "text pic" "button pic";
     gap: 10px 10px;
+    background-image: url(../images/header-pics/dots.svg);
+    background-repeat: no-repeat;
   }
 
   &__banner-title {
