@@ -1,0 +1,16 @@
+.about-us {
+  width: 68%;
+  margin: 0 auto;
+}
+.about-us__info {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.about-us__content {
+  width: 100%;
+}
+.about-us__video {
+  width: 100%;
+  object-fit: contain;
+  height: auto;
+}
