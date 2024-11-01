@@ -1,16 +1,34 @@
 .about-us {
   width: 68%;
   margin: 0 auto;
+  margin-bottom: 9.8%;
 }
 .about-us__info {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 1fr;
+  color: #263238;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.about-us__content {
-  width: 100%;
+.about-us__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 42px;
+}
+.about-us__text {
+  color: #6F8793;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
 }
 .about-us__video {
-  width: 100%;
-  object-fit: contain;
+  max-width: 100%;
   height: auto;
+  cursor: pointer;
+}
+.about-us__video:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
