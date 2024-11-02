@@ -275,6 +275,30 @@ ul li {
   text-align: center;
   max-width: 90%;
   width: auto;
+  z-index: 1;
+}
+.how-we-work__text::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6.51vw;
+  height: 6.51vw;
+  background-image: url("../images/how-we-work/how-we-work-dots-left.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+  left: -20px;
+}
+.how-we-work__text--top-right::before, .how-we-work__text--bottom-right::before {
+  left: auto;
+  right: -20px;
+  background-image: url("../images/how-we-work/how-we-work-dots-right.svg");
+}
+.how-we-work__text--bottom-right::before, .how-we-work__text--bottom-left::before {
+  width: 7vw;
+  height: 7vw;
 }
 .how-we-work__text--top {
   top: -3%;
@@ -289,12 +313,12 @@ ul li {
 }
 .how-we-work__text--top-left {
   top: 26%;
-  left: -6%;
+  left: -2%;
   width: 16vw;
 }
 .how-we-work__text--bottom-left {
   bottom: 27%;
-  left: -6%;
+  left: -2%;
   width: 29vw;
 }
 .how-we-work__text--bottom-right {
@@ -385,6 +409,21 @@ ul li {
 .schools__info {
   display: grid;
   grid-template-rows: repeat(4, auto);
+  position: relative;
+  z-index: 1;
+}
+.schools__info ::before {
+  content: "";
+  position: absolute;
+  top: -2.6vw;
+  left: -2.6vw;
+  right: -2.6vw;
+  bottom: -2.6vw;
+  background-image: url("../images/map/map-dots.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  pointer-events: none;
 }
 .schools__title {
   font-size: 42px;
@@ -431,30 +470,6 @@ ul li {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-}
-.schools__button {
-  background-color: #2196f3;
-  color: #ffffff;
-  border: none;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  line-height: 140%;
-  font-weight: 500;
-  font-size: 18px;
-  border-radius: 2px;
-  padding: 19px 9px;
-  width: 310px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.schools__button:hover {
-  background-color: #0056b3;
 }
 .schools__map-wrapper {
   display: grid;
