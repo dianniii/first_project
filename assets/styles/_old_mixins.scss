@@ -1,6 +1,4 @@
 // mixins
-
-// общий миксин для шрифта с font-weight:600
 @mixin font-600 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -8,25 +6,21 @@
   line-height: 140%;
 }
 
-// общий миксин для шрифта с font-weight:500
 @mixin font-500 {
   @include font-600;
   font-weight: 500;
 }
 
-// миксин для шрифта заголовков 1ого и 2ого уровней
 @mixin h1-h2-font {
   @include font-600;
   font-size: 42px;
 }
 
-// миксин для шрифта заголовков 3его уровня
 @mixin h3-font {
   @include font-600;
   font-size: 24px;
 }
 
-// отдельный миксин для шрифта в навигации в шапке
 @mixin header-nav-font {
   color: $main-font-color;
   font-size: 11px;
@@ -34,70 +28,60 @@
   letter-spacing: 2.75px;
 }
 
-// миксин для шрифта 18px
 @mixin text-18px-font {
   @include font-500;
   font-size: 18px;
 }
 
 // Миксин для контейнера пагинации
-@mixin pagination-container {
+@mixin pagination-container($gap: 14px, $margin-top: 20px) {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  margin-top: 20px;
+  gap: $gap;
+  margin-top: $margin-top;
 }
 
 // Миксин для основного блока пагинации
-@mixin pagination {
-  @include text-18px-font;
+@mixin pagination($font-family: 'Montserrat', $font-size: 18px, $line-height: 140%, $gap: 14px) {
+  font-family: $font-family, sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
   display: grid;
   grid-auto-flow: column;
-  gap: $pagination-gap;
+  gap: $gap;
   align-items: center;
 }
 
 // Миксин для номера страницы
-@mixin page-number {
-  color: $main-font-color;
+@mixin page-number($font-weight: 500, $color: #263238) {
+  font-weight: $font-weight;
+  color: $color;
 }
 
 // Миксин для общего количества страниц
-@mixin total-pages {
-  color: #868889;
+@mixin total-pages($color: #868889) {
+  color: $color;
 }
 
 // Миксин для кнопок управления
-@mixin pagination-control {
-  width: 43px;
-  height: 43px;
-  border: 2px solid #fff;
+@mixin pagination-control($size: 43px, $border-color: #fff, $bg-color: #fff, $hover-bg-color: #fafafa, $box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05)) {
+  width: $size;
+  height: $size;
+  border: 2px solid $border-color;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background-color: #fff;
-  box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
+  background-color: $bg-color;
+  box-shadow: $box-shadow;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
 
   &:hover {
+    background-color: $hover-bg-color;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-
-    img {
-      transform: scale(1) translateX(2px); 
-      transition: transform 0.3s ease;
-    }
-
-    img.pagination__arrow-left {
-      transform: scale(1) translateX(-2px); 
-    }
-
-    img.pagination__arrow-right {
-      transform: scale(1) translateX(2px); 
-    }
   }
 
   img {
@@ -105,28 +89,28 @@
     width: 48px;
     height: 24px;
     color: $accent-orange;
-    transition: transform 0.3s ease;
 
-    &.pagination__arrow-left {
+    &.arrow-left {
       left: -16px;
     }
-    &.pagination__arrow-right {
+    &.arrow-right {
       right: -16px;
     }
   }
 }
 
-
 // Миксин для кнопки
-@mixin button {
-  background-color: $accent-blue;
-  color: #ffffff;
+@mixin button($bg-color: $accent-blue, $text-color: #ffffff, $hover-bg-color: #0056b3, $font-weight: 500, $font-size: 18px, $line-height: 140%, $border-radius: 2px, $padding-y: 19px, $padding-x: 9px, $width: 310px, $height: 60px) {
+  background-color: $bg-color;
+  color: $text-color;
   border: none;
-  @include text-18px-font;
-  border-radius: 2px;
-  padding: 19px 9px;
-  width: 310px;
-  height: 60px;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+  padding: $padding-y $padding-x;
+  width: $width;
+  height: $height;
   display: flex;
   align-items: center;
   justify-content: center;
