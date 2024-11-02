@@ -14,7 +14,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    background-image: url(../images/reviews/dots.svg), url(../images/reviews/dots.svg);
+    background-image: url(../images/reviews/dots.svg),
+      url(../images/reviews/dots.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: bottom left, top right;
   }
@@ -54,19 +55,19 @@
     color: #868889;
   }
 
-  &__pagination-container {
-    @include pagination-container; 
-  }
+  // &__pagination-container {
+  //   @include pagination-container;
+  // }
 
-  &__pagination {
-    @include pagination; 
-  }
+  // &__pagination {
+  //   @include pagination;
+  // }
 
-  &__total-pages {
-    @include total-pages; 
-  }
+  // &__total-pages {
+  //   @include total-pages;
+  // }
 
-  &__control {
-    @include pagination-control; 
-  }
+  // &__control {
+  //   @include pagination-control;
+  // }
 }

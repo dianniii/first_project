@@ -130,7 +130,7 @@
           <span class="header__banner-title_black">Мы поможем определиться с выбором!</span>
         </h1>
         <p class="header__banner-text">Подберём школу по вашему запросу и проверим её по всем параметрам</p>
-        <button class="header__banner-btn btn how-we-work__button">Заказать консультацию</button>
+        <button class="button header__banner-btn">Заказать консультацию</button>
         <div class="header__banner-img-container">
           <img src="assets/images/header-pics/header-banner-kids.png" alt="мальчик и девочка с тетрадками и карандашами в руках" class="header__banner-img">
         </div>
@@ -249,7 +249,7 @@
             <img src="./assets/images/consultation-pricing/pic_3.png" alt="общая консультация">
             <h3 class="consultation-pricing__item-subtitle">Общая консультация вне зависимости от города</h3>
             <div class="consultation-pricing__item-list">
-              <ul">
+              <ul>
                 <li>
                   <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Для родителей из любого города</li>
                 <li>
@@ -262,7 +262,6 @@
                   <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Помощь в составлении вашей стратегии выбора школы</li>
                 <li>
                   <img src="./assets/images/consultation-pricing/okei.png" alt="ok">Ответы на вопросы</li>
-                </ul>
               </ul>
             </div>
             <div class="consultation-pricing__item-cost-button">
@@ -289,15 +288,15 @@
               <p class="reviews__review-author">Анна Абросимова, 20 января 2021</p>
             </div>
           </div>
-          <div class="reviews__pagination-container">
-            <button class="reviews__control reviews__control--prev">
-              <img src="./assets/images/reviews/arrow-left.svg" alt="Стрелка влево" class="arrow-left">
+          <div class="reviews__pagination-container pagination__container">
+            <button class="reviews__control pagination__control">
+              <img src="./assets/images/reviews/arrow-left.svg" alt="Стрелка влево" class="arrow-left pagination__arrow-left">
             </button>
-            <div class="reviews__pagination">
-              <span class="reviews__page-number">1</span> | <span class="reviews__total-pages"> 19</span>
+            <div class="reviews__pagination pagination__page-numbers">
+              <span class="reviews__page-number pagination__page-number">1</span> | <span class="reviews__total-pages pagination__total-pages"> 19</span>
             </div>
-            <button class="reviews__control reviews__control--next">
-              <img src="./assets/images/reviews/arrow-right.svg" alt="Стрелка вправо" class="arrow-right">
+            <button class="reviews__control  pagination__control">
+              <img src="./assets/images/reviews/arrow-right.svg" alt="Стрелка вправо" class="arrow-right pagination__arrow-right">
             </button>
           </div>
         </section>
@@ -366,15 +365,22 @@
                 <p class="social-media__slide-title">Полгода Аналитическому отчету!</p>
               </div>
             </div>
-            <div class="social-media__pagination-container">
-              <button class="social-media__control social-media__control--prev">
-                <img src="./assets/images/social-media/arrow-left.svg" alt="Previous arrow" class="arrow-left">
+            <!-- добавила класс pagination__container-->
+            <div class="social-media__pagination-container pagination__container">
+              <!-- добавила класс pagination__control-->
+              <button class="social-media__control social-media__control--prev pagination__control">
+                <!-- добавила класс pagination__arrow-left-->
+                <img src="./assets/images/social-media/arrow-left.svg" alt="Previous arrow" class="arrow-left pagination__arrow-left">
               </button>
-              <div class="social-media__pagination">
-                <span class="social-media__page-number">1</span> | <span class="social-media__total-pages">19</span>
+              <!-- добавила класс pagination__page-numbers-->
+              <div class="social-media__pagination pagination__page-numbers">
+                <!-- добавила класс pagination__page-number к первому span и pagination__total-pages ко второму-->
+                <span class="social-media__page-number pagination__page-number">1</span> | <span class="social-media__total-pages pagination__total-pages">19</span>
               </div>
-              <button class="social-media__control social-media__control--next">
-                <img src="./assets/images/social-media/arrow-right.svg" alt="Next arrow" class="arrow-right">
+              <!-- добавила класс pagination__control-->
+              <button class="social-media__control social-media__control--next pagination__control">
+                <!-- добавила класс pagination__arrow-right-->
+                <img src="./assets/images/social-media/arrow-right.svg" alt="Next arrow" class="arrow-right pagination__arrow-right">
               </button>
             </div>
           </section>

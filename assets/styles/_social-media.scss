@@ -11,7 +11,7 @@
     font-size: 42px;
     margin-bottom: 34px;
     color: $main-font-color;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     line-height: 140%;
   }
@@ -43,11 +43,11 @@
   }
 
   &__description {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 140%;
-    color: #B0BEC5;
+    color: #b0bec5;
     width: 42%;
   }
 
@@ -63,7 +63,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       flex: 0 0 calc(10%);
     }
 
@@ -101,23 +101,23 @@
     margin: 0;
   }
 
-  &__pagination-container {
-    @include pagination-container; 
-  }
+  // &__pagination-container {
+  //   @include pagination-container;
+  // }
 
-  &__pagination {
-    @include pagination; 
-  }
+  // &__pagination {
+  //   @include pagination;
+  // }
 
-  &__page-number {
-    @include page-number; 
-  }
+  // &__page-number {
+  //   @include page-number;
+  // }
 
-  &__total-pages {
-    @include total-pages; 
-  }
+  // &__total-pages {
+  //   @include total-pages;
+  // }
 
-  &__control {
-    @include pagination-control; 
-  }
+  // &__control {
+  //   @include pagination-control;
+  // }
 }
