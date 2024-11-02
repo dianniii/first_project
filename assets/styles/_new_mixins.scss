@@ -70,6 +70,40 @@
 }
 
 // Миксин для кнопок управления
+// @mixin pagination-control {
+//   width: 43px;
+//   height: 43px;
+//   border: 2px solid #fff;
+//   border-radius: 50%;
+//   display: grid;
+//   place-items: center;
+//   background-color: #fff;
+//   box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
+//   cursor: pointer;
+//   transition: all 0.3s ease;
+//   position: relative;
+
+//   &:hover {
+//     background-color: $hover-bg-color;
+//     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+//   }
+
+//   img {
+//     position: absolute;
+//     width: 48px;
+//     height: 24px;
+//     color: $accent-orange;
+
+//     &.pagination__arrow-left {
+//       left: -16px;
+//     }
+//     &.pagination__arrow-right {
+//       right: -16px;
+//     }
+//   }
+// }
+
+// Миксин для кнопок управления с другим hover
 @mixin pagination-control {
   width: 43px;
   height: 43px;
@@ -84,8 +118,20 @@
   position: relative;
 
   &:hover {
-    background-color: $hover-bg-color;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+    img {
+      transform: scale(1) translateX(2px); 
+      transition: transform 0.3s ease;
+    }
+
+    img.pagination__arrow-left {
+      transform: scale(1) translateX(-2px); 
+    }
+
+    img.pagination__arrow-right {
+      transform: scale(1) translateX(2px); 
+    }
   }
 
   img {
@@ -93,6 +139,7 @@
     width: 48px;
     height: 24px;
     color: $accent-orange;
+    transition: transform 0.3s ease;
 
     &.pagination__arrow-left {
       left: -16px;
@@ -102,6 +149,7 @@
     }
   }
 }
+
 
 // Миксин для кнопки
 @mixin button {

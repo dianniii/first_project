@@ -75,14 +75,24 @@ ul li {
   position: relative;
 }
 .pagination__container .pagination__control:hover {
-  background-color: #0056b3;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.pagination__container .pagination__control:hover img {
+  transform: scale(1) translateX(2px);
+  transition: transform 0.3s ease;
+}
+.pagination__container .pagination__control:hover img.pagination__arrow-left {
+  transform: scale(1) translateX(-2px);
+}
+.pagination__container .pagination__control:hover img.pagination__arrow-right {
+  transform: scale(1) translateX(2px);
 }
 .pagination__container .pagination__control img {
   position: absolute;
   width: 48px;
   height: 24px;
   color: #ffa726;
+  transition: transform 0.3s ease;
 }
 .pagination__container .pagination__control img.pagination__arrow-left {
   left: -16px;
@@ -359,55 +369,6 @@ ul li {
   font-size: 16px;
   color: #868889;
 }
-.reviews__pagination-container {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 20px;
-}
-.reviews__pagination {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  line-height: 140%;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 14px;
-  align-items: center;
-}
-.reviews__total-pages {
-  color: #868889;
-}
-.reviews__control {
-  width: 43px;
-  height: 43px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-}
-.reviews__control:hover {
-  background-color: #fafafa;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.reviews__control img {
-  position: absolute;
-  width: 48px;
-  height: 24px;
-  color: #ffa726;
-}
-.reviews__control img.arrow-left {
-  left: -16px;
-}
-.reviews__control img.arrow-right {
-  right: -16px;
-}
 
 .schools {
   margin-bottom: 9.8%;
@@ -593,57 +554,4 @@ ul li {
   color: #535353;
   font-weight: 300;
   margin: 0;
-}
-.social-media__pagination-container {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 20px;
-}
-.social-media__pagination {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  line-height: 140%;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 14px;
-  align-items: center;
-}
-.social-media__page-number {
-  font-weight: 500;
-  color: #263238;
-}
-.social-media__total-pages {
-  color: #868889;
-}
-.social-media__control {
-  width: 43px;
-  height: 43px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-}
-.social-media__control:hover {
-  background-color: #fafafa;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-.social-media__control img {
-  position: absolute;
-  width: 48px;
-  height: 24px;
-  color: #ffa726;
-}
-.social-media__control img.arrow-left {
-  left: -16px;
-}
-.social-media__control img.arrow-right {
-  right: -16px;
 }/*# sourceMappingURL=main.css.map */
