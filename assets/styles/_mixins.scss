@@ -44,11 +44,10 @@
 }
 
 // Миксин для основного блока пагинации
-@mixin pagination($font-family: 'Montserrat', $font-size: 18px, $line-height: 140%, $color: #666, $gap: 14px) {
+@mixin pagination($font-family: 'Montserrat', $font-size: 18px, $line-height: 140%, $gap: 14px) {
   font-family: $font-family, sans-serif;
   font-size: $font-size;
   line-height: $line-height;
-  color: $color;
   display: grid;
   grid-auto-flow: column;
   gap: $gap;
