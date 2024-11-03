@@ -20,3 +20,6 @@
   grid-template-areas: none;
 }
 
+.expert-card-first {
+  grid-area: expert-first;
+}
