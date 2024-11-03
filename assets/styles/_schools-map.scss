@@ -7,7 +7,7 @@
     padding: 20px 0;
     margin-left: 16%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 450px 1fr;
     gap: 10px;
     align-items: stretch; 
   }
@@ -22,10 +22,10 @@
     ::before {
       content: '';
       position: absolute;
-      top: -2.6vw; 
-      left: -2.6vw; 
-      right: -2.6vw; 
-      bottom: -2.6vw; 
+      top: -20px; 
+      left: -60px; 
+      right: -20px; 
+      bottom: -20px; 
       background-image: url('../images/map/map-dots.svg');
       background-repeat: no-repeat;
       background-size: contain;

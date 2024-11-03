@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -297,8 +298,8 @@ ul li {
   background-image: url("../images/how-we-work/how-we-work-dots-right.svg");
 }
 .how-we-work__text--bottom-right::before, .how-we-work__text--bottom-left::before {
-  width: 7vw;
-  height: 7vw;
+  width: 7.51vw;
+  height: 7.51vw;
 }
 .how-we-work__text--top {
   top: -3%;
@@ -402,7 +403,7 @@ ul li {
   padding: 20px 0;
   margin-left: 16%;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 450px 1fr;
   gap: 10px;
   align-items: stretch;
 }
@@ -415,10 +416,10 @@ ul li {
 .schools__info ::before {
   content: "";
   position: absolute;
-  top: -2.6vw;
-  left: -2.6vw;
-  right: -2.6vw;
-  bottom: -2.6vw;
+  top: -20px;
+  left: -60px;
+  right: -20px;
+  bottom: -20px;
   background-image: url("../images/map/map-dots.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -495,6 +496,7 @@ ul li {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   line-height: 140%;
+  white-space: nowrap;
 }
 .social-media__content {
   display: grid;
@@ -507,7 +509,7 @@ ul li {
   display: flex;
   gap: 20px;
   margin-bottom: 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .social-media__icon {
   cursor: pointer;
@@ -524,7 +526,7 @@ ul li {
   font-size: 16px;
   line-height: 140%;
   color: #b0bec5;
-  width: 42%;
+  width: 460px;
 }
 .social-media__slider {
   display: flex;
@@ -569,4 +571,33 @@ ul li {
   color: #535353;
   font-weight: 300;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .social-media__slider {
+    display: flex;
+    overflow-x: auto; /* Возвращаем прокрутку */
+    justify-content: center; /* Выровнять карточки по центру */
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    scroll-snap-type: x mandatory; /* Добавляем плавную прокрутку */
+  }
+  .social-media__slide {
+    display: inline-block;
+    width: calc(50% - 10px); /* Устанавливаем ширину карточек, чтобы помещались две */
+    margin-right: 10px; /* Отступ между карточками */
+    scroll-snap-align: center; /* Карточки привязываются к началу при прокрутке */
+  }
+  .social-media__slide:nth-of-type(n+3) {
+    display: none; /* Скрываем все карточки, начиная с третьей */
+  }
+  .social-media__title {
+    white-space: nowrap; /* Не переносим заголовок на новую строку */
+  }
+  .social-media__icons {
+    display: flex;
+    flex-wrap: nowrap; /* Иконки не переносятся */
+    gap: 10px; /* Расстояние между иконками */
+  }
 }/*# sourceMappingURL=main.css.map */
