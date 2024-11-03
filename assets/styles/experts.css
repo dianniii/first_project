@@ -16,7 +16,7 @@
 
 .experts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: none;
 }
+
