@@ -332,12 +332,9 @@ ul li {
 }
 
 .reviews {
-  width: 74%;
-  margin: 0 auto 5.2%;
-  margin-bottom: 9.8%;
+  margin: 0 16% 5.2%;
 }
 .reviews__title {
-  padding: 0 57px 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -346,22 +343,20 @@ ul li {
   color: #263238;
 }
 .reviews__reviews-container {
-  padding: 50px 4.2% 50px 3.9%;
+  padding: 30px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  background-image: url(../images/reviews/dots.svg), url(../images/reviews/dots.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom left, top right;
 }
 .reviews__review {
-  padding: 0 20px 20px;
-  border-radius: 2px;
-  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px 21px;
+  position: relative;
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-auto-rows: min-content;
   gap: 20px;
-  background-color: #fff;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
 }
 .reviews__review-title {
   font-family: "Montserrat", sans-serif;
@@ -378,12 +373,14 @@ ul li {
   line-height: 140%;
   font-weight: 500;
   font-size: 18px;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 .reviews__review-text {
   color: #000;
 }
 .reviews__review-read-more {
   color: #2196f3;
+  line-height: normal;
 }
 .reviews__review-author {
   font-family: "Montserrat", sans-serif;
@@ -393,6 +390,30 @@ ul li {
   font-weight: 500;
   font-size: 16px;
   color: #868889;
+}
+.reviews__review-first_dots::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 86%;
+  right: 91%;
+  z-index: -1;
+  background-image: url(../images/reviews/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.reviews__review-second_dots::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 86%;
+  left: 91%;
+  z-index: -1;
+  background-image: url(../images/reviews/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .schools {
