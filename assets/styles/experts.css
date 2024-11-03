@@ -23,3 +23,7 @@
 .expert-card-first {
   grid-area: expert-first;
 }
+
+.expert-card-second {
+  grid-area: expert-second;
+}
