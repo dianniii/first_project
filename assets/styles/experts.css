@@ -13,3 +13,9 @@
   font-size: 42px;
   color: rgb(38, 50, 56);
 }
+
+.experts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
