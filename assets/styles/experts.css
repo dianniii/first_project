@@ -17,7 +17,9 @@
 .experts {
   display: grid;
   grid-template-rows: 50% 50%;
-  grid-template-areas: none;
+  grid-template-areas:
+    'expert-first'
+    'expert-second';
 }
 
 .expert-card-first {
