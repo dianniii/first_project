@@ -47,16 +47,17 @@ ul li {
   margin-top: 20px;
 }
 .pagination__container .pagination__page-numbers {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 14px;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
   line-height: 140%;
   font-weight: 500;
   font-size: 18px;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 14px;
-  align-items: center;
+  color: #263238;
 }
 .pagination__container .pagination__page-numbers .pagination__total-pages {
   color: #868889;
