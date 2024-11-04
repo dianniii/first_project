@@ -89,6 +89,20 @@
 .experts__quote {
   padding: 20px;
 }
+
+.experts__quote-container::after {
+  content: "";
+  width: 32px;
+  height: 25px;
+  position: absolute;
+  bottom: 95%;
+  right: 96.5%;
+  background-image: url("../images/section4_pic/quotes-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
 /* .expert-card-second {
   grid-area: expert-second;
 } */
