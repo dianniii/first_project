@@ -95,13 +95,25 @@
   width: 32px;
   height: 25px;
   position: absolute;
-  bottom: 95%;
-  right: 96.5%;
+  top: 92%;
+  left: 97%;
   background-image: url("../images/section4_pic/quotes-right.svg");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 2;
   pointer-events: none;
+}
+
+.experts__card-second {
+  margin-bottom: 76px;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "subtitle img"
+    "text img"
+    "quote img";
+  gap: 40px 0px;
 }
 /* .expert-card-second {
   grid-area: expert-second;
