@@ -1,3 +1,4 @@
+@charset "UTF-8";
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -5,28 +6,69 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .order-consultation {
-  width: 68%;
+  width: 81%;
+  height: 676px;
   margin: 0 auto;
   margin-bottom: 9.8%;
+  background-color: #f8fcff;
+}
+.order-consultation__form-container {
+  width: 100%;
+  padding: 100px 125px;
+}
+.order-consultation__heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 42px;
+  color: #263238;
 }
 .order-consultation__form {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  width: 100%;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 40px;
 }
 .order-consultation__input {
-  padding: 0 10px;
+  padding: 19px 9px 19px 20px;
+  /* верхний, правый, нижний, левый */
   margin: 10px 0;
   width: 420px;
   height: 65px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 18px;
 }
 .order-consultation__input--comments {
   padding: 0 10px;
   margin: 10px 0;
   width: 420px;
   height: 150px;
+  border: none;
 }
 .order-consultation__options {
   display: grid;
   align-content: space-between;
   margin: 10px 0;
+}
+.order-consultation__options-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6F8793;
+}
+.order-consultation__radio-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 1.25rem;
 }

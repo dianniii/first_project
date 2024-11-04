@@ -1,36 +1,65 @@
+@import "_mixins.scss";
+@import "vars.scss";
+
 input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
     }
+    input[type="radio"] {
+        // display: none; /* Скрываем оригинальные радиокнопки */
+    }
+
 .order-consultation{
-    width: 68%;
+    width: 81%;
+    height: 676px;
     margin: 0 auto;
     margin-bottom: 9.8%;
+    background-color: $form-background;
+
+    &__form-container{
+        width: 100%;
+        padding: 100px 125px
+    }
+    &__heading{
+        @include h1-h2-font;
+        color: $main-font-color;
+    }
 // первый див
     &__form{
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
+        width: 100%;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 40px;
     }
     &__input{
-        padding: 0 10px;
+        padding: 19px 9px 19px 20px; /* верхний, правый, нижний, левый */
         margin: 10px 0;
         width: 420px;
         height: 65px;
-        // border: none;
+        border: none;
+        @include text-18px-font;
     }
     &__input--comments{
         padding: 0 10px;
         margin: 10px 0;
         width: 420px;
         height: 150px;
-        // border: none;
-        // после добавления бэкраунд
+        border: none;
     }
     // второй див
     &__options{
         display: grid;
         align-content: space-between;
         margin: 10px 0;
+    }
+    &__options-text{
+        @include font-500;
+        font-size: 1rem;
+        color: #6F8793;
+    }
+    &__radio-label{
+        @include font-600;
+        font-size: 1.25rem;
     }
 }
