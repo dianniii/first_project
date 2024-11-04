@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="stylesheet" href="./assets/styles/dist/_consultation-pricing.css">
     <link rel="stylesheet" href="./assets/styles/dist/_about-us.css">
+    <link rel="stylesheet" href="./assets/styles/dist/order-consultation .css">
     <link rel="stylesheet" href="./assets/styles/experts.css" />
     <title>Document</title>
   </head>
@@ -310,6 +311,78 @@
           <button class="pagination__control">
             <img src="./assets/images/reviews/arrow-right.svg" alt="Стрелка вправо" class="pagination__arrow-right">
           </button>
+        </div>
+      </section>
+
+      <section class="order-consultation">
+        <h2 class="order-consultation__heading">Заказать подбор школы</h2>
+        <div class="order-consultation__form-container">
+          <form class="order-consultation__form">
+            <div class="order-consultation__forma">
+                <div class="order-consultation__input-group">
+                  <label for="name"
+                        class="order-consultation__label"></label>
+                  <input type="text" id="name" placeholder="Имя"
+                        class="order-consultation__input">
+                </div>
+                <div class="order-consultation__input-group">
+                  <label for="email"
+                        class="order-consultation__label"></label>
+                  <input type="email" id="email" placeholder="Эл.почта"
+                        class="order-consultation__input">
+                </div>
+                <div class="order-consultation__input-group">
+                  <label for="phone"
+                        class="order-consultation__label"></label>
+                  <input type="number" id="phone" placeholder="Телефон"
+                        class="order-consultation__input">
+                </div>
+                <div class="order-consultation__input-group">
+                  <label for="comments"
+                        class="order-consultation__label"></label>
+                  <input type="text" id="comments" placeholder="Опишите коротко вашу ситуацию"
+                        class="order-consultation__input order-consultation__input--comments">
+                </div>
+            </div>
+            <div class="order-consultation__options">
+              <p class="order-consultation__options-text">Готовы заказать консультацию? Или у вас остались вопросы? </br>Просто оставьте свои контактные данные и мы свяжемся с вами</p>
+              <div>
+                <div class="order-consultation__radio-group">
+                  <label for="consultation1"
+                        class="order-consultation__radio-label">
+                  <input type="radio" id="consultation1" name="consultation" value="oral_consultation"
+                        class="order-consultation__radio">
+                        Устная консультация по Петербургу (4500 ₽)
+                  </label>
+                </div>
+                <div class="order-consultation__radio-group">
+                  <label for="consultation2"
+                        class="order-consultation__radio-label">
+                  <input type="radio" id="consultation2" name="consultation" value="school_list"
+                        class="order-consultation__radio">
+                        Подробный список школ Петербурга (9500 ₽)
+                  </label>
+                </div>
+                <div class="order-consultation__radio-group">
+                  <label for="consultation3"
+                        class="order-consultation__radio-label">
+                  <input type="radio" id="consultation3" name="consultation" value="general_consultation"
+                        class="order-consultation__radio">
+                        Общая консультация (4500 ₽)
+                  </label>
+                </div>
+              </div>
+              <div>
+                <div class="order-consultation__input-group">
+                  <label for="promo"
+                        class="order-consultation__label"></label>
+                  <input type="text" id="promo" placeholder="Промокод"
+                    class="order-consultation__input">
+                </div>
+                <button class="button order-consultation__button">Отправить</button>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
 
