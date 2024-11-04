@@ -48,6 +48,7 @@
 
 .experts__text {
   margin-left: 60px;
+  margin-right: 10.4%;
   grid-area: text;
   align-self: center;
   font-family: "Montserrat", sans-serif;
