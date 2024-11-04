@@ -103,6 +103,18 @@
   z-index: 2;
   pointer-events: none;
 }
+
+.experts__card-second {
+  margin-bottom: 76px;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "subtitle img"
+    "text img"
+    "quote img";
+  gap: 40px 0px;
+}
 /* .expert-card-second {
   grid-area: expert-second;
 } */
