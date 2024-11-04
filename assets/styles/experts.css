@@ -95,8 +95,8 @@
   width: 32px;
   height: 25px;
   position: absolute;
-  bottom: 95%;
-  right: 96.5%;
+  top: 92%;
+  left: 97%;
   background-image: url("../images/section4_pic/quotes-right.svg");
   background-repeat: no-repeat;
   background-size: contain;
