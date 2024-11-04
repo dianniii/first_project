@@ -52,17 +52,18 @@
 
 // Миксин для основного блока пагинации
 @mixin pagination {
-  @include text-18px-font;
   display: grid;
   grid-auto-flow: column;
   gap: $pagination-gap;
   align-items: center;
+  @include text-18px-font;
+  color: $main-font-color;
 }
 
 // Миксин для номера страницы
-@mixin page-number {
-  color: $main-font-color;
-}
+// @mixin page-number {
+//   color: $main-font-color;
+// }
 
 // Миксин для общего количества страниц
 @mixin total-pages {
@@ -87,16 +88,16 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 
     img {
-      transform: scale(1) translateX(2px); 
+      transform: scale(1) translateX(2px);
       transition: transform 0.3s ease;
     }
 
     img.pagination__arrow-left {
-      transform: scale(1) translateX(-2px); 
+      transform: scale(1) translateX(-2px);
     }
 
     img.pagination__arrow-right {
-      transform: scale(1) translateX(2px); 
+      transform: scale(1) translateX(2px);
     }
   }
 
@@ -115,7 +116,6 @@
     }
   }
 }
-
 
 // Миксин для кнопки
 @mixin button {

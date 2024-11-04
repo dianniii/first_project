@@ -48,16 +48,17 @@ ul li {
   margin-top: 20px;
 }
 .pagination__container .pagination__page-numbers {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 14px;
+  align-items: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
   line-height: 140%;
   font-weight: 500;
   font-size: 18px;
-  display: grid;
-  grid-auto-flow: column;
-  gap: 14px;
-  align-items: center;
+  color: #263238;
 }
 .pagination__container .pagination__page-numbers .pagination__total-pages {
   color: #868889;
@@ -106,12 +107,11 @@ ul li {
   width: 100%;
 }
 .header__first-line, .header__second-line, .header__banner {
-  width: 71%;
-  margin: 0 16.2% 0 13.8%;
+  margin: 0 16%;
   display: grid;
 }
 .header__first-line {
-  padding: 20px 0 5px 3%;
+  padding: 20px 0 5px;
   grid-template-columns: 10fr 1fr;
   align-items: center;
   gap: 55px;
@@ -149,14 +149,15 @@ ul li {
 }
 .header__second-line {
   margin-bottom: 40px;
-  padding: 20px 0 0 3%;
-  grid-template-columns: 1fr minmax(600px, 1.5fr);
+  padding: 20px 0;
+  grid-template-columns: 1fr 3fr;
+  gap: 49px;
 }
 .header__nav2-list {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  justify-items: end;
-  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px 49px;
 }
 .header__nav2-list-item-link {
   text-transform: uppercase;
@@ -170,12 +171,22 @@ ul li {
 }
 .header__banner {
   margin-bottom: 5.2%;
-  padding-left: 3%;
+  position: relative;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1.7fr 1.3fr;
   grid-template-areas: "title pic" "text pic" "button pic";
-  gap: 10px 10px;
-  background-image: url(../images/header-pics/dots.svg);
+  gap: 10px;
+}
+.header__banner::before {
+  content: "";
+  position: absolute;
+  width: 123px;
+  height: 590px;
+  top: 0px;
+  left: -60px;
+  z-index: -1;
+  background-image: url("../images/header-pics/dots.svg");
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .header__banner-title {
@@ -332,12 +343,9 @@ ul li {
 }
 
 .reviews {
-  width: 74%;
-  margin: 0 auto 5.2%;
-  margin-bottom: 9.8%;
+  margin: 0 16% 5.2%;
 }
 .reviews__title {
-  padding: 0 57px 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -346,22 +354,20 @@ ul li {
   color: #263238;
 }
 .reviews__reviews-container {
-  padding: 50px 4.2% 50px 3.9%;
+  padding: 30px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  background-image: url(../images/reviews/dots.svg), url(../images/reviews/dots.svg);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom left, top right;
 }
 .reviews__review {
-  padding: 0 20px 20px;
-  border-radius: 2px;
-  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
+  padding: 20px 21px;
+  position: relative;
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-auto-rows: min-content;
   gap: 20px;
-  background-color: #fff;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
 }
 .reviews__review-title {
   font-family: "Montserrat", sans-serif;
@@ -378,12 +384,14 @@ ul li {
   line-height: 140%;
   font-weight: 500;
   font-size: 18px;
+  font-variant-numeric: lining-nums tabular-nums;
 }
 .reviews__review-text {
   color: #000;
 }
 .reviews__review-read-more {
   color: #2196f3;
+  line-height: normal;
 }
 .reviews__review-author {
   font-family: "Montserrat", sans-serif;
@@ -393,6 +401,30 @@ ul li {
   font-weight: 500;
   font-size: 16px;
   color: #868889;
+}
+.reviews__review-first_dots::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  z-index: -1;
+  background-image: url(../images/reviews/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.reviews__review-second_dots::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  z-index: -1;
+  background-image: url(../images/reviews/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .schools {

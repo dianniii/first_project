@@ -1,3 +1,102 @@
-.container {
-  margin-bottom: 100 px;
+.experts {
+  margin: 0% 16% 9.8%;
 }
+
+.experts__title {
+  margin-bottom: 30px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 42px;
+  color: rgb(38, 50, 56);
+}
+
+.experts {
+  /* display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+    'expert-first'
+    'expert-second'; */
+}
+
+.experts__card-first {
+  margin-bottom: 76px;
+  display: grid;
+  grid-template-columns: 0.98fr 1.02fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "img subtitle"
+    "img text"
+    "img quote";
+  gap: 40px 0px;
+}
+
+.experts__img-container {
+  grid-area: img;
+}
+
+.experts__subtitle-container {
+  /* padding-top: 23px;
+  padding-bottom: 23px; */
+  grid-area: subtitle;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 24px;
+  background-color: #f1f8ff;
+  display: flex;
+  align-items: center;
+}
+
+.experts__subtitle {
+  margin-left: 60px;
+}
+
+.experts__text {
+  margin-left: 60px;
+  grid-area: text;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 20px;
+}
+
+.experts__quote-container {
+  position: relative;
+  margin-left: 60px;
+  width: 85%;
+  grid-area: quote;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.experts__quote-container::before {
+  content: "";
+  width: 32px;
+  height: 25px;
+  position: absolute;
+  bottom: 95%;
+  right: 96.5%;
+  background-image: url("../images/section4_pic/quotes-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+.experts__quote {
+  padding: 20px;
+}
+/* .expert-card-second {
+  grid-area: expert-second;
+} */
