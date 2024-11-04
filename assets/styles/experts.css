@@ -12,14 +12,6 @@
   color: rgb(38, 50, 56);
 }
 
-.experts {
-  /* display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:
-    'expert-first'
-    'expert-second'; */
-}
-
 .experts__card-first {
   margin-bottom: 76px;
   display: grid;
