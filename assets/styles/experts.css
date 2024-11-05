@@ -205,6 +205,10 @@
   pointer-events: none;
 }
 
+.experts__button {
+  margin: 51px auto 0;
+}
+
 /* .expert-card-second {
   grid-area: expert-second;
 } */
