@@ -4,12 +4,17 @@
   z-index: 0;
 
   &__container {
-    padding: 20px 0;
     margin-left: 16%;
     display: grid;
     grid-template-columns: 450px 1fr;
     gap: 10px;
     align-items: stretch; 
+
+    @media (max-width: 768px) {
+      max-width: 98%;
+      margin-left: 0;
+      padding-left: 10px;
+    }
   }
 
   &__info {

@@ -383,6 +383,12 @@ ul li {
   max-width: 68%;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .how-we-work__container {
+    max-width: 98%;
+    padding-left: 10px;
+  }
+}
 .how-we-work__title {
   font-size: 42px;
   margin-bottom: clamp(20px, 4.6vw, 60px);
@@ -414,7 +420,7 @@ ul li {
 }
 @media screen and (max-width: 768px) {
   .how-we-work__content {
-    margin-bottom: clamp(480px, 10px + 17vh, 480px);
+    margin-bottom: clamp(360px, 10px + 17vh, 480px);
   }
 }
 .how-we-work__info {
@@ -616,12 +622,18 @@ ul li {
   z-index: 0;
 }
 .schools__container {
-  padding: 20px 0;
   margin-left: 16%;
   display: grid;
   grid-template-columns: 450px 1fr;
   gap: 10px;
   align-items: stretch;
+}
+@media (max-width: 768px) {
+  .schools__container {
+    max-width: 98%;
+    margin-left: 0;
+    padding-left: 10px;
+  }
 }
 .schools__info {
   display: grid;
@@ -704,6 +716,12 @@ ul li {
   max-width: 68%;
   margin: 0 auto;
   text-align: left;
+}
+@media (max-width: 768px) {
+  .social-media__container {
+    max-width: 98%;
+    padding-left: 10px;
+  }
 }
 .social-media__title {
   font-size: 42px;
