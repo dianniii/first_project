@@ -177,6 +177,20 @@
   z-index: 2;
   pointer-events: none;
 }
+
+.experts__quote-container-second::after {
+  content: "";
+  width: 32px;
+  height: 25px;
+  position: absolute;
+  top: 92%;
+  left: 97%;
+  background-image: url("../images/section4_pic/quotes-right.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 2;
+  pointer-events: none;
+}
 /* .expert-card-second {
   grid-area: expert-second;
 } */
