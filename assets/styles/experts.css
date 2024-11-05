@@ -25,6 +25,10 @@
   gap: 40px 0px;
 }
 
+.experts__quote-container-second-dots {
+  position: relative;
+}
+
 .experts__quote-container-second-dots::before {
   content: "";
   width: 120px;
