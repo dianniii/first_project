@@ -24,7 +24,7 @@
   gap: 40px 0px;
 }
 
-experts__quote-container::before {
+experts__quote-container-second::before {
   content: "";
   width: 120px;
   height: 120px;
