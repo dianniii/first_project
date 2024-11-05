@@ -148,6 +148,7 @@
 
 .experts__quote-container-second {
   position: relative;
+  margin-right: 10.3%;
   width: 85%;
   grid-area: quote;
   align-self: center;
