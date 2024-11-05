@@ -55,10 +55,6 @@
   }
 
   &__nav2-list {
-    // display: grid;
-    // grid-template-columns: repeat(5, auto);
-    // justify-items: end;
-    // gap: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -68,6 +64,78 @@
   &__nav2-list-item-link {
     text-transform: uppercase;
     @include header-nav-font;
+  }
+
+  .hamburger-menu {
+    visibility: hidden;
+  }
+
+  #menu__toggle {
+    display: none;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1;
+
+    span,
+    span::before,
+    span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2.6px;
+      background-color: $main-font-color;
+      transition-duration: 0.25s;
+    }
+
+    span::before {
+      content: "";
+      top: -7px;
+    }
+
+    span::after {
+      content: "";
+      top: 7px;
+    }
+  }
+
+  .menu__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    position: absolute;
+    visibility: hidden;
+    top: 60px;
+    right: 0;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
+    text-transform: uppercase;
+    @include header-nav-font;
+    transition-duration: 0.25s;
+  }
+
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+
+    &:hover {
+      background-color: $light-blue-background;
+    }
+  }
+
+  .menu__item-link {
+    color: inherit;
   }
 
   &__banner {
@@ -141,4 +209,36 @@
   }
 }
 
-// @media screen and (max-width: 768px){  }
+@media screen and (max-width: 768px) {
+  .header {
+    &__first-line,
+    &__horizontal-line,
+    &__nav2 {
+      display: none;
+    }
+
+    .hamburger-menu {
+      visibility: visible;
+
+      #menu__toggle:checked {
+        ~ .menu__btn > span {
+          transform: rotate(45deg);
+
+          &::before {
+            top: 0;
+            transform: rotate(0);
+          }
+
+          &::after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+        }
+
+        ~ .menu__box {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
