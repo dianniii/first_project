@@ -365,7 +365,8 @@
           <div class="reviews__review">
             <h3 class="reviews__review-title">Мне понравилась слаженная работа девушек</h3>
             <p class="reviews__review-text">«Наш сын пойдёт в школу только через год, однако уже сейчас мы, родители, поняли, что хотели бы осознанно подойти к такому важному шагу как выбор начальной школы для своего ребёнка. До того, как встретиться в зуме с Мариной и Натальей, в Инстаграм-аккаунте prosto.education мы скачали лист вопросов, на которые сначала ответили вдвоём с мужем, чтобы убедиться, что наши взгляды на дальнейшее образование нашего сына совпадают...</p>
-            <a href="#" class="reviews__review-read-more">Читать полностью...</a>
+            <p class="reviews__review-text reviews__review-text--hidden">Vы скачали лист вопросов, на которые сначала ответили вдвоём с мужем, чтобы убедиться, что наши взгляды на дальнейшее образование нашего сына совпадают...</p>
+            <a href="#" class="reviews__review-read-more" onclick="toggleReviewText(event)">Читать полностью...</a>
             <p class="reviews__review-author">Анна Абросимова, 20 января 2021</p>
           </div>
           <div class="reviews__review">
@@ -648,6 +649,25 @@
           myMap.container.fitToViewport();
         });
       }
+      
+    </script>
+    <script type="text/javascript">
+      function toggleReviewText(event) {
+      event.preventDefault();
+
+      // Найти ближайший родительский блок отзыва
+      const reviewBlock = event.target.closest('.reviews__review');
+
+      // Переключить класс .reviews__review--expanded
+      reviewBlock.classList.toggle('reviews__review--expanded');
+
+      // Изменить текст ссылки в зависимости от состояния
+      if (reviewBlock.classList.contains('reviews__review--expanded')) {
+        event.target.textContent = 'Свернуть';
+      } else {
+        event.target.textContent = 'Читать полностью...';
+      }
+    }
     </script>
   </body>
 </html>
