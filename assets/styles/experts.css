@@ -25,7 +25,7 @@
   gap: 40px 0px;
 }
 
-.experts__quote-container-second::before {
+.experts__quote-container-second-dots::before {
   content: "";
   width: 120px;
   height: 120px;
