@@ -134,6 +134,18 @@
 .experts__subtitle-second {
   padding-left: 25px;
 }
+
+.experts__text-second {
+  margin-left: 60px;
+  margin-right: 10.4%;
+  grid-area: text;
+  align-self: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 20px;
+}
 /* .expert-card-second {
   grid-area: expert-second;
 } */
