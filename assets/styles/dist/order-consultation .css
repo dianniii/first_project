@@ -28,7 +28,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 2fr;
-  column-gap: 40px;
+  column-gap: 5%;
 }
 .order-consultation__input {
   padding: 19px 9px 19px 20px;
@@ -65,10 +65,61 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 1rem;
   color: #6F8793;
 }
+.order-consultation__radio-group {
+  padding-top: 10px;
+}
 .order-consultation__radio-label {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
   line-height: 140%;
   font-size: 1.25rem;
+}
+.order-consultation__button {
+  width: 420px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-top: 10px;
+}
+
+.order-consultation__radio-group .custom-radio {
+  display: inline-block;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #B0BEC5;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.order-consultation__radio-group .custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72%;
+  height: 72%;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* Скрываем оригинальные радиокнопки */
+input[type=radio] {
+  display: none;
+}
+
+/* стиль для checked */
+input[type=radio]:checked + .custom-radio::after {
+  background-color: #f5a623;
+}
+
+/* цвет границы при выборе */
+input[type=radio]:checked + .custom-radio {
+  border: 1px solid #f5a623;
 }

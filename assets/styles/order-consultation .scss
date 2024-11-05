@@ -1,13 +1,11 @@
 @import "_mixins.scss";
 @import "vars.scss";
 
+// Убираем выбор цифр в форме
 input[type=number]::-webkit-inner-spin-button,
     input[type=number]::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
-    }
-    input[type="radio"] {
-        // display: none; /* Скрываем оригинальные радиокнопки */
     }
 
 .order-consultation{
@@ -25,12 +23,12 @@ input[type=number]::-webkit-inner-spin-button,
         @include h1-h2-font;
         color: $main-font-color;
     }
-// первый див
+// forma
     &__form{
         display: grid;
         width: 100%;
         grid-template-columns: 1fr 2fr;
-        column-gap: 40px;
+        column-gap: 5%;
     }
     &__input{
         padding: 19px 9px 19px 20px; /* верхний, правый, нижний, левый */
@@ -47,7 +45,7 @@ input[type=number]::-webkit-inner-spin-button,
         height: 150px;
         border: none;
     }
-    // второй див
+    // __options
     &__options{
         display: grid;
         align-content: space-between;
@@ -58,8 +56,56 @@ input[type=number]::-webkit-inner-spin-button,
         font-size: 1rem;
         color: #6F8793;
     }
+    &__radio-group{
+        padding-top: 10px;
+    }
     &__radio-label{
         @include font-600;
         font-size: 1.25rem;
     }
+    &__button{
+        width: 420px;
+        @include font-500;
+        font-size: 1.25rem;
+        margin-top: 10px;
+    }
+}
+// радио кнопки
+.order-consultation__radio-group{
+    .custom-radio {
+        display: inline-block;
+        position: relative;
+        width: 28px; 
+        height: 28px; 
+        border: 1px solid #B0BEC5;
+        border-radius: 50%; 
+        background-color: transparent;
+        cursor: pointer;
+        margin-right: 10px;
+        // внутренний кружок
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 72%; 
+            height: 72%; 
+            background-color: transparent;
+            border-radius: 50%;
+        }
+    }
+}
+
+/* Скрываем оригинальные радиокнопки */
+input[type="radio"] {
+    display: none; 
+}
+/* стиль для checked */
+input[type="radio"]:checked + .custom-radio::after {
+  background-color: #f5a623; 
+}
+/* цвет границы при выборе */
+input[type="radio"]:checked + .custom-radio {
+    border: 1px solid #f5a623; 
 }
