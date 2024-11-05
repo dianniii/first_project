@@ -11,6 +11,7 @@
     }
     &__items{
         display: grid;
+        position: relative;
         grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
         gap: 20px;
         justify-items: center;
@@ -26,7 +27,7 @@
         background-color: white;
         transition: box-shadow 0.3s ease;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-
+        
         &:hover{
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
             cursor: pointer;
@@ -190,4 +191,29 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
     }
+}
+// точки
+.consultation-pricing__items::before{
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    z-index: -1;
+    background-image: url(../../images/section4_pic/dots.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.consultation-pricing__items::after{
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    z-index: -1;
+    background-image: url(../../images/section4_pic/dots.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
 }

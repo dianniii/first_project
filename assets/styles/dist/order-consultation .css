@@ -6,11 +6,24 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .order-consultation {
-  width: 81%;
-  height: 676px;
+  width: 82%;
   margin: 0 auto;
   margin-bottom: 9.8%;
   background-color: #f8fcff;
+  position: relative;
+  z-index: -2;
+}
+.order-consultation::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  z-index: 1;
+  background-image: url(../../images/section4_pic/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .order-consultation__form-container {
   width: 100%;
@@ -29,6 +42,19 @@ input[type=number]::-webkit-outer-spin-button {
   width: 100%;
   grid-template-columns: 1fr 2fr;
   column-gap: 5%;
+  position: relative;
+}
+.order-consultation__form::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  z-index: -1;
+  background-image: url(../../images/section4_pic/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .order-consultation__input {
   padding: 19px 9px 19px 20px;
@@ -51,6 +77,11 @@ input[type=number]::-webkit-outer-spin-button {
   width: 420px;
   height: 150px;
   border: none;
+}
+.order-consultation__input--comments::placeholder {
+  position: relative;
+  top: -40px;
+  left: 10px;
 }
 .order-consultation__options {
   display: grid;

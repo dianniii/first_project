@@ -80,6 +80,9 @@
     &__info{
         width: 68%;
         margin: 0 auto;
+        img{
+            width: 100%;
+        }
     }
     &__info-links{
         display: flex;

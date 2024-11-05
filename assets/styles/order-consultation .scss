@@ -9,15 +9,28 @@ input[type=number]::-webkit-inner-spin-button,
     }
 
 .order-consultation{
-    width: 81%;
-    height: 676px;
+    width: 82%;
     margin: 0 auto;
     margin-bottom: 9.8%;
     background-color: $form-background;
+    position: relative;
+    z-index: -2;
+    &::after{
+        content: "";
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        top: -60px;
+        right: -60px;
+        z-index: 1;
+        background-image: url(../../images/section4_pic/dots.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 
     &__form-container{
         width: 100%;
-        padding: 100px 125px
+        padding: 100px 125px;
     }
     &__heading{
         @include h1-h2-font;
@@ -29,6 +42,19 @@ input[type=number]::-webkit-inner-spin-button,
         width: 100%;
         grid-template-columns: 1fr 2fr;
         column-gap: 5%;
+        position: relative;
+        &::before{
+            content: "";
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            bottom: -60px;
+            left: -60px;
+            z-index: -1;
+            background-image: url(../../images/section4_pic/dots.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     }
     &__input{
         padding: 19px 9px 19px 20px; /* верхний, правый, нижний, левый */
@@ -45,6 +71,12 @@ input[type=number]::-webkit-inner-spin-button,
         width: 420px;
         height: 150px;
         border: none;
+        
+        &::placeholder{
+            position: relative;
+            top: -40px;
+            left: 10px;
+        }
     }
     // __options
     &__options{
@@ -71,6 +103,7 @@ input[type=number]::-webkit-inner-spin-button,
         font-size: 1.25rem;
     }
 }
+
 // радио кнопки
 .order-consultation__radio-group{
     .custom-radio {
@@ -110,3 +143,4 @@ input[type="radio"]:checked + .custom-radio::after {
 input[type="radio"]:checked + .custom-radio {
     border: 1px solid #f5a623; 
 }
+

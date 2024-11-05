@@ -249,12 +249,14 @@
               <p class="experts__text-second">Координатор проекта ШколПРОсвет,
               соорганизатор фестиваля Другие Школы
               </p>
+              <div class="experts__quote-container-second-dots">
                 <blockquote class="experts__quote-container-second">
                   <p class="experts__quote">Мне важно, чтобы при выборе школы родитель опирался в
                   первую очередь на себя, свой запрос и потенциал ребенка.
                   А ещё есть целый ворох деталей, которые надо держать в голове,
                   анализируя подходящие на первый взгляд школы.</p>
                 </blockquote>
+              </div>
             </div>
           </div>
           <button class="experts__button button">Заказать консультацию</button>
@@ -360,13 +362,14 @@
       <section class="reviews">
         <h2 class="reviews__title">Отзывы о консультациях</h2>
         <div class="reviews__reviews-container">
-          <div class="reviews__review reviews__review-first_dots">
+          <div class="reviews__review">
             <h3 class="reviews__review-title">Мне понравилась слаженная работа девушек</h3>
             <p class="reviews__review-text">«Наш сын пойдёт в школу только через год, однако уже сейчас мы, родители, поняли, что хотели бы осознанно подойти к такому важному шагу как выбор начальной школы для своего ребёнка. До того, как встретиться в зуме с Мариной и Натальей, в Инстаграм-аккаунте prosto.education мы скачали лист вопросов, на которые сначала ответили вдвоём с мужем, чтобы убедиться, что наши взгляды на дальнейшее образование нашего сына совпадают...</p>
-            <a href="#" class="reviews__review-read-more">Читать полностью...</a>
+            <p class="reviews__review-text reviews__review-text--hidden">Vы скачали лист вопросов, на которые сначала ответили вдвоём с мужем, чтобы убедиться, что наши взгляды на дальнейшее образование нашего сына совпадают...</p>
+            <a href="#" class="reviews__review-read-more" onclick="toggleReviewText(event)">Читать полностью...</a>
             <p class="reviews__review-author">Анна Абросимова, 20 января 2021</p>
           </div>
-          <div class="reviews__review reviews__review-second_dots">
+          <div class="reviews__review">
             <h3 class="reviews__review-title">Информация дана была сжато, конкретно и удобно</h3>
             <p class="reviews__review-text">«Нам был предоставлен перечень из восьми школ, которые отвечали нашим запросам, к каждой из них прилагались конкретные, удобные ссылки не только на сайт, но и на различного рода интервью с их директорами, видео про межпредметные погружения, сравнительные варианты того, как школы перешли на вынужденный дистант в конце прошлого учебного года. Информация дана была сжато, конкретно и удобно: какие преимущества в данной школе, а также....</p>
             <a href="#" class="reviews__review-read-more">Читать полностью...</a>
@@ -646,6 +649,25 @@
           myMap.container.fitToViewport();
         });
       }
+      
+    </script>
+    <script type="text/javascript">
+      function toggleReviewText(event) {
+      event.preventDefault();
+
+      // Найти ближайший родительский блок отзыва
+      const reviewBlock = event.target.closest('.reviews__review');
+
+      // Переключить класс .reviews__review--expanded
+      reviewBlock.classList.toggle('reviews__review--expanded');
+
+      // Изменить текст ссылки в зависимости от состояния
+      if (reviewBlock.classList.contains('reviews__review--expanded')) {
+        event.target.textContent = 'Свернуть';
+      } else {
+        event.target.textContent = 'Читать полностью...';
+      }
+    }
     </script>
   </body>
 </html>
