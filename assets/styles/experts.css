@@ -29,8 +29,8 @@
   width: 120px;
   height: 120px;
   position: absolute;
-  bottom: -60px;
-  left: -60px;
+  bottom: -56.6%;
+  right: 12.8%;
   z-index: -1;
   background-image: url(../images/reviews/dots.svg);
   background-repeat: no-repeat;
