@@ -37,13 +37,13 @@ experts__quote-container::before {
   background-size: contain;
 }
 
-.experts__card-second::after {
+.experts__card-first::after {
   content: "";
   width: 120px;
   height: 120px;
   position: absolute;
-  bottom: -120%;
-  left: 12.6%;
+  top: -60px;
+  right: -60px;
   z-index: -1;
   background-image: url(../images/reviews/dots.svg);
   background-repeat: no-repeat;
