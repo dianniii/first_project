@@ -8,14 +8,40 @@
 
   &__reviews-container {
     padding: 30px 0;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
+  &__reviews-container::before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    bottom: -35px;
+    left: -60px;
+    z-index: -1;
+    background-image: url(../images/reviews/dots.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__reviews-container::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -35px;
+    right: -60px;
+    z-index: -1;
+    background-image: url(../images/reviews/dots.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   &__review {
     padding: 20px 21px;
-    position: relative;
     display: grid;
     grid-auto-rows: min-content;
     gap: 20px;
@@ -49,31 +75,5 @@
     @include font-500;
     font-size: 16px;
     color: #868889;
-  }
-
-  &__review-first_dots::before {
-    content: "";
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    bottom: -60px;
-    left: -60px;
-    z-index: -1;
-    background-image: url(../images/reviews/dots.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  &__review-second_dots::after {
-    content: "";
-    width: 120px;
-    height: 120px;
-    position: absolute;
-    top: -60px;
-    right: -60px;
-    z-index: -1;
-    background-image: url(../images/reviews/dots.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 }
