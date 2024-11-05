@@ -34,7 +34,7 @@
     background-position: center;
 
     @media screen and (max-width: $laptop) {
-      margin-bottom: clamp(100px, 30px + 18vh, 600px);
+      margin-bottom: clamp(130px, 50px + 18vh, 600px);
     }
 
     @media screen and (max-width: $laptop-s) {
@@ -42,7 +42,7 @@
     }
 
     @media screen and (max-width: $tablet) {
-      margin-bottom: clamp(360px, 10px + 17vh, 480px);
+      margin-bottom: clamp(310px, 10px + 17vh, 480px);
     }
   }
 

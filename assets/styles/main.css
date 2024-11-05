@@ -411,7 +411,7 @@ ul li {
 }
 @media screen and (max-width: 1440px) {
   .how-we-work__content {
-    margin-bottom: clamp(100px, 30px + 18vh, 600px);
+    margin-bottom: clamp(130px, 50px + 18vh, 600px);
   }
 }
 @media screen and (max-width: 1024px) {
@@ -421,7 +421,7 @@ ul li {
 }
 @media screen and (max-width: 768px) {
   .how-we-work__content {
-    margin-bottom: clamp(360px, 10px + 17vh, 480px);
+    margin-bottom: clamp(310px, 10px + 17vh, 480px);
   }
 }
 .how-we-work__info {
@@ -799,7 +799,6 @@ ul li {
   gap: 20px;
   overflow-x: auto;
   width: 100vw;
-  max-width: 100%;
   padding: 0 20px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
@@ -843,7 +842,7 @@ ul li {
   .social-media__slider {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     max-width: 100%;
   }
