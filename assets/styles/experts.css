@@ -134,7 +134,6 @@
 }
 
 .experts__card-second {
-  margin-bottom: 76px;
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
   grid-template-rows: repeat(3, auto);
