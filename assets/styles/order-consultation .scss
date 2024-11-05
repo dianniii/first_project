@@ -65,9 +65,9 @@ input[type=number]::-webkit-inner-spin-button,
     }
     &__button{
         width: 420px;
+        height: 70px;
         @include font-500;
         font-size: 1.25rem;
-        margin-top: 10px;
     }
 }
 // радио кнопки
