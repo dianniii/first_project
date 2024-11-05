@@ -138,7 +138,7 @@
   }
 
   &__banner {
-    margin-bottom: 5.2%;
+    margin-bottom: 100px;
     position: relative;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 1.7fr 1.3fr;
@@ -168,14 +168,21 @@
   }
 
   &__banner-title_orange-italics {
+    display: block;
     color: $accent-orange;
     font-style: italic;
     font-weight: 800;
   }
 
+  &__banner-title_black {
+    display: block;
+    width: 90%;
+  }
+
   &__banner-text {
     grid-area: text;
-    width: 70%;
+    // width: 70%;
+    max-width: 590px;
     align-self: center;
     font-size: 24px;
     @include font-600;
@@ -218,8 +225,8 @@
 
     &__second-line,
     &__banner {
-      margin-left: 2.5%;
-      margin-right: 2.5%;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     .hamburger-menu {
@@ -244,6 +251,27 @@
           visibility: visible;
         }
       }
+    }
+
+    &__banner {
+      grid-template-columns: 1.86fr 1.14fr;
+    }
+
+    &__banner::before {
+      left: 0;
+    }
+
+    &__banner-title_black {
+      width: 79%;
+    }
+
+    &__banner-text {
+      width: 85%;
+    }
+
+    &__banner-img-container {
+      width: 118%;
+      margin-left: -19%;
     }
   }
 }

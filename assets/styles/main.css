@@ -238,7 +238,7 @@ ul li {
   color: inherit;
 }
 .header__banner {
-  margin-bottom: 5.2%;
+  margin-bottom: 100px;
   position: relative;
   grid-template-rows: repeat(3, auto);
   grid-template-columns: 1.7fr 1.3fr;
@@ -269,13 +269,18 @@ ul li {
   font-size: 42px;
 }
 .header__banner-title_orange-italics {
+  display: block;
   color: #ffa726;
   font-style: italic;
   font-weight: 800;
 }
+.header__banner-title_black {
+  display: block;
+  width: 90%;
+}
 .header__banner-text {
   grid-area: text;
-  width: 70%;
+  max-width: 590px;
   align-self: center;
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
@@ -312,8 +317,8 @@ ul li {
     display: none;
   }
   .header__second-line, .header__banner {
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .header .hamburger-menu {
     visibility: visible;
@@ -331,6 +336,22 @@ ul li {
   }
   .header .hamburger-menu #menu__toggle:checked ~ .menu__box {
     visibility: visible;
+  }
+  .header__banner {
+    grid-template-columns: 1.86fr 1.14fr;
+  }
+  .header__banner::before {
+    left: 0;
+  }
+  .header__banner-title_black {
+    width: 79%;
+  }
+  .header__banner-text {
+    width: 85%;
+  }
+  .header__banner-img-container {
+    width: 118%;
+    margin-left: -19%;
   }
 }
 .how-we-work {
@@ -438,7 +459,7 @@ ul li {
 }
 
 .reviews {
-  margin: 0 16% 5.2%;
+  margin: 0 16% 100px;
 }
 .reviews__title {
   font-family: "Montserrat", sans-serif;
