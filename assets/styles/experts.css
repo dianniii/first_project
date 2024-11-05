@@ -24,6 +24,19 @@
   gap: 40px 0px;
 }
 
+.experts__card-first::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  z-index: -1;
+  background-image: url(../images/reviews/dots.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .experts__img-container {
   grid-area: img;
 }
