@@ -1,0 +1,126 @@
+@charset "UTF-8";
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.order-consultation {
+  width: 81%;
+  height: 676px;
+  margin: 0 auto;
+  margin-bottom: 9.8%;
+  background-color: #f8fcff;
+}
+.order-consultation__form-container {
+  width: 100%;
+  padding: 100px 125px;
+}
+.order-consultation__heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 42px;
+  color: #263238;
+}
+.order-consultation__form {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 2fr;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+}
+.order-consultation__input {
+  padding: 19px 9px 19px 20px; /* верхний, правый, нижний, левый */
+  margin: 10px 0;
+  width: 420px;
+  height: 65px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+.order-consultation__input--comments {
+  padding: 0 10px;
+  margin: 10px 0;
+  width: 420px;
+  height: 150px;
+  border: none;
+}
+.order-consultation__options {
+  display: grid;
+  align-content: space-between;
+  margin: 10px 0;
+}
+.order-consultation__options-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #6F8793;
+}
+.order-consultation__radio-group {
+  padding-top: 10px;
+}
+.order-consultation__radio-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-size: 1.25rem;
+}
+.order-consultation__button {
+  width: 420px;
+  height: 70px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.order-consultation__radio-group .custom-radio {
+  display: inline-block;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #B0BEC5;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.order-consultation__radio-group .custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72%;
+  height: 72%;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* Скрываем оригинальные радиокнопки */
+input[type=radio] {
+  display: none;
+}
+
+/* стиль для checked */
+input[type=radio]:checked + .custom-radio::after {
+  background-color: #f5a623;
+}
+
+/* цвет границы при выборе */
+input[type=radio]:checked + .custom-radio {
+  border: 1px solid #f5a623;
+}/*# sourceMappingURL=order-consultation .css.map */

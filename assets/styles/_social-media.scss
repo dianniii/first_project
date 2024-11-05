@@ -105,33 +105,33 @@
 
 @media (max-width: 768px) {
   .social-media__slider {
-    display: flex;
-    overflow-x: auto; /* Возвращаем прокрутку */
-    justify-content: center; /* Выровнять карточки по центру */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
     width: 100%;
     max-width: 100%;
-    padding: 0;
-    scroll-snap-type: x mandatory; /* Добавляем плавную прокрутку */
+
+    &::before {
+      display: none;
+    }
   }
 
   .social-media__slide {
-    display: inline-block;
-    width: calc(50% - 10px); /* Устанавливаем ширину карточек, чтобы помещались две */
-    margin-right: 10px; /* Отступ между карточками */
-    scroll-snap-align: center; /* Карточки привязываются к началу при прокрутке */
+    width: 100%;
   }
 
-  .social-media__slide:nth-of-type(n+3) {
-    display: none; /* Скрываем все карточки, начиная с третьей */
+  .social-media__slide:nth-of-type(1),
+  .social-media__slide:nth-of-type(n+4) {
+    display: none;
   }
 
   .social-media__title {
-    white-space: nowrap; /* Не переносим заголовок на новую строку */
+    white-space: nowrap;
   }
 
   .social-media__icons {
     display: flex;
-    flex-wrap: nowrap; /* Иконки не переносятся */
-    gap: 10px; /* Расстояние между иконками */
+    flex-wrap: nowrap;
+    gap: 10px;
   }
 }
