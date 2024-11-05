@@ -410,17 +410,17 @@ ul li {
 }
 @media screen and (max-width: 1440px) {
   .how-we-work__content {
-    margin-bottom: clamp(130px, 50px + 18vh, 600px);
+    margin-bottom: clamp(330px, 50px + 18vh, 600px);
   }
 }
 @media screen and (max-width: 1024px) {
   .how-we-work__content {
-    margin-bottom: clamp(360px, 10px + 17vh, 480px);
+    margin-bottom: clamp(450px, 10px + 17vh, 480px);
   }
 }
 @media screen and (max-width: 768px) {
   .how-we-work__content {
-    margin-bottom: clamp(310px, 10px + 17vh, 480px);
+    margin-bottom: clamp(430px, 10px + 17vh, 480px);
   }
 }
 .how-we-work__info {
@@ -431,7 +431,7 @@ ul li {
   -moz-column-gap: 247px;
        column-gap: 247px;
   position: absolute;
-  top: -3.83%;
+  top: -4%;
   left: -74px;
   width: 100%;
   height: 100%;
@@ -489,10 +489,12 @@ ul li {
   .how-we-work__text {
     width: 100%;
     justify-self: center;
+    padding: 20px 40px;
   }
   .how-we-work__text--top {
     grid-row: 1;
     margin-bottom: calc(30% + 5vw);
+    padding: 10px 40px;
   }
   .how-we-work__text--top-right {
     grid-row: 3;

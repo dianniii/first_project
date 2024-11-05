@@ -33,15 +33,15 @@
     background-position: center;
 
     @media screen and (max-width: $laptop) {
-      margin-bottom: clamp(130px, 50px + 18vh, 600px);
+      margin-bottom: clamp(330px, 50px + 18vh, 600px);
     }
 
     @media screen and (max-width: $laptop-s) {
-      margin-bottom: clamp(360px, 10px + 17vh, 480px);
+      margin-bottom: clamp(450px, 10px + 17vh, 480px);
     }
 
     @media screen and (max-width: $tablet) {
-      margin-bottom: clamp(310px, 10px + 17vh, 480px);
+      margin-bottom: clamp(430px, 10px + 17vh, 480px);
     }
   }
 
@@ -52,7 +52,7 @@
     grid-auto-flow: dense;
     column-gap: 247px;
     position: absolute;
-    top: -3.83%;
+    top: -4%;
     left: -74px;
     width: 100%;
     height: 100%;
@@ -112,11 +112,13 @@
 
     @media screen and (max-width: 1440px) {
       width: 100%; 
-      justify-self: center; 
+      justify-self: center;
+      padding: 20px 40px; 
 
       &--top {
         grid-row: 1;
         margin-bottom: calc(30% + 5vw);
+        padding: 10px 40px; 
       }
 
       &--top-right {
