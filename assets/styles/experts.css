@@ -116,6 +116,7 @@ experts__quote-container-second::before {
   pointer-events: none;
 }
 .experts__quote {
+  position: relative;
   padding: 20px;
 }
 
