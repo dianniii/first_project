@@ -378,7 +378,7 @@ ul li {
 }
 .how-we-work {
   text-align: center;
-  margin-bottom: 9.8%;
+  margin-bottom: 100px;
 }
 .how-we-work__container {
   max-width: 68%;
@@ -649,7 +649,7 @@ ul li {
   }
 }
 .schools {
-  margin-bottom: 9.8%;
+  margin-bottom: 100px;
   z-index: 0;
 }
 .schools__container {
@@ -741,7 +741,7 @@ ul li {
 }
 
 .social-media {
-  margin-bottom: 9.8%;
+  margin-bottom: 100px;
 }
 .social-media__container {
   max-width: 68%;
