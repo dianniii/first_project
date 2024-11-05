@@ -14,6 +14,7 @@
 
 .experts__card-first {
   margin-bottom: 76px;
+  position: relative;
   display: grid;
   grid-template-columns: 0.98fr 1.02fr;
   grid-template-rows: repeat(3, auto);
@@ -24,26 +25,26 @@
   gap: 40px 0px;
 }
 
-.experts__card-first::before {
+.experts__quote-container-second-dots::before {
   content: "";
   width: 120px;
   height: 120px;
   position: absolute;
-  bottom: -49.5%;
-  right: 12.8%;
+  bottom: -60px;
+  left: -60px;
   z-index: -1;
   background-image: url(../images/reviews/dots.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.experts__card-second::after {
+.experts__card-first::after {
   content: "";
   width: 120px;
   height: 120px;
   position: absolute;
-  bottom: -120%;
-  left: 12.6%;
+  top: -60px;
+  right: -60px;
   z-index: -1;
   background-image: url(../images/reviews/dots.svg);
   background-repeat: no-repeat;
@@ -116,6 +117,7 @@
   pointer-events: none;
 }
 .experts__quote {
+  position: relative;
   padding: 20px;
 }
 

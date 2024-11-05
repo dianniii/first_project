@@ -196,7 +196,11 @@
           <span class="header__banner-title_black">Мы поможем определиться с выбором!</span>
         </h1>
         <p class="header__banner-text">Подберём школу по вашему запросу и проверим её по всем параметрам</p>
-        <button class="button header__banner-btn">Заказать консультацию</button>
+        <div class="header__btn-container">
+          <button class="button header__banner-btn">Заказать консультацию</button>
+          <div class="header__arrow-img-container"><img src="./assets/images/header-pics/flags.svg" alt="5 стрелок в право" class="header__arrow-img"></div>
+        </div>
+        
         <div class="header__banner-img-container">
           <img src="assets/images/header-pics/header-banner-kids.png" alt="мальчик и девочка с тетрадками и карандашами в руках" class="header__banner-img">
         </div>
@@ -245,7 +249,7 @@
               <p class="experts__text-second">Координатор проекта ШколПРОсвет,
               соорганизатор фестиваля Другие Школы
               </p>
-                <blockquote class="experts__quote-container-second">
+                <blockquote class="experts__quote-container-second experts__quote-container-second-dots">
                   <p class="experts__quote">Мне важно, чтобы при выборе школы родитель опирался в
                   первую очередь на себя, свой запрос и потенциал ребенка.
                   А ещё есть целый ворох деталей, которые надо держать в голове,
@@ -256,31 +260,32 @@
           <button class="experts__button button">Заказать консультацию</button>
         </section>
 
-      <section class="how-we-work">
+        <section class="how-we-work">
           <div class="how-we-work__container">
             <h2 class="how-we-work__title">Как мы работаем?</h2>
-              <div class="how-we-work__content">
-                  <div class="how-we-work__info">
-                    <p class="how-we-work__text how-we-work__text--top">
-                        Расскажем о каждой школе из списка, чтобы вы соотнесли свой запрос с этим предложением
-                    </p>
-                    <p class="how-we-work__text how-we-work__text--top-right">
-                        Определим важные и второстепенные параметры выбора конкретно для вас
-                    </p>
-                    <p class="how-we-work__text how-we-work__text--top-left">
-                        Поможем вам и вашей семье прояснить запрос к школе
-                    </p>
-                    <p class="how-we-work__text how-we-work__text--bottom-left">
-                        Описание школы будет содержать как общедоступную информацию, так и наши впечатления и наблюдения о работе и особенностях этих школ
-                    </p>
-                    <p class="how-we-work__text how-we-work__text--bottom-right">
-                        Если вас интересуют негосударственные школы Санкт-Петербурга: предложим список из 4–5 школ, потенциально соответствующих вашим ожиданиям
-                    </p>
-                  </div>
+            <div class="how-we-work__content">
+              <div class="how-we-work__info">
+                  <p class="how-we-work__text how-we-work__text--top">
+                    Расскажем о каждой школе из списка, чтобы вы соотнесли свой запрос с этим предложением
+                  </p>
+                  <p class="how-we-work__text how-we-work__text--top-left">
+                    Поможем вам и вашей семье прояснить запрос к школе
+                  </p>
+                  <p class="how-we-work__text how-we-work__text--top-right">
+                    Определим важные и второстепенные параметры выбора конкретно для вас
+                  </p>
+                  <p class="how-we-work__text how-we-work__text--bottom-left">
+                    Описание школы будет содержать как общедоступную информацию, так и наши впечатления и наблюдения о работе и особенностях этих школ
+                  </p>
+                  <p class="how-we-work__text how-we-work__text--bottom-right">
+                    Если вас интересуют негосударственные школы Санкт-Петербурга: предложим список из 4–5 школ, потенциально соответствующих вашим ожиданиям
+                  </p>
               </div>
+            </div>
             <button class="button how-we-work__button">Заказать консультацию</button>
           </div>
-      </section>
+        </section>
+        
     
       <section class="consultation-pricing">
         <h2 class="consultation-pricing__title">Стоимость консультаций</h2>
@@ -618,7 +623,7 @@
             },
             {
               iconLayout: 'default#imageWithContent',
-              iconImageHref: '', // Не используем картинку, вместо этого добавляем SVG
+              iconImageHref: '', 
               iconImageSize: [120, 120],
               iconImageOffset: [-60, -60],
               iconContentOffset: [0, 0],
