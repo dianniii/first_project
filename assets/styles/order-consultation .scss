@@ -37,6 +37,7 @@ input[type=number]::-webkit-inner-spin-button,
         height: 65px;
         border: none;
         @include text-18px-font;
+        cursor: pointer;
     }
     &__input--comments{
         padding: 0 10px;
