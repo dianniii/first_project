@@ -25,12 +25,16 @@
   gap: 40px 0px;
 }
 
+.experts__quote-container-second-dots {
+  position: relative;
+}
+
 .experts__quote-container-second-dots::before {
   content: "";
   width: 120px;
   height: 120px;
   position: absolute;
-  bottom: -60px;
+  bottom: -21px;
   left: -60px;
   z-index: -1;
   background-image: url(../images/reviews/dots.svg);
