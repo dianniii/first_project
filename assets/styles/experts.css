@@ -37,7 +37,7 @@ experts__quote-container::before {
   background-size: contain;
 }
 
-.experts__cards::after {
+.experts__card-first::after {
   content: "";
   width: 120px;
   height: 120px;
