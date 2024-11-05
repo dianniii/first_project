@@ -130,6 +130,10 @@
     "quote img";
   gap: 40px 0px;
 }
+
+.experts__subtitle-second {
+  padding-left: 25px;
+}
 /* .expert-card-second {
   grid-area: expert-second;
 } */
