@@ -148,7 +148,7 @@ ul li {
   margin: auto;
 }
 .header__second-line {
-  margin-bottom: 2.1%;
+  margin-bottom: 40px;
   padding: 20px 0 0px;
   grid-template-columns: 1fr 3fr;
   gap: 0px 49px;
@@ -248,6 +248,7 @@ ul li {
 .header__banner::before {
   content: "";
   position: absolute;
+  max-height: 590px;
   top: 0px;
   left: -5.5%;
   right: -20px;
@@ -289,15 +290,12 @@ ul li {
   line-height: 140%;
   color: #263238;
 }
-.header__banner-btn {
+.header__btn-container {
   grid-area: button;
-  position: relative;
-}
-.header__banner-btn::before {
-  content: url("../images/header-pics/flags.svg");
-  position: absolute;
-  right: -45%;
-  max-width: 120px;
+  align-self: start;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .header__banner-img-container {
   grid-area: pic;
@@ -350,8 +348,32 @@ ul li {
     width: 85%;
   }
   .header__banner-img-container {
-    width: 118%;
+    width: 120%;
     margin-left: -19%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .header__banner {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: auto;
+    grid-template-areas: "title" "text" "button" "pic";
+    gap: 20px;
+  }
+  .header__banner-img-container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .header__banner-title {
+    font-size: 32px;
+  }
+  .header__banner-text {
+    font-size: 20px;
+  }
+  .header__btn-container {
+    flex-direction: column;
+    align-items: start;
   }
 }
 .how-we-work {
