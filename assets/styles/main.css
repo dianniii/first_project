@@ -387,7 +387,6 @@ ul li {
 @media (max-width: 768px) {
   .how-we-work__container {
     max-width: 98%;
-    padding-left: 10px;
   }
 }
 .how-we-work__title {
@@ -814,7 +813,6 @@ ul li {
 .social-media__slide {
   flex: 0 0 auto;
   min-width: 310px;
-  max-width: 310px;
   display: grid;
   grid-template-rows: auto 1fr auto;
   place-items: center;
