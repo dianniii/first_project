@@ -82,14 +82,15 @@
   &__banner::before {
     content: "";
     position: absolute;
-    width: 123px;
-    height: 590px;
-    top: 0px;
+    top: -20px;
     left: -60px;
-    z-index: -1;
-    background-image: url("../images/header-pics/dots.svg");
-    background-size: contain;
+    right: -20px;
+    bottom: -20px;
+    background-image: url("../images/map/map-dots.svg");
     background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+    pointer-events: none;
   }
 
   &__banner-title {
@@ -139,3 +140,5 @@
     object-fit: contain;
   }
 }
+
+// @media screen and (max-width: 768px){  }
