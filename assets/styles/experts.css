@@ -74,6 +74,7 @@
 
 .experts__quote-container {
   position: relative;
+  margin-bottom: 36px;
   margin-left: 60px;
   width: 85%;
   grid-area: quote;
