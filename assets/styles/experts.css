@@ -14,6 +14,7 @@
 
 .experts__card-first {
   margin-bottom: 76px;
+  position: relative;
   display: grid;
   grid-template-columns: 0.98fr 1.02fr;
   grid-template-rows: repeat(3, auto);
