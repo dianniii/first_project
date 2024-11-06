@@ -11,3 +11,10 @@
     font-size: 42px;
     color: rgb(38, 50, 56);
   }
+
+.pluses__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    gap: 20px;
+}
