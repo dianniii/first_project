@@ -1,0 +1,20 @@
+.pluses {
+    margin: 0% 16% 100px;
+  }
+
+.pluses__title {
+    margin-bottom: 30px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 140%;
+    font-size: 42px;
+    color: rgb(38, 50, 56);
+  }
+
+.pluses__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    gap: 20px;
+}
