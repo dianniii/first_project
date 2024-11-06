@@ -37,7 +37,7 @@
   bottom: -21px;
   left: -60px;
   z-index: -1;
-  background-image: url(../images/reviews/dots.svg);
+  background-image: url(../images/dots-square.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -50,7 +50,7 @@
   top: -60px;
   right: -60px;
   z-index: -1;
-  background-image: url(../images/reviews/dots.svg);
+  background-image: url(../images/dots-square.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
