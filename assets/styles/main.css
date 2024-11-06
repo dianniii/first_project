@@ -391,7 +391,7 @@ ul li {
 }
 .how-we-work__title {
   font-size: 42px;
-  margin-bottom: clamp(20px, 4.6vw, 60px);
+  margin-bottom: clamp(40px, 4.6vw, 60px);
   color: #263238;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -428,13 +428,14 @@ ul li {
   grid-template-columns: repeat(2, 1fr);
   align-items: start;
   grid-auto-flow: dense;
-  -moz-column-gap: 247px;
-       column-gap: 247px;
+  -moz-column-gap: 300px;
+       column-gap: 300px;
   position: absolute;
   top: -4%;
   left: -74px;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 @media screen and (max-width: 1440px) {
   .how-we-work__info {
@@ -479,7 +480,7 @@ ul li {
 }
 .how-we-work__text--bottom-left {
   justify-self: start;
-  width: 32vw;
+  width: 29vw;
 }
 .how-we-work__text--bottom-right {
   justify-self: end;
@@ -517,16 +518,15 @@ ul li {
   left: -20px;
   width: 7.5vw;
   height: 7.5vw;
-  background-image: url("../images/how-we-work/how-we-work-dots-left.svg");
-  background-size: 100% 100%;
+  background-image: url("../images/how-we-work/how-we-work-dots.svg");
+  background-size: contain;
   background-repeat: no-repeat;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
 }
 .how-we-work__text--top-right::before, .how-we-work__text--bottom-right::before {
   left: auto;
   right: -20px;
-  background-image: url("../images/how-we-work/how-we-work-dots-right.svg");
   width: 7.5vw;
   height: 7.5vw;
 }
