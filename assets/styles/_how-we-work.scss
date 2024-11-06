@@ -6,18 +6,13 @@
   &__container {
     max-width: 68%;
     margin: 0 auto;
-
-    @media (max-width: 768px) {
-      max-width: 98%;
-    }
   }
 
   &__title {
-    font-size: 42px;
+    @include h1-h2-font;
     margin-bottom: clamp(40px, 4.6vw, 60px);
     color: $main-font-color;
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
     line-height: 140%;
   }
 
@@ -31,32 +26,157 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
-    @media screen and (max-width: $laptop) {
-      margin-bottom: clamp(330px, 18vh, 350px);
-    }
-
-    @media screen and (max-width: $laptop-s) {
-      margin-bottom: clamp(410px, 18vh, 430px);
-    }
-
-    @media screen and (max-width: $tablet) {
-      margin-bottom: clamp(390px, 18vh, 400px);
-    }
   }
 
   &__info {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); // Добавляем шаблон колонок
-    column-gap: 300px; // Отступ между колонками
+    grid-template-columns: repeat(2, 1fr); 
+    column-gap: 220px; 
     width: 100%;
     height: 100%;
     position: relative;
     z-index: 1;
-    left: -70px;
+    left: -110px;
     top: -25px;
+  }
 
-    @media screen and (max-width: 1440px) {
+  &__text-wrapper {
+    position: relative;
+    align-items: start;
+    padding: 20px 40px;
+
+    &--top {
+      grid-column: 1 / span 2;
+      justify-self: center;
+      width: 35vw;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 53px;
+        left: 10px;
+        transform: translateY(-50%);
+        width: 120px;
+        height: 120px;
+        background-image: url('../images/dots-square.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+
+    &--top-left {
+      grid-row: 2;
+      width: 20vw;
+      justify-self: start;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 53px;
+        left: 10px;
+        transform: translateY(-50%);
+        width: 125px;
+        height: 125px;
+        background-image: url('../images/dots-square.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+
+    &--top-right {
+      grid-row: 2;
+      width: 25vw;
+      justify-self: end;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top:52px;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 125px;
+        height: 125px;
+        background-image: url('../images/dots-square.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+
+    &--bottom-left {
+      grid-row: 3;
+      width: 33vw;
+      justify-self: start;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 67px;
+        left: 10px;
+        transform: translateY(-50%);
+        width: 140px;
+        height: 140px;
+        background-image: url('../images/dots-square.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+
+    &--bottom-right {
+      grid-row: 3;
+      width: 35vw;
+      justify-self: end;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 67px;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 140px;
+        height: 140px;
+        background-image: url('../images/dots-square.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__text {
+    @include text-18px-font;
+    background-color: #fff;
+    padding: 10px;
+    color: #263238;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat", sans-serif;
+    line-height: 140%;
+    text-align: center;
+    position: relative; 
+    z-index: 2; 
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .how-we-work {
+
+    &__content {
+      margin-bottom: clamp(330px, 18vh, 350px);
+    }
+
+    &__info {
       grid-template-columns: 1fr; 
       grid-template-rows: repeat(5, auto); 
       justify-items: center; 
@@ -69,270 +189,206 @@
       min-height: 300px;
     }
 
-    @media screen and (max-width: 1024px) {
-      grid-template-columns: 1fr; 
-      grid-template-rows: repeat(5, auto); 
-      justify-items: center; 
+    &__text-wrapper {
+
+      width: 100%;
+      justify-self: center;
+
+      // Используем цикл для задания grid-row и других свойств
+      @for $i from 1 through 5 {
+        &--#{if($i == 1, 'top', if($i == 2, 'top-left', if($i == 3, 'top-right', if($i == 4, 'bottom-left', 'bottom-right'))))} {
+          grid-row: #{$i};
+
+          @if $i == 1 {
+            margin-bottom: calc(30% + 5vw);
+          }
+        }
+      }
+
+      &--top::before, 
+      &--top-left::before,
+      &--top-right::before,
+      &--bottom-left::before,
+      &--bottom-right::before {
+        top: 50%;
+        right: 17px;
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .how-we-work {
+
+    &__content {
+      margin-bottom: clamp(410px, 18vh, 430px);
+    }
+
+    &__info {
+      row-gap: clamp(20px, 0.1vw, 5px);
+    }
+
+    &__text-wrapper {
+
+      padding: 10px 20px;
+
+      &--top::before,
+      &--top-left::before {
+        width: 100px;
+        height: 100px;
+        left: 5px;
+      }
+
+      &--top-right::before {
+        width: 100px;
+        height: 100px;
+        right: 5px;
+      }
+
+      &--bottom-left::before {
+        width: 125px;
+        height: 125px;
+        left: 5px;
+      }
+
+      &--bottom-right::before {
+        width: 125px;
+        height: 125px;
+        right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .how-we-work {
+
+    &__container {
+      max-width: 98%;
+    }
+
+    &__title {
+      margin-bottom: clamp(70px, 4.6vw, 60px);
+    }
+
+    &__content {
+      margin-bottom: clamp(350px, 18vh, 370px);
+    }
+
+    &__info {
+      row-gap: clamp(10px, 0.1vw, 5px);
+    }
+
+    &__text-wrapper {
+      padding: 10px 10px;
+
+      &--top::before,
+      &--top-left::before {
+        width: 100px;
+        height: 100px;
+        left: -2px;
+      }
+
+      &--top-right::before {
+        width: 100px;
+        height: 100px;
+        right: -2px;
+      }
+
+      &--bottom-left::before {
+        left: -2px;
+      }
+
+      &--bottom-right::before {
+        right: -2px;
+      }
+    }
+
+    &__text {
+      padding: 10px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .how-we-work {
+
+    &__title {
+      margin-bottom: clamp(80px, 4.6vw, 60px);
+      font-size: 32px;
+    }
+
+    &__content {
+      margin-bottom: clamp(390px, 18vh, 410px);
+    }
+
+    &__info {
+      top: -45px;
+      padding: 0px;
       row-gap: clamp(0px, 0.1vw, 5px);
-      column-gap: 0; 
-      position: relative;
-      left: 0;
-      padding: 0 10px; 
-      min-height: 300px;
     }
-  }
 
-  &__text-wrapper {
-    position: relative;
-    align-items: start;
+    &__text-wrapper {
 
-    &--top {
-      grid-column: 1 / span 2;
-      justify-self: center;
-      width: 31vw;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 37px;
-        left: -20px;
-        transform: translateY(-50%);
-        // width: clamp(100px, 9vw + 50px, 125px);
-        // height: clamp(100px, 9vw + 50px, 125px);
-        width: 125px;
-        height: 125px;
-        background-image: url('../images/how-we-work/how-we-work-dots.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
-        pointer-events: none;
-
-        @media screen and (max-width: 1440px) {
-          top: 50%;
-          left: 17px;
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: clamp(100px, 9vw + 50px, 110px);
-          height: clamp(100px, 9vw + 50px, 110px);
-        }
-
-        @media screen and (max-width: 768px) {
-          width: clamp(100px, 9vw + 50px, 100px);
-          height: clamp(100px, 9vw + 50px, 100px);
-          left: 25px;
-        }
+      &--top::before {
+        width: 120px;
+        height: 120px;
+        left: -3px;
       }
-    }
 
-    &--top-left {
-      grid-row: 2;
-      width: 16vw;
-      justify-self: start;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 37px;
-        left: -20px;
-        transform: translateY(-50%);
-        // width: clamp(100px, 9vw + 50px, 125px);
-        // height: clamp(100px, 9vw + 50px, 125px);
-        width: 125px;
-        height: 125px;
-        background-image: url('../images/how-we-work/how-we-work-dots.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
-        pointer-events: none;
-
-        @media screen and (max-width: 1440px) {
-          top: 50%;
-          left: 17px;
-          width: clamp(100px, 9vw + 50px, 110px);
-          height: clamp(100px, 9vw + 50px, 110px);
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: clamp(100px, 9vw + 50px, 110px);
-          height: clamp(100px, 9vw + 50px, 110px);
-        }
-
-        @media screen and (max-width: 768px) {
-          width: clamp(100px, 9vw + 50px, 100px);
-          height: clamp(100px, 9vw + 50px, 100px);
-          left: 25px;
-        }
+      &--top-left::before {
+        left: -3px;
       }
-    }
 
-    &--top-right {
-      grid-row: 2;
-      width: 21vw;
-      justify-self: end;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 37px;
-        right: -20px;
-        transform: translateY(-50%);
-        // width: clamp(100px, 9vw + 50px, 125px);
-        // height: clamp(100px, 9vw + 50px, 125px);
-        width: 125px;
-        height: 125px;
-        background-image: url('../images/how-we-work/how-we-work-dots.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
-        pointer-events: none;
-
-        @media screen and (max-width: 1440px) {
-          top: 50%;
-          right: 17px;
-          width: clamp(100px, 9vw + 50px, 110px);
-          height: clamp(100px, 9vw + 50px, 110px);
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: clamp(100px, 9vw + 50px, 110px);
-          height: clamp(100px, 9vw + 50px, 110px);
-        }
-
-        @media screen and (max-width: 768px) {
-          width: clamp(100px, 9vw + 50px, 100px);
-          height: clamp(100px, 9vw + 50px, 100px);
-          right: 25px;
-        }
+      &--top-right::before {
+        right: -3px;
       }
-    }
 
-    &--bottom-left {
-      grid-row: 3;
-      width: 29vw;
-      justify-self: start;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 44px;
-        left: -20px;
-        transform: translateY(-50%);
-        // width: clamp(100px, 9vw + 50px, 125px);
-        // height: clamp(100px, 9vw + 50px, 125px);
+      &--bottom-left::before {
         width: 140px;
         height: 140px;
-        background-image: url('../images/how-we-work/how-we-work-dots.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
-        pointer-events: none;
-
-        @media screen and (max-width: 1440px) {
-          top: 50%;
-          left: 17px;
-          width: clamp(120px, 9vw, 120px);
-          height: clamp(120px, 9vw, 120px);
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: clamp(130px, 9vw, 130px);
-          height: clamp(130px, 9vw, 130px);
-        }
-
-        @media screen and (max-width: 768px) {
-          width: clamp(130px, 9vw, 130px);
-          height: clamp(130px, 9vw, 130px);
-          left: 25px;
-        }
+        left: -3px;
       }
-    }
 
-    &--bottom-right {
-      grid-row: 3;
-      width: 31vw;
-      justify-self: end;
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 44px;
-        right: -20px;
-        transform: translateY(-50%);
-        // width: clamp(100px, 9vw + 50px, 125px);
-        // height: clamp(100px, 9vw + 50px, 125px);
+      &--bottom-right::before {
         width: 140px;
         height: 140px;
-        background-image: url('../images/how-we-work/how-we-work-dots.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: -1;
-        pointer-events: none;
-
-        @media screen and (max-width: 1440px) {
-          top: 50%;
-          right: 17px;
-          width: clamp(120px, 9vw, 120px);
-          height: clamp(120px, 9vw, 120px);
-        }
-
-        @media screen and (max-width: 1024px) {
-          width: clamp(130px, 9vw, 130px);
-          height: clamp(130px, 9vw, 130px);
-        }
-
-        @media screen and (max-width: 768px) {
-          width: clamp(130px, 9vw, 130px);
-          height: clamp(130px, 9vw, 130px);
-          right: 25px;
-        }
+        right: -3px;
       }
     }
 
-    @media screen and (max-width: 1440px) {
-      width: 100%; 
-      justify-self: center;
-      padding: 20px 40px;
-
-      &--top {
-        grid-row: 1;
-        margin-bottom: calc(30% + 5vw);
-        padding: 10px 40px;
-      }
-
-      &--top-left {
-        grid-row: 2;
-      }
-
-      &--top-right {
-        grid-row: 3;
-      }
-
-      &--bottom-left {
-        grid-row: 4;
-      }
-
-      &--bottom-right {
-        grid-row: 5;
-      }
+    &__text {
+      padding: 10px 20px;
+      font-size: 16px;
     }
   }
+}
 
-  &__text {
-    background-color: #fff;
-    padding: 10px;
-    font-size: 18px;
-    color: #263238;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    line-height: 140%;
-    text-align: center;
-    position: relative; // Относительное позиционирование для z-index
-    z-index: 2; // Чтобы текст был поверх точек
-  }
+@media screen and (max-width: 360px) {
+  .how-we-work {
+    &__content {
+      margin-bottom: clamp(440px, 18vh, 450px);
+    }
 
-  &__button {
-    margin: 0 auto;
+    &__text-wrapper {
+
+      &--top-right::before {
+        width: 110px;
+        height: 110px;
+        right: -3px;
+      }
+
+      &--bottom-left::before {
+        width: 155px;
+        height: 155px;
+      }
+
+      &--bottom-right::before {
+        width: 175px;
+        height: 175px;
+      }
+    }
   }
 }
