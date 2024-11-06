@@ -7,7 +7,7 @@
     height: auto;
     &__container{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         column-gap: 7%;
         width: 68%;
         margin: 0 auto;
@@ -51,11 +51,13 @@
     }
     &__contact{
         p{
-            font-size: 0.94rem;
             color: #ffffff;
+            @include font-500;
+            font-size: 0.94rem;
         }
         a{
             color: #ffffff;
+            @include font-500;
         }
     }
     &__contact-title{
