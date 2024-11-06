@@ -253,7 +253,7 @@ ul li {
   left: -5.5%;
   right: -20px;
   bottom: -20px;
-  background-image: url("../images/map/map-dots.svg");
+  background-image: url("../images/dots-long.svg");
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
@@ -688,7 +688,7 @@ ul li {
   bottom: -35px;
   left: -55px;
   z-index: -1;
-  background-image: url(../images/reviews/dots.svg);
+  background-image: url(../images/dots-square.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -700,7 +700,7 @@ ul li {
   top: -35px;
   right: -55px;
   z-index: -1;
-  background-image: url(../images/reviews/dots.svg);
+  background-image: url(../images/dots-square.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
