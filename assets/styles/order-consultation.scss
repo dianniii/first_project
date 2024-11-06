@@ -14,7 +14,7 @@ input[type=number]::-webkit-inner-spin-button,
     margin-bottom: 9.8%;
     background-color: $form-background;
     position: relative;
-    z-index: -2;
+    z-index: 3;
     &::after{
         content: "";
         width: 120px;
