@@ -5,7 +5,7 @@
 }
 .footer__container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   column-gap: 7%;
   width: 68%;
   margin: 0 auto;
@@ -58,11 +58,21 @@
   margin: 20px 0;
 }
 .footer__contact p {
-  font-size: 0.94rem;
   color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
+  font-size: 0.94rem;
 }
 .footer__contact a {
   color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 140%;
+  font-weight: 500;
 }
 .footer__contact-title {
   font-family: "Montserrat", sans-serif;

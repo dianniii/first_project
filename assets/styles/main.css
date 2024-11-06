@@ -208,7 +208,7 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   position: absolute;
   visibility: hidden;
   top: 60px;
