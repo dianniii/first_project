@@ -1,5 +1,31 @@
 // mixins
 
+// миксины для боковых марджинов
+@mixin margin-lateral-1920 {
+  margin-left: 16%;
+  margin-right: 16%;
+}
+
+@mixin margin-lateral-1440 {
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+@mixin margin-lateral-1024 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@mixin margin-lateral-768 {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@mixin margin-lateral-360 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 // общий миксин для шрифта с font-weight:600
 @mixin font-600 {
   font-family: "Montserrat", sans-serif;

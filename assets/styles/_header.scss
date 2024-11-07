@@ -1,10 +1,12 @@
 .header {
   width: 100%;
+  min-width: 330px;
 
   &__first-line,
   &__second-line,
   &__banner {
-    margin: 0 16%;
+    // margin: 0 16%;
+    @include margin-lateral-1920;
     display: grid;
   }
 
@@ -138,7 +140,7 @@
   }
 
   &__banner {
-    margin-bottom: 100px;
+    margin-bottom: $marging-bottom;
     position: relative;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 1.7fr 1.3fr;
@@ -182,7 +184,6 @@
 
   &__banner-text {
     grid-area: text;
-    // width: 70%;
     max-width: 590px;
     align-self: center;
     font-size: 24px;
@@ -212,6 +213,26 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .header {
+    &__first-line,
+    &__second-line,
+    &__banner {
+      @include margin-lateral-1440;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    &__first-line,
+    &__second-line,
+    &__banner {
+      @include margin-lateral-1024;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     &__first-line,
@@ -222,8 +243,7 @@
 
     &__second-line,
     &__banner {
-      margin-left: 20px;
-      margin-right: 20px;
+      @include margin-lateral-768;
     }
 
     .hamburger-menu {
@@ -302,6 +322,15 @@
     &__btn-container {
       flex-direction: column;
       align-items: start;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+    &__second-line,
+    &__banner {
+      @include margin-lateral-360;
     }
   }
 }

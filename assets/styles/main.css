@@ -105,9 +105,11 @@ ul li {
 
 .header {
   width: 100%;
+  min-width: 330px;
 }
 .header__first-line, .header__second-line, .header__banner {
-  margin: 0 16%;
+  margin-left: 16%;
+  margin-right: 16%;
   display: grid;
 }
 .header__first-line {
@@ -310,6 +312,18 @@ ul li {
      object-fit: contain;
 }
 
+@media screen and (max-width: 1440px) {
+  .header__first-line, .header__second-line, .header__banner {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__first-line, .header__second-line, .header__banner {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 @media screen and (max-width: 768px) {
   .header__first-line, .header__horizontal-line, .header__nav2 {
     display: none;
@@ -374,6 +388,12 @@ ul li {
   .header__btn-container {
     flex-direction: column;
     align-items: start;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header__second-line, .header__banner {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 .how-we-work {
@@ -716,7 +736,9 @@ ul li {
   }
 }
 .reviews {
-  margin: 0 16% 100px;
+  margin-left: 16%;
+  margin-right: 16%;
+  margin-bottom: 100px;
   /* Скрываем дополнительный текст по умолчанию */
   /* Класс для показа дополнительного текста */
 }
@@ -808,6 +830,18 @@ ul li {
   color: #868889;
 }
 
+@media screen and (max-width: 1440px) {
+  .reviews {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .reviews {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 @media screen and (max-width: 768px) {
   .reviews {
     margin-left: 20px;
@@ -829,6 +863,12 @@ ul li {
   }
   .reviews__review-text, .reviews__review-read-more {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .reviews {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 .schools {
