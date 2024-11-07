@@ -652,7 +652,7 @@
           center: [59.939095, 30.315868], // Центр карты (например, Санкт-Петербург)
           zoom: 10
         });
-
+    
         // Добавляем метки с SVG-кружками
         var circles = [
           { coords: [59.972373, 29.721276], number: 3, colors: ['#76a23f', '#8fbf67', '#d3d3d3'] },
@@ -663,8 +663,14 @@
           { coords: [59.857419, 30.323546], number: 32, colors: ['#1abc9c', '#2ecc71', '#d3d3d3'] },
           { coords: [59.861070, 29.968837], number: 13, colors: ['#3498db', '#9b59b6', '#d3d3d3'] }
         ];
-
+    
+        function getIconSize() {
+          return window.innerWidth <= 440 ? [40, 40] : [120, 120];
+        }
+    
         circles.forEach(function(circle) {
+          var iconSize = getIconSize();
+    
           var placemark = new ymaps.Placemark(
             circle.coords,
             {
@@ -672,12 +678,12 @@
             },
             {
               iconLayout: 'default#imageWithContent',
-              iconImageHref: '', 
-              iconImageSize: [120, 120],
-              iconImageOffset: [-60, -60],
+              iconImageHref: '',
+              iconImageSize: iconSize,
+              iconImageOffset: [-iconSize[0] / 2, -iconSize[1] / 2],
               iconContentOffset: [0, 0],
               iconContentLayout: ymaps.templateLayoutFactory.createClass(
-                `<svg width="120" height="120" viewBox="0 0 36 36">
+                `<svg width="${iconSize[0]}" height="${iconSize[1]}" viewBox="0 0 36 36">
                   <circle cx="18" cy="18" r="16" fill="${circle.colors[2]}" />
                   <path d="M18 2 a16 16 0 0 1 16 16L18 18Z" fill="${circle.colors[0]}" />
                   <path d="M18 2 a16 16 0 0 0 -16 16L18 18Z" fill="${circle.colors[1]}" />
@@ -689,13 +695,26 @@
           );
           myMap.geoObjects.add(placemark);
         });
-
-        // Обновляем размеры карты при изменении размера окнa
+    
+        // Функция для обновления размеров иконок при изменении ширины экрана
+        function updatePlacemarkIcons() {
+          myMap.geoObjects.each(function(geoObject) {
+            var newSize = getIconSize();
+            geoObject.options.set({
+              iconImageSize: newSize,
+              iconImageOffset: [-newSize[0] / 2, -newSize[1] / 2]
+            });
+          });
+        }
+    
+        // Обновляем размеры карты и иконок при изменении размера окна
         window.addEventListener('resize', function() {
           myMap.container.fitToViewport();
+          updatePlacemarkIcons();
         });
       }
     </script>
+    
 
     <script type="text/javascript">
       function toggleReviewText(event) {
