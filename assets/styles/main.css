@@ -105,9 +105,11 @@ ul li {
 
 .header {
   width: 100%;
+  min-width: 330px;
 }
 .header__first-line, .header__second-line, .header__banner {
-  margin: 0 16%;
+  margin-left: 16%;
+  margin-right: 16%;
   display: grid;
 }
 .header__first-line {
@@ -240,17 +242,17 @@ ul li {
 .header__banner {
   margin-bottom: 100px;
   position: relative;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: 1.5fr min-content 1fr;
   grid-template-columns: 1.7fr 1.3fr;
   grid-template-areas: "title pic" "text pic" "button pic";
-  gap: 10px;
+  gap: 40px 10px;
 }
 .header__banner::before {
   content: "";
   position: absolute;
   max-height: 590px;
   top: 0px;
-  left: -5.5%;
+  left: -55px;
   right: -20px;
   bottom: -20px;
   background-image: url("../images/dots-long.svg");
@@ -277,11 +279,10 @@ ul li {
 }
 .header__banner-title_black {
   display: block;
-  width: 90%;
 }
 .header__banner-text {
   grid-area: text;
-  max-width: 590px;
+  max-width: 498px;
   align-self: center;
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
@@ -310,6 +311,18 @@ ul li {
      object-fit: contain;
 }
 
+@media screen and (max-width: 1440px) {
+  .header__first-line, .header__second-line, .header__banner {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__first-line, .header__second-line, .header__banner {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 @media screen and (max-width: 768px) {
   .header__first-line, .header__horizontal-line, .header__nav2 {
     display: none;
@@ -374,6 +387,12 @@ ul li {
   .header__btn-container {
     flex-direction: column;
     align-items: start;
+  }
+}
+@media screen and (max-width: 360px) {
+  .header__second-line, .header__banner {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 .how-we-work {
@@ -712,7 +731,9 @@ ul li {
   }
 }
 .reviews {
-  margin: 0 16% 100px;
+  margin-left: 16%;
+  margin-right: 16%;
+  margin-bottom: 100px;
   /* Скрываем дополнительный текст по умолчанию */
   /* Класс для показа дополнительного текста */
 }
@@ -804,6 +825,18 @@ ul li {
   color: #868889;
 }
 
+@media screen and (max-width: 1440px) {
+  .reviews {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .reviews {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 @media screen and (max-width: 768px) {
   .reviews {
     margin-left: 20px;
@@ -825,6 +858,12 @@ ul li {
   }
   .reviews__review-text, .reviews__review-read-more {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .reviews {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 .schools {

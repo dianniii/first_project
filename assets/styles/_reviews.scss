@@ -1,5 +1,6 @@
 .reviews {
-  margin: 0 16% 100px;
+  @include margin-lateral-1920;
+  margin-bottom: $marging-bottom;
 
   &__title {
     @include h1-h2-font;
@@ -88,10 +89,21 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .reviews {
+    @include margin-lateral-1440;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .reviews {
+    @include margin-lateral-1024;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .reviews {
-    margin-left: 20px;
-    margin-right: 20px;
+    @include margin-lateral-768;
 
     &__reviews-container {
       grid-template-columns: 1fr;
@@ -117,5 +129,11 @@
     &__review-read-more {
       font-size: 16px;
     }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .reviews {
+    @include margin-lateral-360;
   }
 }

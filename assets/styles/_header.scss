@@ -1,10 +1,12 @@
 .header {
   width: 100%;
+  min-width: 330px;
 
   &__first-line,
   &__second-line,
   &__banner {
-    margin: 0 16%;
+    // margin: 0 16%;
+    @include margin-lateral-1920;
     display: grid;
   }
 
@@ -138,12 +140,12 @@
   }
 
   &__banner {
-    margin-bottom: 100px;
+    margin-bottom: $marging-bottom;
     position: relative;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: 1.5fr min-content 1fr;
     grid-template-columns: 1.7fr 1.3fr;
     grid-template-areas: "title pic" "text pic" "button pic";
-    gap: 10px;
+    gap: 40px 10px;
   }
 
   &__banner::before {
@@ -151,7 +153,7 @@
     position: absolute;
     max-height: 590px;
     top: 0px;
-    left: -5.5%;
+    left: -55px;
     right: -20px;
     bottom: -20px;
     background-image: url("../images/dots-long.svg");
@@ -177,13 +179,12 @@
 
   &__banner-title_black {
     display: block;
-    width: 90%;
+    // width: 90%;
   }
 
   &__banner-text {
     grid-area: text;
-    // width: 70%;
-    max-width: 590px;
+    max-width: 498px;
     align-self: center;
     font-size: 24px;
     @include font-600;
@@ -212,6 +213,26 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .header {
+    &__first-line,
+    &__second-line,
+    &__banner {
+      @include margin-lateral-1440;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    &__first-line,
+    &__second-line,
+    &__banner {
+      @include margin-lateral-1024;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     &__first-line,
@@ -222,8 +243,7 @@
 
     &__second-line,
     &__banner {
-      margin-left: 20px;
-      margin-right: 20px;
+      @include margin-lateral-768;
     }
 
     .hamburger-menu {
@@ -302,6 +322,15 @@
     &__btn-container {
       flex-direction: column;
       align-items: start;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .header {
+    &__second-line,
+    &__banner {
+      @include margin-lateral-360;
     }
   }
 }
