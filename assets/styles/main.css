@@ -241,6 +241,7 @@ ul li {
 }
 .header__banner {
   margin-bottom: 100px;
+  height: 590px;
   position: relative;
   grid-template-rows: 1.5fr min-content 1fr;
   grid-template-columns: 1.7fr 1.3fr;
@@ -252,7 +253,7 @@ ul li {
   position: absolute;
   max-height: 590px;
   top: 0px;
-  left: -55px;
+  left: -60px;
   right: -20px;
   bottom: -20px;
   background-image: url("../images/dots-long.svg");
@@ -302,12 +303,13 @@ ul li {
 .header__banner-img-container {
   grid-area: pic;
   align-self: center;
-  width: 107.4%;
-  margin-left: -8%;
+  width: 102%;
+  margin-left: -3%;
 }
 .header__banner-img {
   width: 100%;
   height: auto;
+  max-height: 600px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -322,6 +324,11 @@ ul li {
   .header__first-line, .header__second-line, .header__banner {
     margin-left: 5%;
     margin-right: 5%;
+  }
+  .header__banner-img-container {
+    padding-bottom: 10%;
+    width: 115%;
+    margin-left: -13%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -355,27 +362,26 @@ ul li {
   .header__banner::before {
     left: 0;
   }
-  .header__banner-title_black {
-    width: 79%;
-  }
   .header__banner-text {
-    width: 85%;
+    width: 91%;
   }
   .header__banner-img-container {
-    width: 120%;
-    margin-left: -19%;
+    padding-bottom: 15%;
+    margin-left: -15%;
   }
 }
 @media screen and (max-width: 660px) {
   .header__banner {
+    height: auto;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: auto;
     grid-template-areas: "title" "text" "button" "pic";
     gap: 20px;
   }
   .header__banner-img-container {
-    width: 100%;
+    width: 95%;
     margin-left: 0;
+    padding-bottom: 0;
   }
 }
 @media screen and (max-width: 440px) {
