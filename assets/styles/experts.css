@@ -57,6 +57,7 @@
 
 .experts__img-container {
   grid-area: img;
+  width: 100%;
 }
 
 .experts__subtitle-container {
