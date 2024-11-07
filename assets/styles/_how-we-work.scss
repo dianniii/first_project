@@ -225,6 +225,10 @@
       @include margin-lateral-1024;
     }
 
+    &__title {
+      margin-bottom: clamp(80px, 4.6vw, 60px);
+    }
+
     &__content {
       margin-bottom: clamp(300px, 18vh, 320px);
     }

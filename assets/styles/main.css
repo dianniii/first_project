@@ -607,6 +607,9 @@ ul li {
     margin-left: 5%;
     margin-right: 5%;
   }
+  .how-we-work__title {
+    margin-bottom: clamp(80px, 4.6vw, 60px);
+  }
   .how-we-work__content {
     margin-bottom: clamp(300px, 18vh, 320px);
   }
