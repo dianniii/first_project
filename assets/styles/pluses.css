@@ -19,3 +19,9 @@
     justify-items: center;
     gap: 20px;
 }
+
+.pluses__plus-first {
+    position: relative;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+}
