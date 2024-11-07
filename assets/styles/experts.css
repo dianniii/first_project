@@ -66,6 +66,10 @@
   object-fit: cover;
 }
 
+.experts__card-first .experts__img {
+  object-position: 65% 50%;
+}
+
 .experts__subtitle-container {
   height: 80px;
   grid-area: subtitle;
