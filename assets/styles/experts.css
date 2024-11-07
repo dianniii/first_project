@@ -61,8 +61,6 @@
 }
 
 .experts__subtitle-container {
-  /* padding-top: 23px;
-  padding-bottom: 23px; */
   height: 80px;
   grid-area: subtitle;
   font-family: "Montserrat", sans-serif;
