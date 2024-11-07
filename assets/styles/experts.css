@@ -57,11 +57,20 @@
 
 .experts__img-container {
   grid-area: img;
+  width: 100%;
+}
+
+.experts__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experts__card-first .experts__img {
+  object-position: 65% 50%;
 }
 
 .experts__subtitle-container {
-  /* padding-top: 23px;
-  padding-bottom: 23px; */
   height: 80px;
   grid-area: subtitle;
   font-family: "Montserrat", sans-serif;
