@@ -4,8 +4,7 @@
   margin-bottom: 100px;
 
   &__container {
-    max-width: 68%;
-    margin: 0 auto;
+    margin: 0 16%;
   }
 
   &__title {
@@ -172,8 +171,12 @@
 @media screen and (max-width: 1440px) {
   .how-we-work {
 
+    &__container {
+      margin: 0 8%;
+    }
+
     &__content {
-      margin-bottom: clamp(330px, 18vh, 350px);
+      margin-bottom: clamp(270px, 18vh, 300px);
     }
 
     &__info {
@@ -222,8 +225,12 @@
 @media screen and (max-width: 1024px) {
   .how-we-work {
 
+    &__container {
+      margin: 0 5%;
+    }
+
     &__content {
-      margin-bottom: clamp(410px, 18vh, 430px);
+      margin-bottom: clamp(300px, 18vh, 320px);
     }
 
     &__info {
@@ -266,7 +273,7 @@
   .how-we-work {
 
     &__container {
-      max-width: 98%;
+      margin: 0;
     }
 
     &__title {
@@ -278,6 +285,7 @@
     }
 
     &__info {
+      padding: 0 20px;
       row-gap: clamp(10px, 0.1vw, 5px);
     }
 
@@ -326,7 +334,6 @@
 
     &__info {
       top: -45px;
-      padding: 0px;
       row-gap: clamp(0px, 0.1vw, 5px);
     }
 
@@ -369,7 +376,11 @@
 @media screen and (max-width: 360px) {
   .how-we-work {
     &__content {
-      margin-bottom: clamp(440px, 18vh, 450px);
+      margin-bottom: clamp(480px, 18vh, 490px);
+    }
+
+    &__info {
+      padding: 0 10px;
     }
 
     &__text-wrapper {

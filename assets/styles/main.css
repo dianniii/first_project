@@ -381,8 +381,7 @@ ul li {
   margin-bottom: 100px;
 }
 .how-we-work__container {
-  max-width: 68%;
-  margin: 0 auto;
+  margin: 0 16%;
 }
 .how-we-work__title {
   font-family: "Montserrat", sans-serif;
@@ -540,8 +539,11 @@ ul li {
 }
 
 @media screen and (max-width: 1440px) {
+  .how-we-work__container {
+    margin: 0 8%;
+  }
   .how-we-work__content {
-    margin-bottom: clamp(330px, 18vh, 350px);
+    margin-bottom: clamp(270px, 18vh, 300px);
   }
   .how-we-work__info {
     grid-template-columns: 1fr;
@@ -584,8 +586,11 @@ ul li {
   }
 }
 @media screen and (max-width: 1024px) {
+  .how-we-work__container {
+    margin: 0 5%;
+  }
   .how-we-work__content {
-    margin-bottom: clamp(410px, 18vh, 430px);
+    margin-bottom: clamp(300px, 18vh, 320px);
   }
   .how-we-work__info {
     row-gap: clamp(20px, 0.1vw, 5px);
@@ -616,7 +621,7 @@ ul li {
 }
 @media screen and (max-width: 768px) {
   .how-we-work__container {
-    max-width: 98%;
+    margin: 0;
   }
   .how-we-work__title {
     margin-bottom: clamp(70px, 4.6vw, 60px);
@@ -625,6 +630,7 @@ ul li {
     margin-bottom: clamp(350px, 18vh, 370px);
   }
   .how-we-work__info {
+    padding: 0 20px;
     row-gap: clamp(10px, 0.1vw, 5px);
   }
   .how-we-work__text-wrapper {
@@ -660,7 +666,6 @@ ul li {
   }
   .how-we-work__info {
     top: -45px;
-    padding: 0px;
     row-gap: clamp(0px, 0.1vw, 5px);
   }
   .how-we-work__text-wrapper--top::before {
@@ -691,7 +696,10 @@ ul li {
 }
 @media screen and (max-width: 360px) {
   .how-we-work__content {
-    margin-bottom: clamp(440px, 18vh, 450px);
+    margin-bottom: clamp(480px, 18vh, 490px);
+  }
+  .how-we-work__info {
+    padding: 0 10px;
   }
   .how-we-work__text-wrapper--top-right::before {
     width: 110px;
