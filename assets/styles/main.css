@@ -400,7 +400,8 @@ ul li {
   margin-bottom: 100px;
 }
 .how-we-work__container {
-  margin: 0 16%;
+  margin-left: 16%;
+  margin-right: 16%;
 }
 .how-we-work__title {
   font-family: "Montserrat", sans-serif;
@@ -555,7 +556,8 @@ ul li {
 
 @media screen and (max-width: 1440px) {
   .how-we-work__container {
-    margin: 0 8%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
   .how-we-work__content {
     margin-bottom: clamp(270px, 18vh, 300px);
@@ -602,7 +604,8 @@ ul li {
 }
 @media screen and (max-width: 1024px) {
   .how-we-work__container {
-    margin: 0 5%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .how-we-work__content {
     margin-bottom: clamp(300px, 18vh, 320px);
@@ -1099,17 +1102,20 @@ ul li {
 
 @media screen and (max-width: 1440px) {
   .social-media__container {
-    margin: 0 8%;
+    margin-left: 8%;
+    margin-right: 8%;
   }
 }
 @media screen and (max-width: 1024px) {
   .social-media__container {
-    margin: 0 5%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }
 @media screen and (max-width: 768px) {
   .social-media__container {
-    margin: 0 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .social-media__description {
     white-space: normal;
@@ -1138,9 +1144,6 @@ ul li {
   }
 }
 @media screen and (max-width: 440px) {
-  .social-media__container {
-    margin: 0 20px;
-  }
   .social-media__title {
     font-size: 32px;
     white-space: normal;
@@ -1173,7 +1176,8 @@ ul li {
 }
 @media screen and (max-width: 360px) {
   .social-media__container {
-    margin: 0 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .social-media__slide {
     max-width: 340px;

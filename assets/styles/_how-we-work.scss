@@ -4,7 +4,7 @@
   margin-bottom: 100px;
 
   &__container {
-    margin: 0 16%;
+    @include margin-lateral-1920;
   }
 
   &__title {
@@ -168,7 +168,7 @@
   .how-we-work {
 
     &__container {
-      margin: 0 8%;
+      @include margin-lateral-1440;
     }
 
     &__content {
@@ -222,7 +222,7 @@
   .how-we-work {
 
     &__container {
-      margin: 0 5%;
+      @include margin-lateral-1024;
     }
 
     &__content {

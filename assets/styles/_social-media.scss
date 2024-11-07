@@ -98,7 +98,7 @@
   .social-media {
 
     &__container {
-      margin: 0 8%;
+      @include margin-lateral-1440;
     }
   }
 }
@@ -107,7 +107,7 @@
   .social-media {
 
     &__container {
-      margin: 0 5%;
+      @include margin-lateral-1024;
     }
   }
 }
@@ -117,7 +117,7 @@
   .social-media {
 
     &__container {
-      margin: 0 20px;
+      @include margin-lateral-768;
     }
 
     &__description {
@@ -156,10 +156,6 @@
 
 @media screen and (max-width: 440px) {
   .social-media {
-
-    &__container {
-      margin: 0 20px;
-    }
 
     &__title {
       font-size: 32px;
@@ -203,7 +199,7 @@
   .social-media {
 
     &__container {
-      margin: 0 10px;
+      @include margin-lateral-360;
     }
 
     &__slide {
