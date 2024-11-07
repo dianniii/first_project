@@ -224,6 +224,9 @@
   margin: 51px auto 0;
 }
 
-/* .expert-card-second {
-  grid-area: expert-second;
-} */
+@media screen and (max-width: 1440px) {
+  .experts {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
