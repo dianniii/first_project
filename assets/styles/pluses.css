@@ -55,3 +55,11 @@
     font-size: 20px;
     color: rgb(38, 50, 56);
 }
+
+.pluses__text {
+    font-family: Montserrat, sans-serif;
+    font-weight: 65rmal;
+    line-height: 140%;
+    font-size: 16px;
+    color: rgb(144, 164, 174);
+}
