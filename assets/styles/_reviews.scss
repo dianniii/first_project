@@ -15,6 +15,16 @@
     gap: 20px;
   }
 
+  .with-dots-before::before {
+    bottom: -35px;
+    left: -55px;
+  }
+
+  .with-dots-after::after {
+    top: -35px;
+    right: -55px;
+  }
+
   // &__reviews-container::before {
   //   content: "";
   //   width: 120px;

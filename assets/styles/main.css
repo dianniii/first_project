@@ -107,8 +107,8 @@ ul li {
   width: 120px;
   height: 120px;
   position: absolute;
-  bottom: -35px;
-  left: -55px;
+  bottom: -60px;
+  left: -60px;
   z-index: -1;
   background-image: url(../images/dots-square.svg);
   background-repeat: no-repeat;
@@ -120,8 +120,8 @@ ul li {
   width: 120px;
   height: 120px;
   position: absolute;
-  top: -35px;
-  right: -55px;
+  top: -60px;
+  right: -60px;
   z-index: -1;
   background-image: url(../images/dots-square.svg);
   background-repeat: no-repeat;
@@ -787,6 +787,14 @@ ul li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+.reviews .with-dots-before::before {
+  bottom: -35px;
+  left: -55px;
+}
+.reviews .with-dots-after::after {
+  top: -35px;
+  right: -55px;
 }
 .reviews__review {
   padding: 20px 21px;
