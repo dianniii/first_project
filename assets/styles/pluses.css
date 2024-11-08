@@ -75,10 +75,21 @@
     padding-bottom: 114px;
 }
 
-.pluses__image-container-thirst {
+.pluses__image-container-first {
     grid-area: img-first;
 }
 
+.pluses__image-container-second {
+    grid-area: img-second;
+}
+
+.pluses__image-container-third {
+    grid-area: img-third;
+}
+
+.pluses__image-container-fourth {
+    grid-area: img-fourth;
+}
 .pluses__subtitle {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
