@@ -90,6 +90,23 @@
 .pluses__image-container-fourth {
     grid-area: img-fourth;
 }
+
+.pluses__subtitle-first {
+    grid-area: subtitle-first;
+}
+
+.pluses__subtitle-second {
+    grid-area: subtitle-second;
+}
+
+.pluses__subtitle-third {
+    grid-area: subtitle-third;
+}
+
+.pluses__subtitle-fourth {
+    grid-area: subtitle-fourth;
+}
+
 .pluses__subtitle {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
