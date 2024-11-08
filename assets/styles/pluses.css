@@ -52,10 +52,8 @@
 
 .pluses__plus {
     position: relative;
-    display: grid;
     max-width: 310px;
     padding: 0 20px 20px;
-    grid-template-rows: repeat(3, auto);
     border-radius: 2px;
     box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
     background: rgb(255, 255, 255);
@@ -77,7 +75,12 @@
     padding-bottom: 114px;
 }
 
+.pluses__image-container {
+    grid-area: img;
+}
+
 .pluses__subtitle {
+    grid-area: subtitle;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -87,6 +90,7 @@
 }
 
 .pluses__text {
+    grid-area: text;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-style: normal;
