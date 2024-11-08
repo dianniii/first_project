@@ -18,9 +18,9 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
-        "img img img img"
-        "subtitle subtitle subtitle subtitle"
-        "text text text text"
+        "img-first img-second img-third img-fourth"
+        "subtitle-first subtitle-second subtitle-third subtitle-fourth"
+        "text-first text-second text-third text-fourth"
     gap: 0px 20px;
 }
 
@@ -75,12 +75,11 @@
     padding-bottom: 114px;
 }
 
-.pluses__image-container {
-    grid-area: img;
+.pluses__image-container-thirst {
+    grid-area: img-first;
 }
 
 .pluses__subtitle {
-    grid-area: subtitle;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -90,7 +89,6 @@
 }
 
 .pluses__text {
-    grid-area: text;
     font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-style: normal;
