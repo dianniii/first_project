@@ -1238,17 +1238,19 @@ ul li {
   gap: 16px 19px;
 }
 .footer__subscribe, .footer__contact, .footer__social, .footer__subscribe-form-btn-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  gap: 16px;
 }
 .footer__subscribe {
+  grid-template-rows: repeat(3, auto);
   gap: 19px;
 }
-.footer__subscribe-title {
+.footer__subscribe-title, .footer__contact-title {
   margin-bottom: 4px;
 }
 .footer__subscribe-form-btn-container {
-  gap: 16px;
+  grid-template-rows: auto;
 }
 .footer__subscribe-input {
   width: 352px;
@@ -1272,18 +1274,27 @@ ul li {
 .footer__subscribe-link {
   text-decoration: underline;
 }
-.footer__contact {
-  gap: 16px;
-}
 .footer__contact-text {
+  max-width: 403px;
   color: #ffffff;
   font-size: 15px;
 }
-.footer__social {
-  align-items: flex-end;
+.footer__contact-email {
+  position: relative;
 }
-.footer__social-title {
-  margin-bottom: 7%;
+.footer__contact-email::after {
+  content: "";
+  position: absolute;
+  width: 172px;
+  height: 1px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #2196f3;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer__social {
+  justify-self: end;
 }
 .footer__info {
   margin-left: 16%;
