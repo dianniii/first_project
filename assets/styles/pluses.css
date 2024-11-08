@@ -23,5 +23,6 @@
 .pluses__plus-first {
     position: relative;
     display: grid;
+    max-width: 310px;
     grid-template-rows: repeat(3, auto);
 }
