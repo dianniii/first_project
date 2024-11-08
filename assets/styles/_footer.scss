@@ -1,103 +1,119 @@
-@import "mixins.scss";
-@import "vars.scss";
+// @import "mixins.scss";
+// @import "vars.scss";
 
-.footer{
-    width: 100%;
+.footer {
+  background-color: $main-font-color;
+
+  //main font characteristics for the whole footer
+  &__subtitle {
+    @include h3-font;
+    font-size: 17px;
+    color: #78909c;
+  }
+
+  &__text {
+    @include font-500;
+    color: #78909c;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  //  main container
+  &__container {
+    @include margin-lateral-1920;
+    padding-top: 49px; //спорный момент
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: 6.5%;
+  }
+
+  // subscribe block in container
+  &__subscribe {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    gap: 19px;
+  }
+
+  &__subscribe-title {
+    margin-bottom: 4px;
+  }
+
+  &__subscribe-form-btn-container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 16px;
+  }
+
+  &__subscribe-input {
+    width: 352px;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid $accent-blue;
     background-color: $main-font-color;
-    height: auto;
-    &__container{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        column-gap: 7%;
-        width: 68%;
-        margin: 0 auto;
-        padding-top: 40px;
+    font-size: 15px;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+
+  &__button {
+    width: 352px;
+    height: 40px;
+    border-radius: 2px;
+  }
+
+  &__subscribe-text {
+    font-size: 13px;
+  }
+
+  &__subscribe-link {
+    text-decoration: underline;
+  }
+
+  // contact block in container
+  &__contact {
+    display: grid;
+  }
+
+  &__contact-title {
+    margin-bottom: 7%;
+  }
+
+  &__contact-text {
+    color: #ffffff;
+  }
+
+  // social block in container
+  &__social {
+    justify-items: end;
+  }
+
+  &__social-title {
+    margin-bottom: 7%;
+  }
+
+  // под линией
+  &__info {
+    width: 68%;
+    margin: 0 auto;
+    img {
+      width: 100%;
     }
-    &__subscribe{
-        a{
-            text-decoration: underline;
-            color: #78909C;
-        }
-        p{
-            font-size: 0.8rem;
-            color: #78909C;
-            @include font-500;
-            margin: 20px 0;
-        }
+  }
+  &__info-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+    a {
+      color: #78909c;
+      font-size: 0.94rem;
+      @include font-500;
     }
-    &__subscribe-title{
-        @include h3-font;
-        font-size: 17px;
-        color: #78909C;
-        margin-bottom: 7%;
-    }
-    &__subscribe-input{
-        width: 352px;
-        height: 40px;
-        border-radius: 2px;
-        border: 1px solid #2196F3;
-        background-color: $main-font-color;
-        @include font-500;
-        color: #78909C;
-        font-size: 0.94rem;
-        padding: 0 10px;
-        cursor: pointer;
-    }
-    &__button{
-        width: 352px;
-        height: 40px;
-        border-radius: 2px;
-        margin: 20px 0;
-    }
-    &__contact{
-        p{
-            color: #ffffff;
-            @include font-500;
-            font-size: 0.94rem;
-        }
-        a{
-            color: #ffffff;
-            @include font-500;
-        }
-    }
-    &__contact-title{
-        @include h3-font;
-        font-size: 17px;
-        color: #78909C;
-        margin-bottom: 7%;
-    }
-    &__social{
-        justify-items: end;
-        img{
-            margin-left: 7px
-        }
-    }
-    &__social-title{
-        @include h3-font;
-        font-size: 17px;
-        color: #78909C;
-        margin-bottom: 7%;
-    }
-    // под линией
-    &__info{
-        width: 68%;
-        margin: 0 auto;
-        img{
-            width: 100%;
-        }
-    }
-    &__info-links{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
-        padding-bottom: 20px;
-        a{
-            color: #78909C;
-            font-size: 0.94rem;
-            @include font-500;
-        }
-    }
-    &__info-link{
-        text-decoration: underline;
-    }
+  }
+  &__info-link {
+    text-decoration: underline;
+  }
 }
