@@ -411,11 +411,11 @@
 
       <section class="reviews">
         <h2 class="reviews__title">Отзывы о консультациях</h2>
-        <div class="reviews__reviews-container">
+        <div class="reviews__reviews-container with-dots-before with-dots-after">
           <div class="reviews__review">
             <h3 class="reviews__review-title">Мне понравилась слаженная работа девушек</h3>
             <p class="reviews__review-text">«Наш&nbsp;сын пойдёт в&nbsp;школу только через&nbsp;год, однако уже&nbsp;сейчас мы, родители, поняли, что&nbsp;хотели&nbsp;бы&nbsp;осознанно подойти к&nbsp;такому важному шагу как&nbsp;выбор начальной школы для&nbsp;своего ребёнка. До&nbsp;того, как&nbsp;встретиться в&nbsp;зуме с&nbsp;Мариной и&nbsp;Натальей, в&nbsp;Инстаграм-аккаунте prosto.education мы&nbsp;скачали лист вопросов, на&nbsp;которые сначала ответили вдвоём с&nbsp;мужем, чтобы&nbsp;убедиться, что&nbsp;наши взгляды на&nbsp;дальнейшее образование нашего сына совпадают...</p>
-            <p class="reviews__review-text reviews__review-text--hidden">Vы&nbsp;скачали лист вопросов, на&nbsp;которые сначала ответили вдвоём с&nbsp;мужем, чтобы&nbsp;убедиться, что&nbsp;наши взгляды на&nbsp;дальнейшее образование нашего сына совпадают....</p>
+            <p class="reviews__review-text reviews__review-text_hidden">Vы&nbsp;скачали лист вопросов, на&nbsp;которые сначала ответили вдвоём с&nbsp;мужем, чтобы&nbsp;убедиться, что&nbsp;наши взгляды на&nbsp;дальнейшее образование нашего сына совпадают....</p>
             <a href="#" class="reviews__review-read-more" onclick="toggleReviewText(event)">Читать полностью...</a>
             <p class="reviews__review-author">Анна Абросимова, 20 января 2021</p>
           </div>
@@ -721,10 +721,10 @@
       const reviewBlock = event.target.closest('.reviews__review');
 
       // Переключить класс .reviews__review--expanded
-      reviewBlock.classList.toggle('reviews__review--expanded');
+      reviewBlock.classList.toggle('reviews__review_expanded');
 
       // Изменить текст ссылки в зависимости от состояния
-      if (reviewBlock.classList.contains('reviews__review--expanded')) {
+      if (reviewBlock.classList.contains('reviews__review_expanded')) {
         event.target.textContent = 'Свернуть';
       } else {
         event.target.textContent = 'Читать полностью...';

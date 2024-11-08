@@ -39,6 +39,32 @@ ul {
   }
 }
 
+.with-dots-before::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: -35px;
+  left: -55px;
+  z-index: -1;
+  background-image: url(../images/dots-square.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.with-dots-after::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -35px;
+  right: -55px;
+  z-index: -1;
+  background-image: url(../images/dots-square.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 // import all style files
 @import "./header";
 @import "./how-we-work";
