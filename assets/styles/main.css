@@ -1205,6 +1205,7 @@ ul li {
   }
 }
 .footer {
+  min-height: 368px;
   background-color: #263238;
 }
 .footer__subtitle {
@@ -1231,22 +1232,22 @@ ul li {
   margin-left: 16%;
   margin-right: 16%;
   padding-top: 49px;
+  padding-bottom: 40px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  -moz-column-gap: 6.5%;
-       column-gap: 6.5%;
+  grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+  gap: 16px 19px;
+}
+.footer__subscribe, .footer__contact, .footer__social, .footer__subscribe-form-btn-container {
+  display: flex;
+  flex-direction: column;
 }
 .footer__subscribe {
-  display: grid;
-  grid-template-rows: repeat(3, auto);
   gap: 19px;
 }
 .footer__subscribe-title {
   margin-bottom: 4px;
 }
 .footer__subscribe-form-btn-container {
-  display: grid;
-  grid-template-rows: auto;
   gap: 16px;
 }
 .footer__subscribe-input {
@@ -1265,32 +1266,32 @@ ul li {
   border-radius: 2px;
 }
 .footer__subscribe-text {
+  max-width: 320px;
   font-size: 13px;
 }
 .footer__subscribe-link {
   text-decoration: underline;
 }
 .footer__contact {
-  display: grid;
-}
-.footer__contact-title {
-  margin-bottom: 7%;
+  gap: 16px;
 }
 .footer__contact-text {
   color: #ffffff;
+  font-size: 15px;
 }
 .footer__social {
-  justify-items: end;
+  align-items: flex-end;
 }
 .footer__social-title {
   margin-bottom: 7%;
 }
 .footer__info {
-  width: 68%;
-  margin: 0 auto;
+  margin-left: 16%;
+  margin-right: 16%;
 }
-.footer__info img {
+.footer__divider-container svg {
   width: 100%;
+  height: 1px;
 }
 .footer__info-links {
   display: flex;
@@ -1309,4 +1310,29 @@ ul li {
 }
 .footer__info-link {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1440px) {
+  .footer__container, .footer__info {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .footer__container, .footer__info {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__container, .footer__info {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .footer__container, .footer__info {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
