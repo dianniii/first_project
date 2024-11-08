@@ -107,6 +107,22 @@
     grid-area: subtitle-fourth;
 }
 
+.pluses__text-first {
+    grid-area: text-first;
+}
+
+.pluses__text-second {
+    grid-area: text-second;
+}
+
+.pluses__text-third {
+    grid-area: text-third;
+}
+
+.pluses__text-fourth {
+    grid-area: text-fourth;
+}
+
 .pluses__subtitle {
     font-family: Montserrat, sans-serif;
     font-weight: 600;
