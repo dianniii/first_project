@@ -46,3 +46,12 @@
 .pluses__plus-fourth {
     padding-bottom: 114px;
 }
+
+.pluses__subtitle {
+    font-family: Montserrat, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 140%;
+    font-size: 20px;
+    color: rgb(38, 50, 56);
+}
