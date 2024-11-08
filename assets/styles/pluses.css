@@ -16,8 +16,12 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    align-items: baseline;
-    gap: 20px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "img img img img"
+    "subtitle subtitle subtitle subtitle"
+    "text text text text"
+    gap: 0px 20px;
 }
 
 .pluses__container::before {
