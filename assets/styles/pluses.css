@@ -25,4 +25,5 @@
     display: grid;
     max-width: 310px;
     grid-template-rows: repeat(3, auto);
+    padding: 0px 20px 20px 20 px;
 }
