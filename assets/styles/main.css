@@ -462,7 +462,7 @@ ul li {
   position: absolute;
   width: 280px;
   height: 280px;
-  top: 25px;
+  top: 15px;
   right: -65px;
   background-image: url("../images/about-us/dots-right.svg");
   background-repeat: no-repeat;
@@ -477,7 +477,6 @@ ul li {
   line-height: 140%;
   font-size: 42px;
   color: #263238;
-  margin-bottom: 0;
 }
 .about-us__subtitle {
   font-family: "Montserrat", sans-serif;
@@ -486,7 +485,6 @@ ul li {
   line-height: 140%;
   font-weight: 500;
   color: #6f8793;
-  margin: 0;
   font-size: 16px;
 }
 .about-us__video {
@@ -505,7 +503,7 @@ ul li {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about-us__video .about-us__video-overlay {
+.about-us__video-overlay {
   grid-area: image;
   display: flex;
   flex-direction: column;
@@ -513,7 +511,7 @@ ul li {
   padding: 30px;
   text-align: left;
 }
-.about-us__video .about-us__video-overlay .about-us__authors {
+.about-us__video-overlay .about-us__authors {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -521,7 +519,7 @@ ul li {
   font-size: 24px;
   color: #fff;
 }
-.about-us__video .about-us__video-overlay .about-us__duration {
+.about-us__video-overlay .about-us__duration {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -555,7 +553,6 @@ ul li {
   .about-us__container {
     margin-left: 8%;
     margin-right: 8%;
-    gap: 10px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -572,11 +569,70 @@ ul li {
   .about-us__container__subtitle {
     grid-row: 2;
   }
-  .about-us__container__video {
+  .about-us__video {
     grid-row: 3;
+    height: 600px;
   }
-  .about-us__subtitle .br {
+  .about-us__video-image {
+    height: 100%;
+  }
+  .about-us__subtitle .about-us__br {
     display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-us__container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .about-us__container::after {
+    top: 78px;
+    right: -58px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .about-us__container {
+    row-gap: 20px;
+  }
+  .about-us__container::before {
+    width: 150px;
+    height: 150px;
+    bottom: -39px;
+  }
+  .about-us__container::after {
+    width: 150px;
+    height: 150px;
+    top: 72px;
+    right: -37px;
+  }
+  .about-us__title {
+    font-size: 32px;
+  }
+  .about-us__video {
+    height: 235px;
+  }
+  .about-us__video-overlay {
+    padding: 10px;
+  }
+  .about-us__video-overlay .about-us__authors {
+    font-size: 16px;
+  }
+  .about-us__video-overlay .about-us__duration {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  .about-us__play-button {
+    width: 62px;
+    height: 62px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .about-us__container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .about-us__container::after {
+    top: 142px;
   }
 }
 .how-we-work {
