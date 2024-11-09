@@ -63,21 +63,11 @@
     box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
   }
 
-.pluses__plus-first {
-    padding-bottom: 20px;
-}
-
-.pluses__plus-second {
-    padding-bottom: 48px;
-}
-
-.pluses__plus-third {
-    padding-bottom: 92px;
-}
-
-.pluses__plus-fourth {
-    padding-bottom: 114px;
-}
+.pluses__image-container {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    z-index: 2;
+  }
 
 .pluses__subtitle {
     padding: 10px 0px;
