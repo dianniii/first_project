@@ -127,7 +127,7 @@
     justify-content: space-between;
   }
 
-  &__info-link {
+  &__info-user-agrem {
     text-decoration: underline;
   }
 }
@@ -190,6 +190,10 @@
     &__container,
     &__info {
       @include margin-lateral-768;
+    }
+
+    &__info-user-agrem {
+      display: none;
     }
   }
 }

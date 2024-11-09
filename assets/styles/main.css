@@ -1313,7 +1313,7 @@ ul li {
   grid-template-columns: max-content max-content;
   justify-content: space-between;
 }
-.footer__info-link {
+.footer__info-user-agrem {
   text-decoration: underline;
 }
 
@@ -1358,6 +1358,9 @@ ul li {
   .footer__container, .footer__info {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .footer__info-user-agrem {
+    display: none;
   }
 }
 @media screen and (max-width: 360px) {
