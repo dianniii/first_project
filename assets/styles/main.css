@@ -1240,7 +1240,7 @@ ul li {
 }
 .footer__contact, .footer__social, .footer__subscribe-form-btn-container {
   display: grid;
-  grid-template-rows: min-content min-content;
+  grid-template-rows: min-content 1fr;
   gap: 16px;
 }
 .footer__subscribe {
@@ -1255,19 +1255,26 @@ ul li {
   grid-template-rows: auto;
 }
 .footer__subscribe-input {
+  padding: 8px 16px;
   width: 352px;
   height: 40px;
   border-radius: 2px;
   border: 1px solid #2196f3;
   background-color: #263238;
   font-size: 15px;
-  padding: 0 10px;
+  line-height: 213.333%;
   cursor: pointer;
 }
 .footer__button {
   width: 352px;
   height: 40px;
+  padding: 13px 16px 11px;
   border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 145.45%;
+  letter-spacing: 2.75px;
 }
 .footer__subscribe-text {
   max-width: 320px;
@@ -1327,6 +1334,9 @@ ul li {
   .footer__contact {
     align-self: center;
   }
+  .footer__info-links {
+    padding-top: 49.5px;
+  }
 }
 @media screen and (max-width: 1440px) {
   .footer__container {
@@ -1341,14 +1351,22 @@ ul li {
     grid-template-rows: auto auto;
     gap: 56px 19px;
   }
+  .footer__info-links {
+    padding-top: 72px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .footer__container {
     padding-top: 55px;
+    grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
+    gap: 56px 19px;
   }
   .footer__container, .footer__info {
     margin-left: 5%;
     margin-right: 5%;
+  }
+  .footer__info-links {
+    padding-top: 94.5px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1359,13 +1377,33 @@ ul li {
     margin-left: 20px;
     margin-right: 20px;
   }
+  .footer__info-links {
+    padding-top: 117px;
+  }
   .footer__info-user-agrem {
     display: none;
   }
 }
+@media screen and (max-width: 440px) {
+  .footer__container {
+    padding-top: 55px;
+    grid-template-columns: 320px;
+    gap: 56px 19px;
+  }
+  .footer__info-links {
+    padding-top: 96px;
+  }
+  .footer__subscribe-input {
+    padding: 8px 14.55px;
+    width: 320px;
+  }
+  .footer__button {
+    padding: 13px 14.55px 11px;
+    width: 320px;
+  }
+}
 @media screen and (max-width: 360px) {
-  .footer__container, .footer__info {
-    margin-left: 10px;
-    margin-right: 10px;
+  .footer__info-links {
+    padding-top: 75px;
   }
 }/*# sourceMappingURL=main.css.map */
