@@ -19,7 +19,7 @@
     gap: 53px 20px;
 }
 
-.pluses__container::before {
+/* .pluses__container::before {
     content: "";
     width: 120px;
     height: 120px;
@@ -30,7 +30,7 @@
     background-image: url(../images/dots-square.svg);
     background-repeat: no-repeat;
     background-size: contain;
-  }
+  } 
 
 .pluses__container::after {
     content: "";
@@ -43,7 +43,7 @@
     background-image: url(../images/dots-square.svg);
     background-repeat: no-repeat;
     background-size: contain;
-  }
+  } */
 
 .pluses__plus {
     position: relative;
