@@ -15,30 +15,14 @@
     gap: 20px;
   }
 
-  &__reviews-container::before {
-    content: "";
-    width: 120px;
-    height: 120px;
-    position: absolute;
+  .with-dots-before::before {
     bottom: -35px;
     left: -55px;
-    z-index: -1;
-    background-image: url(../images/dots-square.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
-  &__reviews-container::after {
-    content: "";
-    width: 120px;
-    height: 120px;
-    position: absolute;
+  .with-dots-after::after {
     top: -35px;
     right: -55px;
-    z-index: -1;
-    background-image: url(../images/dots-square.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
 
   &__review {
@@ -67,13 +51,13 @@
     color: #000;
   }
 
-  /* Скрываем дополнительный текст по умолчанию */
-  &__review-text--hidden {
+  // Скрываем дополнительный текст по умолчанию
+  &__review-text_hidden {
     display: none;
   }
 
-  /* Класс для показа дополнительного текста */
-  &__review--expanded &__review-text--hidden {
+  // Класс для показа дополнительного текста
+  &__review_expanded &__review-text_hidden {
     display: block;
   }
 

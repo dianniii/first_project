@@ -19,6 +19,25 @@ ul {
   }
 }
 
+.icon-social {
+  justify-self: end;
+  display: flex;
+  gap: 10px;
+
+  &__item-link {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+}
+
 .button {
   @include button;
 }
@@ -39,6 +58,32 @@ ul {
   }
 }
 
+.with-dots-before::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  z-index: -1;
+  background-image: url(../images/dots-square.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.with-dots-after::after {
+  content: "";
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  z-index: -1;
+  background-image: url(../images/dots-square.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 // import all style files
 @import "./header";
 @import "./about-us";
@@ -46,3 +91,4 @@ ul {
 @import "./reviews";
 @import "./schools-map";
 @import "./social-media";
+@import "./footer";
