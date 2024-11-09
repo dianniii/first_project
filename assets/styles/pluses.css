@@ -15,9 +15,8 @@
 .pluses__container {
     position: relative;
     display: grid;
-    align-items: baseline;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 53px 20px;
 }
 
 .pluses__container::before {
@@ -49,13 +48,20 @@
 .pluses__plus {
     position: relative;
     display: grid;
-    max-width: 310px;
-    padding: 0 20px 20px;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: min-content 1fr;
+    gap: 10px;
+}
+
+.pluses__subtitle-text_border {
+    margin-top: -70px;
+    padding: 50px 20px 20px;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 10px;
+    background-color: #fff;
     border-radius: 2px;
     box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
-    background: rgb(255, 255, 255);
-}
+  }
 
 .pluses__plus-first {
     padding-bottom: 20px;
