@@ -98,8 +98,8 @@
   
 @media screen and (max-width: 1440px) {
   .pluses {
-    @include margin-lateral-1440;
-  
+    margin-left: 8%;
+    margin-right: 8%;
     .pluses__container {
       grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     }
@@ -108,7 +108,8 @@
   
 @media screen and (max-width: 1024px) {
   .pluses {
-    @include margin-lateral-1024;
+    margin-left: 5%;
+    margin-right: 5%;
     .pluses__container {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -117,12 +118,14 @@
   
 @media screen and (max-width: 768px) {
   .pluses {
-    @include margin-lateral-768;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
   
 @media screen and (max-width: 360px) {
   .pluses {
-    @include margin-lateral-360;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
