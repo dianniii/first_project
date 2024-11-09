@@ -1568,15 +1568,11 @@ ul li {
 @media screen and (max-width: 1440px) {
   .footer__container {
     padding-top: 53px;
+    grid-template-columns: repeat(auto-fit, minmax(415px, 1fr));
   }
   .footer__container, .footer__info {
     margin-left: 8%;
     margin-right: 8%;
-  }
-  .footer__container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 56px 19px;
   }
   .footer__info-links {
     padding-top: 72px;
@@ -1586,7 +1582,6 @@ ul li {
   .footer__container {
     padding-top: 55px;
     grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
-    gap: 56px 19px;
   }
   .footer__container, .footer__info {
     margin-left: 5%;
@@ -1615,7 +1610,6 @@ ul li {
   .footer__container {
     padding-top: 55px;
     grid-template-columns: 320px;
-    gap: 56px 19px;
   }
   .footer__info-links {
     padding-top: 96px;

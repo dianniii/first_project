@@ -164,17 +164,12 @@
   .footer {
     &__container {
       padding-top: 53px;
+      grid-template-columns: repeat(auto-fit, minmax(415px, 1fr));
     }
 
     &__container,
     &__info {
       @include margin-lateral-1440;
-    }
-
-    &__container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto;
-      gap: 56px 19px;
     }
 
     &__info-links {
@@ -188,7 +183,6 @@
     &__container {
       padding-top: 55px;
       grid-template-columns: repeat(auto-fit, minmax(352px, 1fr));
-      gap: 56px 19px;
     }
 
     &__container,
@@ -229,7 +223,6 @@
       padding-top: 55px;
       //   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       grid-template-columns: 320px;
-      gap: 56px 19px;
     }
     &__info-links {
       padding-top: 96px;
