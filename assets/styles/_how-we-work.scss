@@ -161,6 +161,8 @@
 
   &__button {
     margin: 0 auto;
+    position: relative;
+    z-index: 10;
   }
 }
 
@@ -316,6 +318,15 @@
 
     &__text {
       padding: 10px 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .how-we-work {
+    
+    &__content {
+      margin-bottom: clamp(450px, 18vh, 370px);
     }
   }
 }

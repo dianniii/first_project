@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/styles/dist/normalize.css" />
     <link rel="stylesheet" href="./assets/styles/main.css" />
     <link rel="stylesheet" href="./assets/styles/dist/_consultation-pricing.css">
-    <link rel="stylesheet" href="./assets/styles/dist/_about-us.css">
     <link rel="stylesheet" href="./assets/styles/dist/order-consultation.css">
     <link rel="stylesheet" href="./assets/styles/dist/_footer.css">
     <link rel="stylesheet" href="./assets/styles/experts.css" />
@@ -213,12 +212,18 @@
 
       <section class="about-us">
         <div class="about-us__container">
-          <div class="about-us__info">
-            <h2 class="about-us__title">Давайте знакомиться!</h2>
-            <p class="about-us__text">Посмотрите наше небольшое видео,</br> где мы расскажем, почему вам это нужно!</p>
-          </div>
-          <div class="about-us__content">
-            <img class="about-us__video" src="./assets/images/about-us/video.png" alt="">
+          <h2 class="about-us__title">Давайте знакомиться!</h2>
+          <p class="about-us__subtitle">Посмотрите наше небольшое видео, <br class="br"> где мы расскажем, почему вам это нужно!</p>
+                
+          <div class="about-us__video">
+            <img src="./assets/images/about-us/about-us-video.jpg" alt="Дети за партой" class="about-us__video-image">
+            
+            <button class="about-us__play-button"></button>
+            
+            <div class="about-us__video-overlay">
+              <p class="about-us__authors">Марина Рогозина и Наталья Король</p>
+              <p class="about-us__duration">Длительность: 10 мин</p>
+            </div>
           </div>
         </div>
       </section>
@@ -541,10 +546,18 @@
           <h2 class="social-media__title">Мы в социальных сетях!</h2>
           <div class="social-media__content">
             <ul class="social-media__icons">
-              <li class="social-media__icon social-media__icon--instagram"><img src="./assets/images/social-media/instagramm.svg" alt="instagram"></li>
-              <li class="social-media__icon social-media__icon--youtube"><img src="./assets/images/social-media/youtube.svg" alt="youtube"></li>
-              <li class="social-media__icon social-media__icon--vk"><img src="./assets/images/social-media/vk.svg" alt="vk"></li>
-              <li class="social-media__icon social-media__icon--facebook"><img src="./assets/images/social-media/facebook.svg" alt="facebook"></li>
+              <li class="social-media__icon social-media__icon--instagram">
+                <img src="./assets/images/social-media/instagramm.svg" alt="instagram">
+              </li>
+              <li class="social-media__icon social-media__icon--youtube">
+                <img src="./assets/images/social-media/youtube.svg" alt="youtube">
+              </li>
+              <li class="social-media__icon social-media__icon--vk">
+                <img src="./assets/images/social-media/vk.svg" alt="vk">
+              </li>
+              <li class="social-media__icon social-media__icon--facebook">
+                <img src="./assets/images/social-media/facebook.svg" alt="facebook">
+              </li>
             </ul>
             <p class="social-media__description">
               Смотрите и читайте еще больше полезного контента в наших социальных сетях!
@@ -553,27 +566,39 @@
         </div>
         <div class="social-media__slider">
           <div class="social-media__slide">
-            <img src="./assets/images/social-media/school-superheroes.png" alt="Школы-супергерои" class="social-media__slide-image">
+            <div class="social-media__slide-image-container">
+              <img src="./assets/images/social-media/school-superheroes.png" alt="Школы-супергерои" class="social-media__slide-image">
+            </div>
             <p class="social-media__slide-title">Школы-супергерои</p>
           </div>
           <div class="social-media__slide">
-            <img src="./assets/images/social-media/scientific-approach.png" alt="Научный подход" class="social-media__slide-image">
+            <div class="social-media__slide-image-container">
+              <img src="./assets/images/social-media/scientific-approach.png" alt="Научный подход" class="social-media__slide-image">
+            </div>
             <p class="social-media__slide-title">Научный подход при анализе школ</p>
           </div>
           <div class="social-media__slide">
-            <img src="./assets/images/social-media/open-doors.png" alt="Дни открытых дверей" class="social-media__slide-image">
+            <div class="social-media__slide-image-container">
+              <img src="./assets/images/social-media/open-doors.png" alt="Дни открытых дверей" class="social-media__slide-image">
+            </div>
             <p class="social-media__slide-title">Дни открытых дверей питерских школ</p>
           </div>
           <div class="social-media__slide">
-            <img src="./assets/images/social-media/hero-good.png" alt="Герой не должен быть хорошим!" class="social-media__slide-image">
+            <div class="social-media__slide-image-container">
+              <img src="./assets/images/social-media/hero-good.png" alt="Герой не должен быть хорошим!" class="social-media__slide-image">
+            </div>
             <p class="social-media__slide-title">Герой не должен быть хорошим!</p>
           </div>
           <div class="social-media__slide">
-            <img src="./assets/images/social-media/price-increase.png" alt="Повышаем цены с 1 февраля" class="social-media__slide-image">
+            <div class="social-media__slide-image-container">
+              <img src="./assets/images/social-media/price-increase.png" alt="Повышаем цены с 1 февраля" class="social-media__slide-image">
+            </div>
             <p class="social-media__slide-title">Повышаем цены с 1 февраля</p>
           </div>
           <div class="social-media__slide">
-            <img src="./assets/images/social-media/analytics-report.png" alt="Полгода Аналитическому отчету!" class="social-media__slide-image">
+            <div class="social-media__slide-image-container">
+              <img src="./assets/images/social-media/analytics-report.png" alt="Полгода Аналитическому отчету!" class="social-media__slide-image">
+            </div>
             <p class="social-media__slide-title">Полгода Аналитическому отчету!</p>
           </div>
         </div>
