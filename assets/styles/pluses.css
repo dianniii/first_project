@@ -87,3 +87,42 @@
     font-size: 16px;
     color: rgb(144, 164, 174);
 }
+
+@media screen and (max-width: 1911px) and (min-width: 1440px) {
+  .pluses {
+    .pluses__container {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+  }
+}
+  
+@media screen and (max-width: 1440px) {
+  .pluses {
+    @include margin-lateral-1440;
+  
+    .pluses__container {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+  }
+}
+  
+@media screen and (max-width: 1024px) {
+  .pluses {
+    @include margin-lateral-1024;
+    .pluses__container {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}
+  
+@media screen and (max-width: 768px) {
+  .pluses {
+    @include margin-lateral-768;
+  }
+}
+  
+@media screen and (max-width: 360px) {
+  .pluses {
+    @include margin-lateral-360;
+  }
+}
