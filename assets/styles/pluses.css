@@ -19,12 +19,6 @@
     gap: 53px 20px;
 }
 
-
-.with-dots-before::before {
-    bottom: -35px;
-    left: -55px;
-  }
-  
 /* .pluses__container::before {
     content: "";
     width: 120px;
