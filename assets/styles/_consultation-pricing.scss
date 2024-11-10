@@ -113,7 +113,7 @@
 }
 @media screen and (max-width: 1024px) {
     .consultation-pricing{
-        margin: 0 5%;
+        @include margin-lateral-1024;
         width: 100%;
         margin-bottom: 100px;
         &__items{
@@ -134,29 +134,71 @@
         margin-bottom: 100px;
         &__items{
             grid-template-columns: 1fr;
-            width: 92%;
+            width: 90%;
             gap: 20px;
+            &::after{
+                content: "";
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                top:  745px;
+                left: -60px;
+                z-index: -1;
+                background-image: url(../../images/dots-square.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            &::before{
+                content: "";
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                left: 740px;
+                bottom: 600px;
+                z-index: -1;
+                background-image: url(../../images/dots-square.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
         }
         &__item--1,
         &__item--2,
         &__item--3{
             max-width: none;
-            width: 100%
+            width: 100%;
+            display: flex; // Используем flex для размещения содержимого
+    flex-direction: column; // Устанавливаем вертикальное направление
+    justify-content: flex-start;
         }
         &__item--1{
-            height: 664px;
+            height: 550px;
+            position: relative;
+            margin-top:  18%;
+            overflow: visible;
+            img{
+                top: 50%; // Центруем по вертикали
+                left: 50%; // Центруем по горизонтали
+                transform: translate(0%, -65%);
+                vertical-align: top;
+            }
         }
         &__item--2{
             height: 573px;
+            margin-top: 100px;
         }
         &__item--3{
             height: 673px;
+            margin-top: 100px;
         }
         &__item-cost-button{
             margin-bottom: 15px;
         }
+        li{
+            margin: 15px 10px;
+        }
+        }
     }
-}
+
 @media screen and (max-width:768px) {
     .consultation-pricing{
         width: 100%;
@@ -166,5 +208,14 @@
             width: 94.8%;
         }
 }
+}
+
+@media screen and (max-width:440px) {
+    .consultation-pricing{
+
+}
+}
+
+@media screen and (max-width:360px){
 }
 // остались точки и 360
