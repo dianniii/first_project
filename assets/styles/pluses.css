@@ -20,22 +20,14 @@
     gap: 53px 20px;
 }
 
-.pluses__container::before {
-    content: "";
-    width: 120px;
-    height: 120px;
-    position: absolute;
+.with-dots-before::before {
     bottom: -60px;
     left: -60px;
-    z-index: -1;
-    background-image: url(../images/dots-square.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-  } 
+}
 
 .with-dots-after::after {
-    top: -35px;
-    right: -55px;
+    top: 10px;
+    right: 60px;
 }
 
 .pluses__plus {
