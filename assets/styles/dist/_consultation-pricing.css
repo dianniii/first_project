@@ -272,9 +272,6 @@ li {
     margin: 0 5%;
     margin-bottom: 100px;
   }
-  .consultation-pricing__items {
-    column-gap: 100px;
-  }
 }
 @media screen and (max-width: 890px) {
   .consultation-pricing {
