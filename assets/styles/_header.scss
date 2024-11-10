@@ -30,22 +30,6 @@
     @include header-nav-font;
   }
 
-  // .icon-social {
-  //   justify-self: end;
-  //   display: flex;
-  //   gap: 10px;
-
-  //   &__item-link {
-  //     display: block;
-  //     width: 100%;
-  //     height: auto;
-  //   }
-
-  //   &__icon {
-  //     margin: auto;
-  //   }
-  // }
-
   &__second-line {
     margin-bottom: 40px;
     padding: 20px 0 0px;
@@ -126,7 +110,9 @@
 
   .menu__item {
     display: block;
+    width: 100%;
     padding: 12px 24px;
+    text-align: right;
 
     &:hover {
       background-color: $light-blue-background;
