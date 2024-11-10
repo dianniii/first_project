@@ -110,7 +110,9 @@
 
   .menu__item {
     display: block;
+    width: 100%;
     padding: 12px 24px;
+    text-align: right;
 
     &:hover {
       background-color: $light-blue-background;

@@ -260,7 +260,9 @@ ul li {
 }
 .header .menu__item {
   display: block;
+  width: 100%;
   padding: 12px 24px;
+  text-align: right;
 }
 .header .menu__item:hover {
   background-color: #f1f8ff;
