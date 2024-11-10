@@ -48,7 +48,7 @@ input[type=number]::-webkit-inner-spin-button,
             width: 120px;
             height: 120px;
             position: absolute;
-            bottom: -60px;
+            bottom: -45px;
             left: -60px;
             z-index: -1;
             background-image: url(../../images/dots-square.svg);
@@ -65,19 +65,14 @@ input[type=number]::-webkit-inner-spin-button,
         @include text-18px-font;
         cursor: pointer;
     }
-    &__input--comments{
-        padding: 0 10px;
+    &__textarea--comments{
+        padding: 20px 20px;
         margin: 10px 0;
         width: 420px;
         height: 150px;
         border: none;
         cursor: pointer;
-        
-        &::placeholder{
-            position: relative;
-            top: -40px;
-            left: 10px;
-        }
+        resize: none; /* Отключаем возможность изменения размера */
     }
     // __options
     &__options{
@@ -97,11 +92,35 @@ input[type=number]::-webkit-inner-spin-button,
         @include font-600;
         font-size: 1.25rem;
     }
+    // кнопка Отправить и промокод
+    &__promo-input{
+        padding: 19px 9px 19px 20px; /* верхний, правый, нижний, левый */
+        margin: 10px 0;
+        width: 450px;
+        height: 65px;
+        border: none;
+        @include text-18px-font;
+        cursor: pointer;
+    }
     &__button{
-        width: 420px;
+        width: 450px;
         height: 70px;
         @include font-500;
         font-size: 1.25rem;
+        background-color: #2196f3;
+        color: #ffffff;
+        border: none;
+        border-radius: 2px;
+        padding: 19px 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        &:hover {
+            background-color: #0056b3;
+        }
     }
 }
 
@@ -131,7 +150,6 @@ input[type=number]::-webkit-inner-spin-button,
         }
     }
 }
-
 /* Скрываем оригинальные радиокнопки */
 input[type="radio"] {
     display: none; 
@@ -145,3 +163,10 @@ input[type="radio"]:checked + .custom-radio {
     border: 1px solid #f5a623; 
 }
 
+// адаптив
+@media screen and (max-width: 1440px){
+    .order-consultation{
+        @include margin-lateral-1440;
+        // margin-bottom: 100px;
+}
+}
