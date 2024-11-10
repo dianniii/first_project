@@ -1176,7 +1176,7 @@ ul li {
   margin-bottom: 0px;
 }
 .consultation__input--promo {
-  width: 100%;
+  width: 450px;
 }
 .consultation__radio-group {
   margin-bottom: 37px;
@@ -1191,9 +1191,11 @@ ul li {
   align-items: center;
   margin-bottom: 15px;
   gap: 18px;
+  flex-shrink: 0;
 }
 .consultation__radio-group .consultation__custom-radio {
   display: inline-block;
+  flex: 0 0 28px;
   width: 28px;
   height: 28px;
   border: 1px solid #b0bec5;
@@ -1208,10 +1210,15 @@ ul li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 72%;
-  height: 72%;
+  width: 18px;
+  height: 18px;
   background-color: transparent;
   border-radius: 50%;
+}
+.consultation__radio-group .consultation__radio-label span {
+  display: inline-block;
+  white-space: normal;
+  max-width: calc(100% - 46px);
 }
 .consultation__radio-group input[type=radio] {
   display: none;
@@ -1223,7 +1230,7 @@ ul li {
   background-color: #ffa726;
 }
 .consultation__button {
-  width: 100%;
+  width: 450px;
   height: 70px;
 }
 
