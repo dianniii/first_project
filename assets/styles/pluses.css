@@ -20,12 +20,12 @@
     gap: 53px 20px;
 }
 
-.with-dots-before::before {
+.pluses .with-dots-before::before {
     bottom: -60px;
     left: -60px;
 }
 
-.with-dots-after::after {
+.pluses .with-dots-after::after {
     top: 10px;
     right: 60px;
 }
