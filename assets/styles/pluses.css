@@ -15,9 +15,9 @@
 .pluses__container {
     position: relative;
     display: grid;
-    align-items: baseline;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    justify-items: center;
+    gap: 53px 20px;
 }
 
 .pluses__container::before {
@@ -31,7 +31,7 @@
     background-image: url(../images/dots-square.svg);
     background-repeat: no-repeat;
     background-size: contain;
-  }
+  } 
 
 .pluses__container::after {
     content: "";
@@ -49,32 +49,28 @@
 .pluses__plus {
     position: relative;
     display: grid;
-    max-width: 310px;
-    padding: 0 20px 20px;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: min-content 1fr;
+    gap: 10px;
+}
+
+.pluses__subtitle-text_border {
+    margin-top: -70px;
+    padding: 50px 20px 20px;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    gap: 10px;
+    background-color: #fff;
     border-radius: 2px;
     box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.05);
-    background: rgb(255, 255, 255);
-}
+  }
 
-.pluses__plus-first {
-    padding-bottom: 20px;
-}
-
-.pluses__plus-second {
-    padding-bottom: 48px;
-}
-
-.pluses__plus-third {
-    padding-bottom: 92px;
-}
-
-.pluses__plus-fourth {
-    padding-bottom: 114px;
-}
+.pluses__image-container {
+    padding-bottom: 10px;
+    padding-left: 20px;
+    z-index: 2;
+  }
 
 .pluses__subtitle {
-    padding: 10px 0px;
     font-family: Montserrat, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -90,4 +86,46 @@
     line-height: 140%;
     font-size: 16px;
     color: rgb(144, 164, 174);
+}
+
+@media screen and (max-width: 1911px) and (min-width: 1440px) {
+  .pluses {
+    .pluses__container {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+  }
+}
+  
+@media screen and (max-width: 1440px) {
+  .pluses {
+    margin-left: 8%;
+    margin-right: 8%;
+    .pluses__container {
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+  }
+}
+  
+@media screen and (max-width: 1024px) {
+  .pluses {
+    margin-left: 5%;
+    margin-right: 5%;
+    .pluses__container {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+}
+  
+@media screen and (max-width: 768px) {
+  .pluses {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+  
+@media screen and (max-width: 360px) {
+  .pluses {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

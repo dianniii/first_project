@@ -1,161 +1,223 @@
 .about-us {
-    text-align: left;
-    margin-bottom: 100px;
-    
-    &__container {
-      @include margin-lateral-1920;
-      display: grid;
-      gap: 30px;
-      grid-template-columns: auto 1fr; 
-      align-items: center; 
-      position: relative;
+  text-align: left;
+  margin-bottom: 100px;
   
-      // Псевдоэлемент для точек слева снизу
-      &::before {
-        content: '';
-        position: absolute;
-        width: 280px;
-        height: 880px;
-        bottom: -665px; 
-        left: -65px;
-        background-image: url('../images/about-us/dots-left.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: -1;
-        pointer-events: none;
-      }
-  
-      // Псевдоэлемент для точек справа сверху
-      &::after {
-        content: '';
-        position: absolute;
-        width: 280px;
-        height: 280px;
-        top: 25px; 
-        right: -65px;
-        background-image: url('../images/about-us/dots-right.svg'); 
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: -1;
-        pointer-events: none;
-      }
-    }
-    
-    &__title {
-      @include h1-h2-font;
-      color: $main-font-color;
-      margin-bottom: 0;
-    }
-    
-    &__subtitle {
-      @include font-500;
-      color: #6f8793;
-      margin: 0;
-      font-size: 16px;
-    }
-    
-    &__video {
-      position: relative;
-      max-width: 100%;
-      height: auto;
-      overflow: hidden;
-      display: grid;
-      grid-template-areas: "image";
-      grid-column: 1 / -1;
-      
-      &-image {
-        grid-area: image;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-      }
-  
-      .about-us__video-overlay {
-        grid-area: image;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 30px;
-        text-align: left;
-      
-        .about-us__authors {
-          @include h3-font;
-          color: #fff;
-        }
-      
-        .about-us__duration {
-          font-family: "Montserrat", sans-serif;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 140%;
-          color: #6f8793;
-          margin-top: 20px;
-        }
-      }
-    }
-  
-    &__play-button {
+  &__container {
+    @include margin-lateral-1920;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      width: 142px;
-      height: 142px;
-      background-color: transparent;
-      border: none;
-      background-image: url('../images/about-us/play-icon.svg'); 
-      background-size: contain;
+      width: 280px;
+      height: 880px;
+      bottom: -665px;
+      left: -65px;
+      background-image: url('../images/about-us/dots-left.svg');
       background-repeat: no-repeat;
-      background-position: center;
-  
-      &:hover {
-        transform: translate(-50%, -50%) scale(1.1); 
+      background-size: contain;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      top: 15px;
+      right: -65px;
+      background-image: url('../images/about-us/dots-right.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    @include h1-h2-font;
+    color: $main-font-color;
+  }
+
+  &__subtitle {
+    @include font-500;
+    color: #6f8793;
+    font-size: 16px;
+  }
+
+  &__video {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-areas: "image";
+    grid-column: 1 / -1;
+
+    &-image {
+      grid-area: image;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    &-overlay {
+      grid-area: image;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 30px;
+      text-align: left;
+
+      .about-us__authors {
+        @include h3-font;
+        color: #fff;
+      }
+
+      .about-us__duration {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #6f8793;
+        margin-top: 20px;
       }
     }
   }
-  
 
-  @media screen and (max-width: 1440px) {
-    .about-us {
-  
-      &__container {
-        @include margin-lateral-1440;
-        gap: 10px;
-      }
+  &__play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 142px;
+    height: 142px;
+    background-color: transparent;
+    border: none;
+    background-image: url('../images/about-us/play-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.1);
     }
   }
+}
 
-  @media screen and (max-width: 1024px) {
-    .about-us {
-      &__container {
-        @include margin-lateral-1024;
-        display: grid;
-        grid-template-columns: 1fr;
-        row-gap: 30px; // Задаем общий отступ между строками
-  
-        &__title {
-          grid-row: 1;
-        }
-  
-        &__subtitle {
-          grid-row: 2;
-        }
-  
-        &__video {
-          grid-row: 3;
-        }
+@media screen and (max-width: 1440px) {
+  .about-us__container {
+    @include margin-lateral-1440;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-us {
+    &__container {
+      @include margin-lateral-1024;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+
+      &__title {
+        grid-row: 1;
       }
-  
+
       &__subtitle {
-        .br {
-          display: none; // Скрываем <br> на узких экранах
+        grid-row: 2;
+      }
+    }
+
+    &__video {
+      grid-row: 3;
+      height: 600px;
+
+      &-image {
+        height: 100%;
+      }
+    }
+
+    &__subtitle .about-us__br {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-us__container {
+    @include margin-lateral-768;
+
+    &::after {
+      top: 78px;
+      right: -58px;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .about-us {
+    &__container {
+      row-gap: 20px;
+
+      &::before {
+        width: 150px;
+        height: 150px;
+        bottom: -39px;
+      }
+
+      &::after {
+        width: 150px;
+        height: 150px;
+        top: 72px;
+        right: -37px;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__video {
+      height: 235px;
+
+      &-overlay {
+        padding: 10px;
+
+        .about-us__authors {
+          font-size: 16px;
+        }
+
+        .about-us__duration {
+          font-size: 16px;
+          margin-top: 5px;
         }
       }
     }
+
+    &__play-button {
+      width: 62px;
+      height: 62px;
+    }
   }
-  
-  
+}
+
+@media screen and (max-width: 360px) {
+  .about-us {
+    &__container {
+      @include margin-lateral-360;
+
+      &::after {
+        top: 142px;
+      }
+    }
+  }
+}
