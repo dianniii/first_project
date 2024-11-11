@@ -267,6 +267,10 @@
       gap: 0px;
     }
     
+    .experts__quote-container-second-dots::before, .experts__card-first::after {
+      display: none;
+    }
+
     .experts__title {
       font-size: 32px;
     }
