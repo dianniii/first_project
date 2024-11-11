@@ -1105,12 +1105,16 @@ ul li {
 }
 .consultation {
   margin-bottom: 100px;
+  margin-left: 9.58%;
+  margin-right: 9.58%;
+  background-color: #f8fcff;
+  position: relative;
 }
 .consultation__form-container {
-  margin-left: 16%;
-  margin-right: 16%;
+  margin: 0px 20px 0px 7.94%;
+  padding: 100px 0px;
 }
-.consultation__header {
+.consultation__title {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -1121,41 +1125,46 @@ ul li {
 }
 .consultation__form {
   display: grid;
-  width: 100%;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas: "personal text" "personal options";
   -moz-column-gap: 70px;
        column-gap: 70px;
-  position: relative;
 }
-.consultation__form-content {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.consultation__options {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.consultation__options-text {
+.consultation__exp-text {
+  margin-bottom: 32px;
+  grid-area: text;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
   line-height: 140%;
   font-weight: 500;
   font-size: 16px;
-  color: #6F8793;
-  margin-bottom: 32px;
+  color: #6f8793;
+}
+.consultation__personal-info {
+  position: relative;
+  grid-area: personal;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+.consultation__options {
+  grid-area: options;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .consultation__input {
-  padding: 20px;
+  padding: 19px 9px 19px 20px;
   margin-bottom: 15px;
-  width: 100%;
+  width: 420px;
   height: 65px;
   border: none;
-  color: #B0BEC5;
+  color: #b0bec5;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -1234,41 +1243,83 @@ ul li {
   height: 70px;
 }
 
+.with-dots-after::after {
+  z-index: 2;
+}
+
 @media screen and (max-width: 1440px) {
+  .consultation {
+    margin-left: 4.79%;
+    margin-right: 4.79%;
+  }
   .consultation__form-container {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 3.55%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .consultation {
+    margin-left: 4.79%;
+    margin-right: 4.79%;
+  }
+  .consultation__form {
+    gap: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
+  .consultation {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width: 980px) {
   .consultation__form-container {
-    margin-left: 5%;
-    margin-right: 5%;
+    padding: 70px 0;
+    margin-left: 9.5%;
+  }
+  .consultation__form {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas: "text" "personal" "options";
+    gap: 20px;
+  }
+  .consultation__title {
+    margin-bottom: 40px;
+  }
+  .consultation__exp-text {
+    margin-bottom: 0px;
+  }
+  .consultation__radio-group {
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 768px) {
+  .consultation {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 590px) {
+  .consultation {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .consultation__form-container {
     margin-left: 20px;
     margin-right: 20px;
-    margin-left: 70px;
   }
-  .consultation__form {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "options-text" "form-content" "options" "button";
-    gap: 20px;
+}
+@media screen and (max-width: 490px) {
+  .consultation__title {
+    font-size: 32px;
   }
-  .consultation__options-text {
-    grid-area: options-text;
+  .consultation__input {
+    width: 320px;
   }
-  .consultation__form-content {
-    grid-area: form-content;
+  .consultation__input--promo {
+    width: 320px;
   }
-  .consultation__options {
-    grid-area: options;
-  }
-  .consultation__button, .consultation__input {
-    width: 55%;
+  .consultation__button {
+    width: 320px;
   }
 }
 .schools {

@@ -1,11 +1,16 @@
 .consultation {
   margin-bottom: 100px;
+  margin-left: 9.58%;
+  margin-right: 9.58%;
+  background-color: $form-background;
+  position: relative;
 
   &__form-container {
-    @include margin-lateral-1920;
+    margin: 0px 20px 0px 7.94%;
+    padding: 100px 0px;
   }
 
-  &__header {
+  &__title {
     @include h1-h2-font;
     color: $main-font-color;
     margin-bottom: 27px;
@@ -13,40 +18,47 @@
 
   &__form {
     display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      "personal text"
+      "personal options";
     column-gap: 70px;
-    position: relative;
   }
 
-  &__form-content {
+  &__exp-text {
+    margin-bottom: 32px;
+    grid-area: text;
+    @include font-500;
+    font-size: 16px;
+    color: #6f8793;
+  }
+
+  &__personal-info {
+    position: relative;
+    grid-area: personal;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    z-index: 2;
   }
 
   &__options {
+    grid-area: options;
     min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    &-text {
-      @include font-500;
-      font-size: 16px;
-      color: #6F8793;
-      margin-bottom: 32px;
-    }
   }
 
   &__input {
-    padding: 20px;
+    padding: 19px 9px 19px 20px;
     margin-bottom: 15px;
-    width: 100%;
+    width: 420px;
     height: 65px;
     border: none;
-    color: #B0BEC5;
+    color: #b0bec5;
     @include text-18px-font;
     box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
 
@@ -112,8 +124,8 @@
 
     .consultation__radio-label span {
       display: inline-block;
-      white-space: normal; 
-      max-width: calc(100% - 46px); 
+      white-space: normal;
+      max-width: calc(100% - 46px);
     }
 
     input[type="radio"] {
@@ -135,63 +147,102 @@
   }
 }
 
+// add dots to main container aka section.consultation
+.with-dots-after::after {
+  z-index: 2;
+}
+
 @media screen and (max-width: 1440px) {
   .consultation {
+    margin-left: 4.79%;
+    margin-right: 4.79%;
     &__form-container {
-      @include margin-lateral-1440;
+      margin-left: 3.55%;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .consultation {
+    margin-left: 4.79%;
+    margin-right: 4.79%;
+    &__form {
+      gap: 20px;
     }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .consultation {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .consultation {
     &__form-container {
-      @include margin-lateral-1024;
+      padding: 70px 0;
+      margin-left: 9.5%;
+    }
+    &__form {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        "text"
+        "personal"
+        "options";
+      gap: 20px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__exp-text {
+      margin-bottom: 0px;
+    }
+
+    &__radio-group {
+      margin-bottom: 20px;
     }
   }
 }
 
 @media screen and (max-width: 768px) {
   .consultation {
+    @include margin-lateral-768;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .consultation {
+    margin-left: 0px;
+    margin-right: 0px;
 
     &__form-container {
-      @include margin-lateral-768;
-      margin-left: 70px;
-    }
-
-    &__form {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "options-text"
-        "form-content"
-        "options"
-        "button";
-      gap: 20px;
-    }
-
-    &__options-text {
-      grid-area: options-text;
-    }
-
-    &__form-content {
-      grid-area: form-content;
-    }
-
-    &__options {
-      grid-area: options;
-    }
-
-    &__button,
-    &__input {
-      width: 55%; 
+      margin-left: 20px;
+      margin-right: 20px;
     }
   }
 }
 
+@media screen and (max-width: 490px) {
+  .consultation {
+    &__title {
+      font-size: 32px;
+    }
 
+    &__input {
+      width: 320px;
 
+      &--promo {
+        width: 320px;
+      }
+    }
 
-
-
-
+    &__button {
+      width: 320px;
+    }
+  }
+}
