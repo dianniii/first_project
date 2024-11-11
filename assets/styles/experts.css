@@ -301,6 +301,11 @@
       gap: 0px;
     }
 
+    .experts__text-second {
+      margin-bottom: 20px;
+      margin-left: 0px;
+    }
+
     .experts__button {
       margin: auto 0;
     }
