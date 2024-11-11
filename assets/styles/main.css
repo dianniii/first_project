@@ -1244,7 +1244,7 @@ ul li {
   height: 70px;
 }
 
-.with-dots-after::after {
+.consultation.with-dots-after::after {
   z-index: 2;
 }
 
