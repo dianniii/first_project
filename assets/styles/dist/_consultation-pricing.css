@@ -61,7 +61,7 @@
   z-index: 0;
   position: relative;
   gap: 10px;
-  grid-template-rows: min-content 1fr 1fr;
+  grid-template-rows: min-content 1fr;
   max-width: 420px;
   height: 679px;
   padding: 15px;
@@ -73,10 +73,15 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+.consultation-pricing__text {
+  padding-top: 50px;
+  margin-top: -250px;
+}
 
 .consultation-pricing__item-cost-button {
   justify-items: center;
   gap: 20px;
+  margin-top: 40px;
 }
 .consultation-pricing__item-cost-button .consultation-pricing__item-cost {
   font-family: "Montserrat", sans-serif;
@@ -107,6 +112,7 @@
 .consultation-pricing__item-cost-button--2 {
   justify-items: center;
   gap: 20px;
+  margin-top: 105px;
 }
 .consultation-pricing__item-cost-button--2 .consultation-pricing__item-cost {
   font-family: "Montserrat", sans-serif;
@@ -196,20 +202,40 @@
     margin-right: 8%;
     margin-bottom: 100px;
   }
+  .consultation-pricing li {
+    margin: 10px 10px;
+  }
+  .consultation-pricing__item-cost-button {
+    margin-top: 70px;
+  }
+  .consultation-pricing__item-cost-button--2 {
+    margin-top: 140px;
+  }
+  .consultation-pricing__item-cost-button--3 {
+    margin-top: 35px;
+  }
 }
 @media screen and (max-width: 1024px) {
   .consultation-pricing {
     margin-left: 5%;
     margin-right: 5%;
-    width: 100%;
     margin-bottom: 100px;
   }
   .consultation-pricing__items {
-    width: 90%;
+    width: 100%;
   }
   .consultation-pricing__item--1, .consultation-pricing__item--2, .consultation-pricing__item--3 {
     max-width: none;
     width: 100%;
+  }
+  .consultation-pricing__item--3 {
+    margin-top: 100px;
+  }
+  .consultation-pricing__item-cost-button {
+    margin-top: 145px;
+  }
+  .consultation-pricing__item-cost-button--3 {
+    margin-top: 110px;
   }
 }
 @media screen and (max-width: 890px) {
@@ -252,9 +278,6 @@
   .consultation-pricing__item--1, .consultation-pricing__item--2, .consultation-pricing__item--3 {
     max-width: none;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
   .consultation-pricing__item--1 {
     height: 550px;
@@ -290,6 +313,19 @@
     margin-bottom: 100px;
   }
   .consultation-pricing__items {
-    width: 94.8%;
+    width: 100%;
+  }
+  .consultation-pricing__items__item--1, .consultation-pricing__items__item--2, .consultation-pricing__items__item--3 {
+    max-width: none;
+    width: 100%;
+  }
+  .consultation-pricing__items__item-cost-button {
+    margin-bottom: -50px;
+  }
+  .consultation-pricing__items__item--1 {
+    margin-top: 0;
+  }
+  .consultation-pricing__items__item-cost-button--3 {
+    margin-top: 250px;
   }
 }
