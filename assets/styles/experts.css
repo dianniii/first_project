@@ -242,6 +242,9 @@
   .experts {
     margin-left: 20px;
     margin-right: 20px;
+    .experts__card-first {
+      margin-bottom: 70px;
+    }
     .experts__title {
       margin-bottom: 40px;
     }
@@ -250,16 +253,65 @@
 
 @media screen and (max-width: 440px) {
   .experts {
+    .experts__card-first {
+      margin-bottom: 50px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-areas:
+      "img"
+      "img"
+      "img"
+      "subtitle"
+      "text"
+      "quote";
+      gap: 0px;
+    }
+    
+    .experts__quote-container-second-dots::before, .experts__card-first::after {
+      display: none;
+    }
+
     .experts__title {
       font-size: 32px;
     }
 
     .experts__subtitle-container {
+      margin-bottom: 30px;
       font-size: 20px;
     }
 
+    .experts__text {
+      margin-bottom: 20px;
+      margin-left: 0px;
+    }
+
     .experts__quote-container {
+      margin-bottom: 0px;
+      margin-left: 20px;
       font-size: 16px;
+    }
+
+    .experts__card-second {
+      margin-bottom: 50px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-areas:
+      "img"
+      "img"
+      "img"
+      "subtitle"
+      "text"
+      "quote";
+      gap: 0px;
+    }
+
+    .experts__text-second {
+      margin-bottom: 20px;
+      margin-left: 0px;
+    }
+
+    .experts__button {
+      margin: auto 0;
     }
   }
 }
