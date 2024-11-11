@@ -107,6 +107,14 @@
   }
 }
   
+@media screen and (max-width: 440px) {
+  .pluses {
+    .pluses__title {
+      font-size: 32px;
+    }
+  }
+}
+
 @media screen and (max-width: 360px) {
   .pluses {
     margin-left: 10px;
