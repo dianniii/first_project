@@ -250,6 +250,20 @@
 
 @media screen and (max-width: 440px) {
   .experts {
+    .experts__card-first {
+      margin-bottom: 70px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-areas:
+      "img"
+      "img"
+      "img"
+      "subtitle"
+      "text"
+      "quote";
+      gap: 0px;
+    }
+    
     .experts__title {
       font-size: 32px;
     }
