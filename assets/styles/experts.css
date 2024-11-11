@@ -226,7 +226,47 @@
 
 @media screen and (max-width: 1440px) {
   .experts {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .experts {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experts {
+    margin-left: 20px;
+    margin-right: 20px;
+    .experts__title {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .experts {
+    .experts__title {
+      font-size: 32px;
+    }
+
+    .experts__subtitle-container {
+      font-size: 20px;
+    }
+
+    .experts__quote-container {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .experts {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

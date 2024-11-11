@@ -1,0 +1,249 @@
+.consultation {
+  margin-bottom: 100px;
+  margin-left: 9.58%;
+  margin-right: 9.58%;
+  background-color: $form-background;
+  position: relative;
+
+  &__form-container {
+    margin: 0px 20px 0px 7.94%;
+    padding: 100px 0px;
+  }
+
+  &__title {
+    @include h1-h2-font;
+    color: $main-font-color;
+    margin-bottom: 27px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+      "personal text"
+      "personal options";
+    column-gap: 70px;
+  }
+
+  &__exp-text {
+    margin-bottom: 32px;
+    max-width: 565px;
+    grid-area: text;
+    @include font-500;
+    font-size: 16px;
+    color: #6f8793;
+  }
+
+  &__personal-info {
+    position: relative;
+    grid-area: personal;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+  }
+
+  &__options {
+    grid-area: options;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__input {
+    padding: 19px 9px 19px 20px;
+    margin-bottom: 15px;
+    width: 420px;
+    height: 65px;
+    border: none;
+    color: #b0bec5;
+    @include text-18px-font;
+    box-shadow: 0px 9px 20px rgba(0, 0, 0, 0.05);
+
+    &[type="number"] {
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    &--comments {
+      height: 150px;
+      margin-bottom: 0px;
+    }
+
+    &--promo {
+      width: 450px;
+    }
+  }
+
+  &__radio-group {
+    margin-bottom: 37px;
+
+    .consultation__radio-label {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 140%;
+      color: #000;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      gap: 18px;
+      flex-shrink: 0;
+    }
+
+    .consultation__custom-radio {
+      display: inline-block;
+      flex: 0 0 28px;
+      width: 28px;
+      height: 28px;
+      border: 1px solid #b0bec5;
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 18px;
+        background-color: transparent;
+        border-radius: 50%;
+      }
+    }
+
+    .consultation__radio-label span {
+      display: inline-block;
+      white-space: normal;
+      max-width: calc(100% - 46px);
+    }
+
+    input[type="radio"] {
+      display: none;
+
+      &:checked + .consultation__custom-radio {
+        border: 1px solid $accent-orange;
+
+        &::after {
+          background-color: $accent-orange;
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 450px;
+    height: 70px;
+  }
+}
+
+// add dots to main container aka section.consultation
+.consultation.with-dots-after::after {
+  z-index: 2;
+}
+
+@media screen and (max-width: 1440px) {
+  .consultation {
+    margin-left: 4.79%;
+    margin-right: 4.79%;
+    &__form-container {
+      margin-left: 3.55%;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .consultation {
+    margin-left: 4.79%;
+    margin-right: 4.79%;
+    &__form {
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .consultation {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .consultation {
+    &__form-container {
+      padding: 70px 0;
+      margin-left: 9.5%;
+    }
+    &__form {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-areas:
+        "text"
+        "personal"
+        "options";
+      gap: 20px;
+    }
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__exp-text {
+      margin-bottom: 0px;
+    }
+
+    &__radio-group {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .consultation {
+    @include margin-lateral-768;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .consultation {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    &__form-container {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .consultation {
+    &__title {
+      font-size: 32px;
+    }
+
+    &__input {
+      width: 320px;
+
+      &--promo {
+        width: 320px;
+      }
+    }
+
+    &__button {
+      width: 320px;
+    }
+  }
+}
