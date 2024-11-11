@@ -1133,6 +1133,7 @@ ul li {
 }
 .consultation__exp-text {
   margin-bottom: 32px;
+  max-width: 565px;
   grid-area: text;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
