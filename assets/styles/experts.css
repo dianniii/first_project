@@ -244,7 +244,23 @@
     margin-right: 20px;
   }
 }
-  
+
+@media screen and (max-width: 440px) {
+  .experts {
+    .experts__title {
+      font-size: 32px;
+    }
+
+    .experts__subtitle-container {
+      font-size: 20px;
+    }
+
+    .experts__quote-container {
+      font-size: 16px;
+    }
+  }
+}
+
 @media screen and (max-width: 360px) {
   .experts {
     margin-left: 10px;
