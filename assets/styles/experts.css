@@ -282,6 +282,8 @@
     }
 
     .experts__quote-container {
+      margin-bottom: 0px;
+      margin-left: 20px;
       font-size: 16px;
     }
   }
