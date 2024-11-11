@@ -38,8 +38,7 @@
         display: grid; 
         grid-template-columns: auto 1fr; 
         line-height: 25.2px; 
-        margin: 20px 10px; 
-        gap: 10px; 
+        gap: 10px;
     } 
 
     &__image { 
@@ -81,6 +80,98 @@
             color: $main-font-color;
         }
         .consultation-pricing__item-order-button{
+            width: 340px;
+            height: 65px;
+            background-color: white;
+            border: 3px solid $accent-blue;
+            color: $accent-blue;
+            @include font-500;
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    // 2
+    .consultation-pricing__item-cost-button--2{
+        justify-items: center;
+        gap: 20px;
+        .consultation-pricing__item-cost{
+            @include h3-font;
+            color: $main-font-color;
+        }
+        .consultation-pricing__item-order-button--2{
+            width: 340px;
+            height: 65px;
+            background-color: white;
+            border: 3px solid $accent-blue;
+            color: $accent-blue;
+            @include font-500;
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    // 3
+    .consultation-pricing__item-cost-button--3{
+        justify-items: center;
+        gap: 20px;
+        .consultation-pricing__item-cost{
+            @include h3-font;
+            color: $main-font-color;
+        }
+        .consultation-pricing__item-order-button--3{
+            width: 340px;
+            height: 65px;
+            background-color: white;
+            border: 3px solid $accent-blue;
+            color: $accent-blue;
+            @include font-500;
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    // 2
+    .consultation-pricing__item-cost-button--2{
+        justify-items: center;
+        gap: 20px;
+        .consultation-pricing__item-cost{
+            @include h3-font;
+            color: $main-font-color;
+        }
+        .consultation-pricing__item-order-button--2{
+            width: 340px;
+            height: 65px;
+            background-color: white;
+            border: 3px solid $accent-blue;
+            color: $accent-blue;
+            @include font-500;
+            font-size: 1.25rem;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+    // 3
+    .consultation-pricing__item-cost-button--3{
+        justify-items: center;
+        gap: 20px;
+        .consultation-pricing__item-cost{
+            @include h3-font;
+            color: $main-font-color;
+        }
+        .consultation-pricing__item-order-button--3{
             width: 340px;
             height: 65px;
             background-color: white;
@@ -184,9 +275,6 @@
         &__item--3{
             max-width: none;
             width: 100%;
-            display: flex; // Используем flex для размещения содержимого
-    flex-direction: column; // Устанавливаем вертикальное направление
-    justify-content: flex-start;
         }
         &__item--1{
             height: 550px;
