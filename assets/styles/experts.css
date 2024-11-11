@@ -286,6 +286,20 @@
       margin-left: 20px;
       font-size: 16px;
     }
+
+    .experts__card-second {
+      margin-bottom: 50px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-areas:
+      "img"
+      "img"
+      "img"
+      "subtitle"
+      "text"
+      "quote";
+      gap: 0px;
+    }
   }
 }
 
